@@ -1,0 +1,131 @@
+@import '@/shared/lib/styles/mixin.scss';
+
+.footer {
+  background: #0c0c0c;
+  padding: 48px 0;
+
+  > div {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 16px;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 48px;
+    @include tablet {
+      flex-direction: column;
+      gap: 100px;
+    }
+  }
+
+  &__col1 {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 350px;
+    @include tablet {
+      align-items: center;
+      width: 100%;
+    }
+    .logo {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      @include tablet {
+        align-items: center;
+      }
+      h5 {
+        color: #fff;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        @include tablet {
+          text-align: center;
+        }
+      }
+    }
+    p {
+      color: #b6b6b6;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+    .contacts {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      a {
+        display: flex;
+        width: 250px;
+        padding: 12px;
+        align-items: center;
+        gap: 8px;
+        background: rgba(255, 255, 255, 0.05);
+        color: #b6b6b6;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+  }
+
+  &__col2 {
+    display: flex;
+    width: 60%;
+    gap: 24px;
+    justify-content: flex-end;
+    @include tablet {
+      width: 100%;
+      flex-wrap: wrap;
+      gap: 48px;
+    }
+    > div {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      width: 150px;
+      @include tablet {
+        width: calc(50% - 24px);
+      }
+      h5 {
+        color: #fff;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+      nav {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        a {
+          color: #b6b6b6;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+      }
+    }
+  }
+
+  &__copyright {
+    margin-top: 48px;
+    padding-top: 48px;
+    border-top: 1px solid rgba(233, 233, 233, 0.1);
+    p {
+      color: #b6b6b6;
+      text-align: center;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+}

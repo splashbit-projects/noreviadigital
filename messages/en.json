@@ -1,0 +1,231 @@
+{
+  "homeFourth": {
+    "slide1": {
+      "title": "Structural Advantage of a Small Fund",
+      "description": "The fund’s size enables faster execution, targeted deal access, and active oversight — benefits not typically available to larger institutional vehicles."
+    },
+    "slide2": {
+      "title": "Regulated and Globally Positioned",
+      "description": "Vertex FinCapital operates under the Singapore VCC framework and is managed by MAS-licensed XEQ Capital, providing legal clarity, investor protection, and international credibility."
+    },
+    "slide3": {
+      "title": "Aligned Profit Distribution Model",
+      "description": "Investors receive the first 12% p.a. of returns. Only after this threshold is met does the fund share in profits, ensuring investor-first economics at the structural level"
+    },
+    "slide4": {
+      "title": "Fee Discipline <br/>and Alignment",
+      "description": "The fund applies a flat 2% management fee (covering all operating expenses) and performance fees only apply above a 12% return, ensuring investor-aligned incentives."
+    },
+    "slide5": {
+      "title": "Selective <br/>Participation",
+      "description": "The investor base is intentionally capped at 20–30 parties to preserve deal quality and access discipline."
+    },
+    "title": "Why Vertex FinCapital"
+  },
+  "homeHero": {
+    "title": "Leverage Unique Opportunities. <br/>Create Value. Deliver Results.",
+    "description": "Regulated in Singapore. Open-ended structure. <br/>Multi-asset strategy."
+  },
+  "homeLast": {
+    "title": "Investor Access & Inquiry",
+    "description": "Vertex FinCapital works exclusively with accredited investors. To request documentation or discuss participation, please submit the form below. All submissions are reviewed individually by the fund’s management team.",
+    "button": "Explore the Fund"
+  },
+  "homeSecond": {
+    "slide1": {
+      "text1": "The fund offers accredited investors access to private market opportunities across real estate, private equity, credit, venture capital, and public equities.",
+      "text2": "Combining institutional governance with boutique agility, the fund serves as a core alternative allocation for sophisticated portfolios.",
+      "title": "Vertex FinCapital is a MAS-regulated investment fund structured under Singapore’s XEQ Global Alternatives VCC.",
+      "button": "Explore the Fund"
+    },
+    "slide2": {
+      "text1": "Real estate (equity or structured debt in development-stage projects)",
+      "text2": "Private equity (payments, proptech, scalable B2B platforms)",
+      "text3": "Secured private credit (with collateral and oversight)",
+      "text4": "Public small-cap equities (value-oriented with near-term catalysts)",
+      "title": "Our key <br/>investment focus"
+    }
+  },
+  "homeThird": {
+    "title": "Investment Entry: At a Glance",
+    "item1": {
+      "title": "Target Capital Raise",
+      "value": "USD 15,000,000"
+    },
+    "item2": {
+      "title": "Planned Investor Group",
+      "value": "Up to 30 <br/>accredited investors"
+    },
+    "item3": {
+      "title": "Minimum Investment",
+      "value": "USD 200,000"
+    }
+  },
+  "assetClass": {
+    "item1": {
+      "title": "Real Estate",
+      "description": "Equity or structured debt in pre-completion residential, commercial, or mixed-use projects. Priority on permits, sponsors, and defined exits (sales/refinancing)."
+    },
+    "item2": {
+      "title": "Private Equity",
+      "description": "Expansion-stage follow-on investments. Focus on payments, asset-light real estate platforms, and scalable B2B models."
+    },
+    "item3": {
+      "title": "Private Credit",
+      "description": "Secured lending to mid-market firms. Yields of 8–20% p.a., collateralized by property, receivables, or guarantees. Includes board rights, covenants, oversight."
+    },
+    "item4": {
+      "title": "Venture Capital",
+      "description": "Direct or syndicated exposure to early-stage fintech, proptech, and data infra startups. Targets asymmetric upside."
+    },
+    "item5": {
+      "title": "Public Small-Cap Equities",
+      "description": "Opportunistic positions in listed or pre-IPO firms with undervaluation and near-term catalysts (e.g., listing, acquisition)."
+    },
+    "title": "Asset Class Details",
+    "subtitle": "Dynamic private market investment strategy"
+  },
+  "geographicDiversification": {
+    "item1": {
+      "title": "Singapore & Southeast Asia",
+      "description": "Tech growth, real estate corridors, early-stage fintech"
+    },
+    "item2": {
+      "title": "Israel",
+      "description": "Cybersecurity, SaaS, digital payments"
+    },
+    "item3": {
+      "title": "Europe (incl. UK)",
+      "description": "Proptech, private credit, real estate"
+    },
+    "item4": {
+      "title": "North America",
+      "description": "Growth equity, pre-IPO VC"
+    },
+    "item5": {
+      "title": "UAE/Dubai",
+      "description": "Real estate (hospitality/logistics), credit with yield premiums"
+    },
+    "title": "Geographic Diversification",
+    "subtitle": "List focus regions and their rationale",
+    "note": "Include one sentence about geo-risk filters: rule of law,  <br/>FX exposure, capital controls."
+  },
+  "investmentStrategyHero": {
+    "title": "Strategy Overview",
+    "description": "Give investors immediate clarity on how capital is deployed."
+  },
+  "riskManagement": {
+    "title": "Risk Management Approach",
+    "subtitle": "Summarize how risk is actively controlled:",
+    "item1": "Use of secured lending and senior debt structures",
+    "item2": "Diversification across sectors and jurisdictions",
+    "item3": "Conservative valuations and peer benchmarking",
+    "item4": "Quarterly rebalancing + cap of 50% NAV per asset class"
+  },
+  "strategicFlexibility": {
+    "title": "Strategic Flexibility",
+    "subtitle": "Explain temporary public market exposure:",
+    "item1": "When private deal flow is pending, funds are deployed in liquid equities or bonds",
+    "item2": "Avoids idle capital, maintains productivity"
+  },
+  "strategyInclude": {
+    "title": "Include",
+    "item1": "Dynamic private market investment strategy",
+    "item2": "Capital may be temporarily allocated to listed securities while private deals are in process",
+    "item3": "Managed through a dedicated brokerage account by a senior investment manager",
+    "item4": "Focus on value-based equity and bond positions to avoid cash drag"
+  },
+  "targetPortfolio": {
+    "item1": {
+      "title": "Real Estate"
+    },
+    "item2": {
+      "title": "Private Equity"
+    },
+    "item3": {
+      "title": "Private Credit"
+    },
+    "item4": {
+      "title": "Venture Capital"
+    },
+    "item5": {
+      "title": "Public Small-Cap Equities"
+    },
+    "title": "Target Portfolio Allocation",
+    "subtitle": "Present as a visual allocation breakdown or clean list",
+    "note": "Note: Add a sentence stating rebalancing occurs quarterly or as needed, <br/>with a max 50% NAV cap per asset class"
+  },
+  "explore": {
+    "title1": "Learn how we allocate <br/>capital and manage risk",
+    "buttonText1": "Investment Strategy",
+    "title2": "Understand eligibility, <br/>subscription steps, and reporting",
+    "buttonText2": "Investor Information",
+    "title": "Explore the Fund Further"
+  },
+  "fundHero": {
+    "title": "Vertex FinCapital",
+    "description": "Singapore-domiciled. Institutionally managed. Focused on results."
+  },
+  "fundPositioning": {
+    "title": "Fund Positioning & Objectives",
+    "description": "Vertex FinCapital serves as a core alternative allocation for accredited investors, combining boutique agility with institutional standards. The fund is limited to 20–30 participants and follows a high-conviction, access-driven strategy focused on private market opportunities.",
+    "button": "Explore the Fund"
+  },
+  "identityRegulatoryFramework": {
+    "title": "Identity & Regulatory Framework",
+    "item1": {
+      "title": "Fund <br/>Structure",
+      "description": "Vertex is a Singapore-domiciled, open-ended fund, which is managed by Vertex FinCapital Pte. Ltd. (“Vertex”), a Singapore-registered fund manager."
+    },
+    "item2": {
+      "title": "Regulatory <br/>Status",
+      "description": "The fund is licensed and regulated by the Monetary Authority of Singapore (MAS)."
+    },
+    "item3": {
+      "title": "Management &<br/>Framework",
+      "description": "Managed by XEQ Capital, promoted by YB Advisors. VCC structure provides asset protection, tax efficiency, and governance."
+    }
+  },
+  "keyFeatures": {
+    "title1": "Performance fees apply only after a 12% return",
+    "title2": "Direct contact — no portals or intermediaries.",
+    "title3": "Fast execution with active deal oversight.",
+    "title4": "Access is limited to 20–30 investors.",
+    "title": "Key Features / Differentiators"
+  },
+  "fundAccessRequest": {
+    "title": "Fund Access Request"
+  },
+  "footer": {
+    "links": {
+      "title1": "Fund",
+      "link1": "The Fund",
+      "link2": "Service Providers",
+      "title2": "For Investor",
+      "link3": "Investment Strategy",
+      "link4": "Investor Information",
+      "title3": "Legal",
+      "link5": "News & Updates",
+      "link6": "Contact Us",
+      "link7": "Privacy Policy",
+      "link8": "Cookie Policy",
+      "link9": "Terms of Use",
+      "link10": "Regulatory Documents"
+    },
+    "companyInfo": "A Regulated Fund Investing in High-Impact Opportunities.",
+    "registeredAddress": "Registered address:",
+    "registeredNumber": "Registered number:",
+    "officeAddress": "Office address:",
+    "copyright": "Vertex FinCapital. All rights reserved. A sub-fund of XEQ Global Alternatives VCC, Singapore. Managed by XEQ Capital, licensed by the Monetary Authority of Singapore."
+  },
+  "header": {
+    "theFund": "The Fund",
+    "investmentStrategy": "Investment Strategy",
+    "investorInformation": "Investor Information",
+    "serviceProviders": "Service Providers",
+    "menu": "Menu",
+    "newsAndUpdates": "News & Updates",
+    "legalAndCompliance": "Legal & Compliance",
+    "contactUs": "Contact Us"
+  }
+}
