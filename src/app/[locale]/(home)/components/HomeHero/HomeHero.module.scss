@@ -39,6 +39,8 @@
     video {
       width: 100%;
       object-fit: cover;
+      height: 650px;
+      border-radius: 16px;
       @include tablet {
         height: 400px;
       }
