@@ -17,7 +17,7 @@ export const HomeHero = () => {
     offset: ['start start', 'end start'],
   });
 
-  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
+  const opacity = useTransform(scrollYProgress, [0, 0.3], [1, 0]);
   const scale = useTransform(scrollYProgress, [0, 0.5], [1, 0.8]);
 
   return (

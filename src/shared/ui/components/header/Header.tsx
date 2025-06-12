@@ -23,6 +23,14 @@ export const Header = () => {
     setIsSubmenuOpen(false);
   }, [pathname]);
 
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+  }, [isMobileMenuOpen]);
+
   return (
     <header className={styles.header}>
       <div className={styles.header__container}>

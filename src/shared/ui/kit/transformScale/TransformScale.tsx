@@ -8,17 +8,16 @@ export const TransformScale = ({ children }: { children: React.ReactNode }) => {
 
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ['start end', 'end start'],
+    offset: ['start end', 'start start'],
   });
 
   const scale = useTransform(scrollYProgress, [0, 0.5], [0.97, 1]);
-  const opacity = useTransform(scrollYProgress, [0, 0.5], [0.5, 1]);
+  //const opacity = useTransform(scrollYProgress, [0, 0.5], [0.5, 1]);
 
   return (
     <motion.div
       style={{
         scale,
-        opacity,
       }}
       ref={ref}
     >
