@@ -20,10 +20,13 @@ export const Transform3D = ({ children }: { children: React.ReactNode }) => {
     ]
   );
 
+  const opacity = useTransform(scrollYProgress, [0, 0.5], [0.5, 1]);
+
   return (
     <motion.div
       style={{
         transform: matrix3d,
+        opacity,
       }}
     >
       {children}

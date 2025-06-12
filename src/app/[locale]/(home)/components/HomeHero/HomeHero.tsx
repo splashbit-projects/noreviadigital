@@ -1,6 +1,5 @@
 'use client';
 import { useRef } from 'react';
-import Image from 'next/image';
 
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useTranslations } from 'next-intl';
@@ -31,12 +30,12 @@ export const HomeHero = () => {
             scale,
           }}
         >
-          <h2>
+          <p>
             {t('subtitle', {
               fallback:
                 'Clear strategy, clean execution, and measurable results — for businesses that expect more.',
             })}
-          </h2>
+          </p>
           <h1
             dangerouslySetInnerHTML={{
               __html: t('title', {
@@ -52,7 +51,7 @@ export const HomeHero = () => {
         </motion.div>
 
         <div className={styles.home_hero__image}>
-          <Image src="/images/home/hero.png" alt="Home Hero" width={1240} height={672} />
+          <video src="/videos/norevia.webm" autoPlay muted loop />
         </div>
       </div>
     </section>
