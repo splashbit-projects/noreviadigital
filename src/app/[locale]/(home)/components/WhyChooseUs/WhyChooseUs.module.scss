@@ -11,6 +11,14 @@
     }
   }
 
+  &__mobile_button {
+    display: none;
+    @include tablet {
+      display: block;
+      margin-top: 56px;
+    }
+  }
+
   &__col {
     &:first-child {
       width: 30%;
@@ -27,6 +35,11 @@
         font-weight: 400;
         line-height: normal;
         margin-bottom: 40px;
+      }
+      a {
+        @include tablet {
+          display: none;
+        }
       }
     }
     &:last-child {

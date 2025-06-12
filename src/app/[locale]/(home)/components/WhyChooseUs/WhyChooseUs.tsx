@@ -56,7 +56,7 @@ export const WhyChooseUs = () => {
               </p>
               <Button url="#" color="grey" plus size="small" buttonType="link">
                 {t('button', {
-                  fallback: 'Explore Full Services',
+                  fallback: 'Learn Us Better',
                 })}
               </Button>
             </TransformScale>
@@ -90,6 +90,13 @@ export const WhyChooseUs = () => {
               ))}
             </div>
           </div>
+        </div>
+        <div className={styles.whyChooseUs__mobile_button}>
+          <Button url="#" color="grey" plus size="small" buttonType="link">
+            {t('button', {
+              fallback: 'Learn Us Better',
+            })}
+          </Button>
         </div>
       </div>
     </section>
