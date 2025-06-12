@@ -1,0 +1,42 @@
+@use '@/shared/lib/styles/mixin.scss' as *;
+
+.marketingBudgets {
+  h2 {
+    color: #fff;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 110%; /* 44px */
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  p {
+    color: #dbdcd5;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  &__content {
+    display: flex;
+    gap: 24px;
+    margin-top: 32px;
+    justify-content: space-between;
+    @include tablet {
+      flex-direction: column;
+    }
+    > div {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      span {
+        color: #fff;
+        font-size: 80px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 110%; /* 88px */
+        text-transform: uppercase;
+      }
+    }
+  }
+}

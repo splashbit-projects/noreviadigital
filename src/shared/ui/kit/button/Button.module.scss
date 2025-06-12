@@ -1,3 +1,5 @@
+@use '@/shared/lib/styles/mixin.scss' as *;
+
 .button {
   display: flex;
   padding: 12px 24px;
@@ -9,6 +11,7 @@
   font-weight: 600;
   line-height: normal;
   border-radius: 8px;
+  box-sizing: border-box;
   &.button--white {
     background: #e1e3e7;
     color: #0d0d0d;
@@ -21,5 +24,35 @@
   &.button--black {
     background: #0d0d0d;
     color: #fff;
+  }
+  &.button--grey {
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(15px);
+  }
+  &.button--large {
+    padding: 12px 40px;
+    color: #0d0d0d;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    text-transform: uppercase;
+    @include tablet {
+      padding: 12px;
+      font-size: 16px;
+    }
+  }
+  &.button--small {
+    padding: 11px 16px;
+    color: #0d0d0d;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    text-transform: uppercase;
+    gap: 8px;
+    @include tablet {
+      font-size: 16px;
+    }
   }
 }

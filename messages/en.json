@@ -4,6 +4,93 @@
     "title": "We Build Marketing <br/>That Works.",
     "button": "Get Your Solution"
   },
+  "marketingBudgets": {
+    "text1": "lost yearly to <br/>ad fraud",
+    "text2": "of ad spend often delivers no return",
+    "title": "Most Marketing Budgets Are Wasted",
+    "text": "Clear strategy, clean execution, and measurable results — for businesses that expect more."
+  },
+  "marketingOffTrack": {
+    "title": "Marketing going off track? <br/>We’ll fix it — fast.",
+    "description": "Rescue your reputation. Stop budget leaks. Get campaigns back on target now.",
+    "button": "Explore Full Services"
+  },
+  "readyToMarket": {
+    "text": "Let’s talk about your goals — and how we’ll hit them. Book a <br/>consultation or request a custom quote.",
+    "title": "Ready to Market Smarter?",
+    "button": "Request a Proposal"
+  },
+  "services": {
+    "service1": {
+      "title": "Advertising <br/>Services",
+      "text": "From digital to physical – everywhere your brand should be.",
+      "text2": "Google Ads, social media campaigns, display banners, video ads, outdoor, print, radio, and TV—we build high-performance campaigns that reach and convert across every channel."
+    },
+    "service2": {
+      "title": "Marketing <br/>Strategy & <br/>Consulting",
+      "text": "Smart, data-backed direction tailored to your goals.",
+      "text2": "Brand strategy, positioning, market research, competitive analysis, conversion optimization, automation—we don’t guess. We engineer your market edge."
+    },
+    "service3": {
+      "title": "Content & <br/>Engagement",
+      "text": "Stories, formats, and visuals that drive interaction.",
+      "text2": "Content marketing, social media management, email campaigns, branding, PR, influencer outreach—strategic and scalable communications that build real connection."
+    },
+    "service4": {
+      "title": "Analytics & <br/>Optimization",
+      "text": "Your brand, experienced live.",
+      "text2": "Event marketing, sponsorship, outdoor campaigns, direct mail—offline channels with online precision."
+    },
+    "service5": {
+      "title": "Event & Offline <br/>Marketing"
+    },
+    "button": "Explore Full Services"
+  },
+  "whatWeDeliver": {
+    "title1": "We Are Strategic:",
+    "text1": "Every campaign starts with data and ends with ROI.",
+    "title2": "We Are Creative:",
+    "text2": "Messaging that connects. Design that converts.",
+    "title3": "We Are Full-Spectrum:",
+    "text3": "Online, offline, and everything in between.",
+    "title": "What We Deliver"
+  },
+  "whyChooseUs": {
+    "title1": "Campaigns custom-built around your goals",
+    "title2": "Transparent pricing, no fluff",
+    "title3": "End-to-end service — strategy, media buying, creative, reporting",
+    "title4": "Dedicated account managers",
+    "title5": "Industry-agnostic performance (B2B, B2C, eCommerce, local)",
+    "title": "Why Choose Us",
+    "description": "Not Just Marketing — Business Impact",
+    "button": "Explore Full Services",
+    "text": "We’re not here to win awards. We’re here to grow your business. Our team combines senior marketing talent with technical precision to create campaigns that drive leads, sales, and visibility."
+  },
+  "footer": {
+    "text": "Norevia Digital <br/> Marketing That Fixes, Builds, and Grows",
+    "socialMedia": "Social Media:",
+    "phone": "Phone:",
+    "email": "Email:",
+    "registeredAddress": "Registered Address:",
+    "officeAddress": "Office Address:",
+    "explore": "Explore",
+    "services": "Services",
+    "solutions": "Solutions",
+    "insights": "Insights",
+    "company": "Company",
+    "about": "About",
+    "contact": "Contact",
+    "legal": "Legal",
+    "tools": "Tools",
+    "constructor": "Constructor",
+    "recovery": "Recovery",
+    "requestBrief": "Request Brief",
+    "terms": "Terms & Conditions",
+    "privacy": "Privacy Policy",
+    "cookie": "Cookie Policy",
+    "refund": "Refund Policy",
+    "copyright": "Norevia Digital OU. All rights reserved."
+  },
   "header": {
     "services": "Services",
     "solutions": "Solutions",

@@ -5,8 +5,8 @@ export const Plus = () => {
         d="M6.5 12H12.5M12.5 12H18.5M12.5 12V18M12.5 12V6"
         stroke="black"
         strokeWidth="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );

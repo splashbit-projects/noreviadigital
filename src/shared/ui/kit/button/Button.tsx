@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import { Plus } from '@/shared/ui/icons/plus/Plus';
+import { Plus } from '@/shared/ui/icons';
 
 import styles from './Button.module.scss';
 
@@ -11,17 +11,22 @@ export const Button = ({
   buttonType = 'button',
   plus = false,
   onClick,
+  size = 'medium',
 }: {
   url?: string;
   children: React.ReactNode;
-  color?: 'black' | 'white';
+  color?: 'black' | 'white' | 'grey';
   buttonType?: 'button' | 'link';
   plus?: boolean;
   onClick?: () => void;
+  size?: 'medium' | 'large' | 'small';
 }) => {
   if (buttonType === 'link') {
     return (
-      <Link href={url || ''} className={`${styles.button} ${styles[`button--${color}`]}`}>
+      <Link
+        href={url || ''}
+        className={`${styles.button} ${styles[`button--${color}`]} ${styles[`button--${size}`]}`}
+      >
         {children}
         {plus && <Plus />}
       </Link>
@@ -30,7 +35,7 @@ export const Button = ({
     return (
       <button
         type={buttonType}
-        className={`${styles.button} ${styles[`button--${color}`]}`}
+        className={`${styles.button} ${styles[`button--${color}`]} ${styles[`button--${size}`]}`}
         onClick={onClick}
       >
         {children}
