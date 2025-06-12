@@ -1,4 +1,4 @@
-import { Inter, Lora } from 'next/font/google';
+import { Work_Sans } from 'next/font/google';
 
 import type { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
@@ -8,19 +8,14 @@ import { Footer, Header } from '@/shared/ui/components';
 import '@/shared/lib/styles/null.scss';
 import '@/shared/lib/styles/base.scss';
 
-const lora = Lora({
-  variable: '--font-lora',
-  subsets: ['latin'],
-});
-
-const inter = Inter({
-  variable: '--font-inter',
+const workSans = Work_Sans({
+  variable: '--font-work-sans',
   subsets: ['latin'],
 });
 
 export const metadata: Metadata = {
-  title: 'Vertex',
-  description: 'Vertex',
+  title: 'Norevia',
+  description: 'Norevia',
 };
 
 export default async function RootLayout({
@@ -34,7 +29,7 @@ export default async function RootLayout({
 
   return (
     <html lang={locale}>
-      <body className={`${lora.variable} ${inter.variable}`}>
+      <body className={`${workSans.variable}`}>
         <NextIntlClientProvider>
           <Header />
           {children}

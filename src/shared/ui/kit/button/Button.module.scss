@@ -1,0 +1,25 @@
+.button {
+  display: flex;
+  padding: 12px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  border-radius: 8px;
+  &.button--white {
+    background: #e1e3e7;
+    color: #0d0d0d;
+    svg {
+      path {
+        fill: #0c0c0c;
+      }
+    }
+  }
+  &.button--black {
+    background: #0d0d0d;
+    color: #fff;
+  }
+}
