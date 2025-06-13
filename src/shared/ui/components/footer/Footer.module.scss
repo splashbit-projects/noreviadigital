@@ -107,8 +107,27 @@
           line-height: 140%; /* 22.4px */
           text-transform: uppercase;
           transition: all 0.3s ease;
+          overflow: hidden;
+          height: 20px;
           &:hover {
             opacity: 0.5;
+            span {
+              &:first-child {
+                margin-top: -20px;
+              }
+            }
+          }
+          span {
+            display: block;
+            height: 20px;
+            width: 100%;
+            transition: all 0.2s ease-in-out;
+            &:first-child {
+              height: 20px;
+            }
+            &:last-child {
+              height: 20px;
+            }
           }
         }
       }

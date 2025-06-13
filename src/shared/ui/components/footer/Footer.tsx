@@ -59,21 +59,48 @@ export const Footer = () => {
           <div className={styles.menu}>
             <div>
               <h5>{t('explore', { fallback: 'Explore' })}</h5>
-              <Link href="#">{t('services', { fallback: 'Services' })}</Link>
-              <Link href="#">{t('solutions', { fallback: 'Solutions' })}</Link>
-              <Link href="#">{t('insights', { fallback: 'Insights' })}</Link>
+              <Link href="#">
+                <span>{t('services', { fallback: 'Services' })}</span>
+                <span>{t('services', { fallback: 'Services' })}</span>
+              </Link>
+              <Link href="#">
+                <span>{t('solutions', { fallback: 'Solutions' })}</span>
+                <span>{t('solutions', { fallback: 'Solutions' })}</span>
+              </Link>
+              <Link href="#">
+                <span>{t('insights', { fallback: 'Insights' })}</span>
+                <span>{t('insights', { fallback: 'Insights' })}</span>
+              </Link>
             </div>
             <div>
               <h5>{t('company', { fallback: 'Company' })}</h5>
-              <Link href="#">{t('about', { fallback: 'About' })}</Link>
-              <Link href="#">{t('contact', { fallback: 'Contact' })}</Link>
-              <Link href="#">{t('legal', { fallback: 'Legal' })}</Link>
+              <Link href="#">
+                <span>{t('about', { fallback: 'About' })}</span>
+                <span>{t('about', { fallback: 'About' })}</span>
+              </Link>
+              <Link href="#">
+                <span>{t('contact', { fallback: 'Contact' })}</span>
+                <span>{t('contact', { fallback: 'Contact' })}</span>
+              </Link>
+              <Link href="#">
+                <span>{t('legal', { fallback: 'Legal' })}</span>
+                <span>{t('legal', { fallback: 'Legal' })}</span>
+              </Link>
             </div>
             <div>
               <h5>{t('tools', { fallback: 'Tools' })}</h5>
-              <Link href="#">{t('constructor', { fallback: 'Constructor' })}</Link>
-              <Link href="#">{t('recovery', { fallback: 'Recovery' })}</Link>
-              <Link href="#">{t('requestBrief', { fallback: 'Request Brief' })}</Link>
+              <Link href="#">
+                <span>{t('constructor', { fallback: 'Constructor' })}</span>
+                <span>{t('constructor', { fallback: 'Constructor' })}</span>
+              </Link>
+              <Link href="#">
+                <span>{t('recovery', { fallback: 'Recovery' })}</span>
+                <span>{t('recovery', { fallback: 'Recovery' })}</span>
+              </Link>
+              <Link href="#">
+                <span>{t('requestBrief', { fallback: 'Request Brief' })}</span>
+                <span>{t('requestBrief', { fallback: 'Request Brief' })}</span>
+              </Link>
             </div>
           </div>
           <div className={styles.legal}>
