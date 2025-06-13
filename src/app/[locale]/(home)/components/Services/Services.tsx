@@ -27,7 +27,7 @@ export const Services = () => {
           'Google Ads, social media campaigns, display banners, video ads, outdoor, print, radio, and TV—we build high-performance campaigns that reach and convert across every channel.',
       }),
       link: '#',
-      image: '/images/home/service1.png',
+      video: '/videos/service1.mp4',
     },
     {
       title: t('service2.title', {
@@ -41,7 +41,7 @@ export const Services = () => {
           'Brand strategy, positioning, market research, competitive analysis, conversion optimization, automation—we don’t guess. We engineer your market edge.',
       }),
       link: '#',
-      image: '/images/home/service2.png',
+      video: '/videos/service2.mp4',
     },
     {
       title: t('service3.title', {
@@ -55,7 +55,7 @@ export const Services = () => {
           'Content marketing, social media management, email campaigns, branding, PR, influencer outreach—strategic and scalable communications that build real connection.',
       }),
       link: '#',
-      image: '/images/home/service3.png',
+      video: '/videos/service3.mp4',
     },
     {
       title: t('service4.title', {
@@ -69,7 +69,7 @@ export const Services = () => {
           'Campaign performance analysis, marketing analytics, CRM setup, SEO, CRO, automation workflows—turn insight into impact.',
       }),
       link: '#',
-      image: '/images/home/service4.png',
+      video: '/videos/service4.mp4',
     },
     {
       title: t('service5.title', {
@@ -83,7 +83,7 @@ export const Services = () => {
           'Event marketing, sponsorship, outdoor campaigns, direct mail—offline channels with online precision.',
       }),
       link: '#',
-      image: '/images/home/service5.png',
+      video: '/videos/service5.mp4',
     },
   ];
 
@@ -105,7 +105,7 @@ export const Services = () => {
                 <ServiceArrow />
               </div>
               <div className={styles.services__col}>
-                <Image src={item.image} alt="services" width={624} height={426} />
+                <video src={item.video} autoPlay muted loop />
               </div>
             </Link>
           </Transform3D>

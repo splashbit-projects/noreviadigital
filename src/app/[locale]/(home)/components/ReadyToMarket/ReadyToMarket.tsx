@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
@@ -15,7 +14,7 @@ export const ReadyToMarket = () => {
 
   return (
     <section className={styles.readyToMarket}>
-      <Image src="/images/home/ready.png" alt="ready-to-market" width={1920} height={1080} />
+      <video src="/videos/readyToMarket.mp4" autoPlay muted loop />
       <div className={styles.readyToMarket__container}>
         <motion.div
           initial="hidden"

@@ -51,7 +51,7 @@ export const HomeHero = () => {
         </motion.div>
 
         <div className={styles.home_hero__image}>
-          <video src="/videos/norevia.webm" autoPlay muted loop />
+          <video src="/videos/homeHero.mp4" autoPlay muted loop />
         </div>
       </div>
     </section>
