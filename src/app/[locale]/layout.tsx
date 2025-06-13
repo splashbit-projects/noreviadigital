@@ -4,7 +4,8 @@ import LocalFont from 'next/font/local';
 import type { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
 
-import { Footer, Header } from '@/shared/ui/components';
+import { CursorFollower, Footer, Header } from '@/shared/ui/components';
+import { LenisScrollProvider } from '@/shared/ui/kit';
 
 import '@/shared/lib/styles/null.scss';
 import '@/shared/lib/styles/base.scss';
@@ -42,9 +43,12 @@ export default async function RootLayout({
     <html lang={locale}>
       <body className={`${workSans.variable} ${kola.variable}`}>
         <NextIntlClientProvider>
-          <Header />
-          {children}
-          <Footer />
+          <LenisScrollProvider>
+            <Header />
+            {children}
+            <Footer />
+            <CursorFollower />
+          </LenisScrollProvider>
         </NextIntlClientProvider>
       </body>
     </html>
