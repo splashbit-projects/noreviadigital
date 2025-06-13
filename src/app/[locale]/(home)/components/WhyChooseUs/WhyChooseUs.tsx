@@ -79,7 +79,7 @@ export const WhyChooseUs = () => {
                     viewport={{ once: false }}
                     className={styles.divider}
                     transition={{
-                      duration: 0.7,
+                      duration: 1.5,
                       ease: 'easeInOut',
                     }}
                   ></motion.div>

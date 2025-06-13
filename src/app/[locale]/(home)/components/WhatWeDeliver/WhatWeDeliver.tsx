@@ -64,7 +64,7 @@ export const WhatWeDeliver = () => {
                 viewport={{ once: false }}
                 className={styles.divider}
                 transition={{
-                  duration: 0.7,
+                  duration: 1.5,
                   ease: 'easeInOut',
                 }}
               ></motion.div>

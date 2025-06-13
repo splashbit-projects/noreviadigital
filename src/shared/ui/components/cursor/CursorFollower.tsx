@@ -1,17 +1,17 @@
 'use client';
 import { useEffect } from 'react';
 
-import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
+import { motion, useMotionValue, useTransform } from 'framer-motion';
 
 export const CursorFollower = () => {
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
 
-  const circleX = useTransform(mouseX, (value) => value - 5); // Adjust for circle size
-  const circleY = useTransform(mouseY, (value) => value - 5); // Adjust for circle size
+  const circleX = useTransform(mouseX, (value) => value);
+  const circleY = useTransform(mouseY, (value) => value);
 
-  const springX = useSpring(circleX, { stiffness: 100, damping: 20, mass: 0.5 });
-  const springY = useSpring(circleY, { stiffness: 100, damping: 20, mass: 0.5 });
+  //const springX = useSpring(circleX, { stiffness: 100, damping: 20, mass: 0.5 });
+  //const springY = useSpring(circleY, { stiffness: 100, damping: 20, mass: 0.5 });
 
   useEffect(() => {
     const handleMouseMove = (event: MouseEvent) => {
@@ -39,12 +39,12 @@ export const CursorFollower = () => {
         position: 'fixed',
         top: 0,
         left: 0,
-        width: 10,
-        height: 10,
+        width: 20,
+        height: 20,
         borderRadius: '50%',
         backgroundColor: '#DBDCD5',
-        x: springX,
-        y: springY,
+        x: circleX,
+        y: circleY,
         pointerEvents: 'none',
         mixBlendMode: 'difference',
         zIndex: 1000,
