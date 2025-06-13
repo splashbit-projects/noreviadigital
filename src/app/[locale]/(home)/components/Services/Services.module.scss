@@ -18,18 +18,16 @@
         @include tablet {
           flex-direction: column;
         }
-        &:hover {
-          .services__col {
-            &:first-child {
-              background: linear-gradient(-123deg, rgba(255, 255, 255, 0) 57.67%, #fff 100%);
-            }
-          }
-        }
         .services__col {
           align-items: flex-end;
-
+          transition: all 0.3s ease;
           @include tablet {
             align-items: flex-start;
+          }
+          &:first-child {
+            &:hover {
+              background: linear-gradient(-123deg, rgba(255, 255, 255, 0) 57.67%, #fff 100%);
+            }
           }
           svg {
             position: absolute;
@@ -87,13 +85,6 @@
       flex-direction: column;
       gap: 32px;
     }
-    &:hover {
-      .services__col {
-        &:first-child {
-          background: linear-gradient(123deg, rgba(255, 255, 255, 0) 57.67%, #fff 100%);
-        }
-      }
-    }
   }
 
   &__col {
@@ -110,6 +101,9 @@
         rgba(255, 255, 255, 0) 57.67%,
         rgba(255, 255, 255, 0) 100%
       );
+      &:hover {
+        background: linear-gradient(123deg, rgba(255, 255, 255, 0) 57.67%, #fff 100%);
+      }
     }
     &:last-child {
       position: relative;
