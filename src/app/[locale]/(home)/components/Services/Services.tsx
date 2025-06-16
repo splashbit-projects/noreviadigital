@@ -7,7 +7,7 @@ import { useTranslations } from 'next-intl';
 
 import { fadeInUp } from '@/shared/lib/helpers/animations';
 import { ServiceArrow } from '@/shared/ui/icons';
-import { Button, Transform3D, TransformScale } from '@/shared/ui/kit';
+import { Button, TransformScale } from '@/shared/ui/kit';
 
 import styles from './Services.module.scss';
 
@@ -91,7 +91,7 @@ export const Services = () => {
     <TransformScale>
       <section className={styles.services}>
         {data.map((item, index) => (
-          <Transform3D key={index}>
+          <div key={index} className={'fadeIn3D'}>
             <Link href={item.link} className={styles.services__item}>
               <div className={styles.services__col}>
                 <span>0{index + 1}</span>
@@ -108,7 +108,7 @@ export const Services = () => {
                 <video src={item.video} autoPlay muted loop />
               </div>
             </Link>
-          </Transform3D>
+          </div>
         ))}
         <motion.div
           initial="hidden"
