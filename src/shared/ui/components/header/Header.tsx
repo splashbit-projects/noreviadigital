@@ -49,7 +49,7 @@ export const Header = () => {
           <nav className={styles.header__menu}>
             <Link href="#">{t('services', { fallback: 'Services' })}</Link>
             <Link href="#">{t('solutions', { fallback: 'Solutions' })}</Link>
-            <Link href="#">{t('constructor', { fallback: 'Constructor' })}</Link>
+            <Link href="/marketing-constructor">{t('constructor', { fallback: 'Constructor' })}</Link>
 
             <button
               className={`${styles.header__menu_button} ${isSubmenuOpen ? styles.open : ''}`}
