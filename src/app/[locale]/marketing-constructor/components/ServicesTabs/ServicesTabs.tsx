@@ -1,18 +1,24 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { useParams } from 'next/navigation';
 
 import { motion } from 'framer-motion';
 import { useLenis } from 'lenis/react';
 
 import { fadeInUp } from '@/shared/lib/helpers/animations';
-import { services } from '@/shared/lib/services/services';
+import { servicesEn } from '@/shared/lib/services/services-en';
+import { servicesEs } from '@/shared/lib/services/services-es';
 
 import styles from './ServicesTabs.module.scss';
 
 import { useSelectedServicesStore } from '@/featured/marketing-constructor-proposal/model/SelectedServicesStore';
 
 export const ServicesTabs = () => {
+  const { locale } = useParams();
+
+  const services = locale === 'en' ? servicesEn : servicesEs;
+
   const [activeTab, setActiveTab] = useState(services[0].title);
   const { selectedServices, setSelectedServices } = useSelectedServicesStore();
   const lenis = useLenis();

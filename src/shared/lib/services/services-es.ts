@@ -1,4 +1,4 @@
-export const services = [
+export const servicesEs = [
   {
     title: 'Advertising',
     video: '/videos/service1.mp4',
