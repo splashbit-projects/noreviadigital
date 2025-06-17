@@ -84,7 +84,7 @@ export const Header = () => {
           <hr />
           <Link href="#">{t('solutions', { fallback: 'Solutions' })}</Link>
           <hr />
-          <Link href="#">{t('constructor', { fallback: 'Constructor' })}</Link>
+          <Link href="/marketing-constructor">{t('constructor', { fallback: 'Constructor' })}</Link>
           <hr />
           <Link href="#">{t('marketing-recovery', { fallback: 'Marketing Recovery' })}</Link>
           <hr />

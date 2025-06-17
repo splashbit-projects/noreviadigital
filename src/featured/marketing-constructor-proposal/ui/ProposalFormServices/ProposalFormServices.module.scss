@@ -1,0 +1,51 @@
+@use '@/shared/lib/styles/mixin.scss' as *;
+
+.proposalFormServices {
+  label {
+    color: #0d0d0d;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 110%; /* 17.6px */
+    text-transform: uppercase;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    column-gap: 10px;
+    margin-top: 8px;
+    div {
+      display: flex;
+      padding: 10px 16px;
+      align-items: center;
+      gap: 15px;
+      border-radius: 999px;
+      background: #0d0d0d;
+      color: #f7f7f7;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 140%; /* 19.6px */
+      @include tablet {
+        font-size: 12px;
+      }
+    }
+  }
+
+  h3 {
+    color: rgba(13, 13, 13, 0.2);
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    text-transform: uppercase;
+    font-family: var(--font-work-sans), sans-serif;
+    margin: 40px 0;
+    @include tablet {
+      font-size: 40px;
+      margin: 10px 0 0 0;
+    }
+  }
+}

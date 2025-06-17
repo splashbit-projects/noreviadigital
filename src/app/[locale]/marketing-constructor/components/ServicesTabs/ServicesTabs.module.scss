@@ -1,0 +1,83 @@
+@use '@/shared/lib/styles/mixin.scss' as *;
+
+.servicesTabs {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  &__tab {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 40px 0;
+    position: relative;
+    overflow: hidden;
+    &.active {
+      .servicesTabs__tabContent {
+        display: flex;
+      }
+    }
+    video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+      width: 192px !important;
+      height: 108px !important;
+      z-index: 0;
+      filter: brightness(0.5) grayscale(100%) !important;
+    }
+  }
+  .divider {
+    height: 1px;
+    background: #fff;
+  }
+  &__tabHead {
+    position: relative;
+    z-index: 1;
+    span {
+      color: #fff;
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 110%; /* 44px */
+      text-transform: uppercase;
+      @include tablet {
+        font-size: 32px;
+      }
+    }
+  }
+  &__tabContent {
+    display: none;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    @include tablet {
+      row-gap: 12px;
+    }
+    label {
+      width: 33.33%;
+      color: #f7f7f7;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 140%; /* 22.4px */
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      @include tablet {
+        width: 100%;
+      }
+      input {
+        width: 32px;
+        height: 32px;
+        appearance: none;
+        background-image: url('/images/checkbox-empty.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        &:checked {
+          background-image: url('/images/checkbox-filled.svg');
+        }
+      }
+    }
+  }
+}

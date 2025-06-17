@@ -66,6 +66,44 @@
     "button": "Learn Us Better",
     "text": "We’re not here to win awards. We’re here to grow your business. Our team combines senior marketing talent with technical precision to create campaigns that drive leads, sales, and visibility."
   },
+  "buildYourOwn": {
+    "title": "Can’t Find the Right Fit?",
+    "subtitle": "Build Your Own.",
+    "description": "Select any services you need — or just describe your case. Our team will craft a custom proposal built around your goals.",
+    "notice": "Click the tabs and choose the services that match your goals."
+  },
+  "marketingHero": {
+    "title": "Build Your Own <br/>Marketing Solution.",
+    "description": "Modular services, strategic clarity, full control — <br/>customise your package now.",
+    "button": "Contact Us"
+  },
+  "proposalFormFields": {
+    "caseDescription": {
+      "label": "Case Description:",
+      "placeholder": "Describe your case"
+    },
+    "website": {
+      "label": "Website:"
+    },
+    "email": {
+      "label": "Email:"
+    },
+    "phone": {
+      "label": "Phone:"
+    },
+    "name": {
+      "label": "Your Name:"
+    }
+  },
+  "marketingConstructor": {
+    "proposalFormServices": {
+      "label": "Selected Services:",
+      "noServices": "No services <br/>selected"
+    },
+    "proposalFormWrapper": {
+      "title": "Your package"
+    }
+  },
   "footer": {
     "text": "Norevia Digital <br/> Marketing That Fixes, Builds, and Grows",
     "socialMedia": "Social Media:",
