@@ -1,11 +1,14 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import { useParams, usePathname } from 'next/navigation';
 
 import { cancelFrame, frame } from 'framer-motion';
 import { type LenisRef, ReactLenis } from 'lenis/react';
 
 export const LenisScrollProvider = ({ children }: { children: React.ReactNode }) => {
+  const locale = useParams();
+  const pathname = usePathname();
   const lenisRef = useRef<LenisRef>(null);
 
   useEffect(() => {
@@ -18,6 +21,14 @@ export const LenisScrollProvider = ({ children }: { children: React.ReactNode })
 
     return () => cancelFrame(update);
   }, []);
+
+  useEffect(() => {
+    lenisRef.current?.lenis?.resize();
+  }, [pathname]);
+
+  useEffect(() => {
+    lenisRef.current?.lenis?.resize();
+  }, [locale]);
 
   return (
     <ReactLenis
