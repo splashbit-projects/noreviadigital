@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useTranslations } from 'next-intl';
@@ -13,12 +13,12 @@ import styles from './ProposalFormFields.module.scss';
 import {
   type ProposalFormValues,
   proposalSchema,
-  useSelectedServicesStore,
+  useProposalFormStore,
 } from '@/featured/marketing-constructor-proposal';
 
 export const ProposalFormFields = () => {
   const t = useTranslations('proposalFormFields');
-  const { selectedServices } = useSelectedServicesStore();
+  const { selectedServices, setIsSuccess } = useProposalFormStore();
   const [isLoading, setIsLoading] = useState(false);
 
   const {
@@ -26,15 +26,22 @@ export const ProposalFormFields = () => {
     handleSubmit,
     reset,
     formState: { errors },
+    setValue,
   } = useForm<ProposalFormValues>({
     resolver: zodResolver(proposalSchema),
   });
 
+  useEffect(() => {
+    setValue('selectedServices', selectedServices.map((service) => service.name).join(','));
+  }, [selectedServices, setValue]);
+
   const onSubmit = (data: ProposalFormValues) => {
+    console.log(data);
     try {
       setIsLoading(true);
       console.log(data);
       setTimeout(() => {
+        setIsSuccess(true);
         reset();
         setIsLoading(false);
       }, 1000);
@@ -45,7 +52,7 @@ export const ProposalFormFields = () => {
 
   return (
     <>
-      <form className={styles.form}>
+      <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
         <div className={`${styles.inputWrapper} ${styles.fullWidth}`}>
           <label>
             {t('caseDescription.label', {
@@ -99,12 +106,13 @@ export const ProposalFormFields = () => {
           <input {...register('name')} placeholder="Enter your name" />
           {errors.name && <p className={styles.error}>{errors.name.message}</p>}
         </div>
-        <input
-          type="hidden"
-          {...register('selectedServices')}
-          value={selectedServices.map((service) => service.name)}
-        />
-        <Button buttonType="button" color="grey" plus size="large" onClick={handleSubmit(onSubmit)}>
+        <div className={styles.inputWrapper}>
+          <input type="hidden" {...register('selectedServices')} />
+          {errors.selectedServices && (
+            <p className={styles.error}>{errors.selectedServices.message}</p>
+          )}
+        </div>
+        <Button buttonType="submit" color="grey" plus size="large">
           {isLoading ? 'Submitting...' : 'Get Proposal'}
         </Button>
       </form>

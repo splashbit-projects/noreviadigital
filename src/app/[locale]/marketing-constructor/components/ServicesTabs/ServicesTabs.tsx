@@ -12,7 +12,7 @@ import { servicesEs } from '@/shared/lib/services/services-es';
 
 import styles from './ServicesTabs.module.scss';
 
-import { useSelectedServicesStore } from '@/featured/marketing-constructor-proposal/model/SelectedServicesStore';
+import { useProposalFormStore } from '@/featured/marketing-constructor-proposal/model/ProposalFormStore';
 
 export const ServicesTabs = () => {
   const { locale } = useParams();
@@ -20,7 +20,7 @@ export const ServicesTabs = () => {
   const services = locale === 'en' ? servicesEn : servicesEs;
 
   const [activeTab, setActiveTab] = useState(services[0].title);
-  const { selectedServices, setSelectedServices } = useSelectedServicesStore();
+  const { selectedServices, setSelectedServices } = useProposalFormStore();
   const lenis = useLenis();
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);

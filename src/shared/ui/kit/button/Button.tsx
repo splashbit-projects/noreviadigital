@@ -16,7 +16,7 @@ export const Button = ({
   url?: string;
   children: React.ReactNode;
   color?: 'black' | 'white' | 'grey';
-  buttonType?: 'button' | 'link';
+  buttonType?: 'button' | 'link' | 'submit';
   plus?: boolean;
   onClick?: () => void;
   size?: 'medium' | 'large' | 'small';

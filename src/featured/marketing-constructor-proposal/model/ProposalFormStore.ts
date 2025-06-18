@@ -5,12 +5,16 @@ type Service = {
   name: string;
 };
 
-type SelectedServicesStore = {
+type ProposalFormStoreStore = {
   selectedServices: Service[];
+  isSuccess: boolean;
   setSelectedServices: (selectedServices: Service[]) => void;
+  setIsSuccess: (isSuccess: boolean) => void;
 };
 
-export const useSelectedServicesStore = create<SelectedServicesStore>((set) => ({
+export const useProposalFormStore = create<ProposalFormStoreStore>((set) => ({
   selectedServices: [],
+  isSuccess: false,
   setSelectedServices: (selectedServices: Service[]) => set({ selectedServices }),
+  setIsSuccess: (isSuccess: boolean) => set({ isSuccess }),
 }));

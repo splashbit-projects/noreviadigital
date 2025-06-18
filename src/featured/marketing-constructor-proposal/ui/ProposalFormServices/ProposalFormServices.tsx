@@ -2,13 +2,13 @@
 
 import { useTranslations } from 'next-intl';
 
-import { useSelectedServicesStore } from '../../model/SelectedServicesStore';
+import { useProposalFormStore } from '../../model/ProposalFormStore';
 import styles from './ProposalFormServices.module.scss';
 
 export const ProposalFormServices = () => {
   const t = useTranslations('marketingConstructor');
 
-  const selectedServices = useSelectedServicesStore((state) => state.selectedServices);
+  const selectedServices = useProposalFormStore((state) => state.selectedServices);
 
   return (
     <div className={styles.proposalFormServices}>

@@ -77,6 +77,11 @@
     "description": "Modular services, strategic clarity, full control — <br/>customise your package now.",
     "button": "Contact Us"
   },
+  "proposalForm": {
+    "messageSentTitle": "Thank you!",
+    "messageSentDescription": "Your request has been received.<br/>You’ll receive a tailored proposal within 48 business hours.",
+    "messageSentButton": "Home page"
+  },
   "proposalFormFields": {
     "caseDescription": {
       "label": "Case Description:",
