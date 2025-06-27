@@ -7,7 +7,7 @@ import { useTranslations } from 'next-intl';
 
 import { WEBSITE_EMAIL, WEBSITE_REGISTERED_ADDRESS } from '@/shared/lib/constants/constants';
 
-import { Facebook, Instagram, X } from '../../icons';
+import { Linkedin } from '../../icons';
 import styles from './Footer.module.scss';
 
 export const Footer = () => {
@@ -30,13 +30,7 @@ export const Footer = () => {
             <h5>{t('socialMedia', { fallback: 'Social Media:' })}</h5>
             <div>
               <Link href="#" target="_blank">
-                <X />
-              </Link>
-              <Link href="#" target="_blank">
-                <Facebook />
-              </Link>
-              <Link href="#" target="_blank">
-                <Instagram />
+                <Linkedin />
               </Link>
             </div>
           </div>
