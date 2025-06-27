@@ -49,7 +49,9 @@ export const Header = () => {
           <nav className={styles.header__menu}>
             <Link href="#">{t('services', { fallback: 'Services' })}</Link>
             <Link href="#">{t('solutions', { fallback: 'Solutions' })}</Link>
-            <Link href="/marketing-constructor">{t('constructor', { fallback: 'Constructor' })}</Link>
+            <Link href="/marketing-constructor">
+              {t('constructor', { fallback: 'Constructor' })}
+            </Link>
 
             <button
               className={`${styles.header__menu_button} ${isSubmenuOpen ? styles.open : ''}`}
@@ -59,13 +61,14 @@ export const Header = () => {
             </button>
           </nav>
           <div className={styles.header__contact}>
+            {/* TODO: add phone
             <Link href="tel:">
               <span>phone</span>
               <span>phone</span>
-            </Link>
-            <Link href="mailto:">
-              <span>email</span>
-              <span>email</span>
+            </Link> */}
+            <Link href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`}>
+              <span>{process.env.NEXT_PUBLIC_EMAIL}</span>
+              <span>{process.env.NEXT_PUBLIC_EMAIL}</span>
             </Link>
           </div>
         </div>
@@ -93,11 +96,12 @@ export const Header = () => {
           <Link href="#">{t('about-us', { fallback: 'About Us' })}</Link>
         </nav>
         <div className={styles.header__mobile_menu_contact}>
+          {/* TODO: add phone
           <Link href="tel:">
             <span>phone</span>
-          </Link>
-          <Link href="mailto:">
-            <span>email</span>
+          </Link> */}
+          <Link href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`}>
+            <span>{process.env.NEXT_PUBLIC_EMAIL}</span>
           </Link>
           <div className={styles.header__mobile_menu_contact_social}>
             <Link href="#">

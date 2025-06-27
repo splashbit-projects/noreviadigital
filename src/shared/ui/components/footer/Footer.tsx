@@ -18,7 +18,7 @@ export const Footer = () => {
           <p
             dangerouslySetInnerHTML={{
               __html: t('text', {
-                fallback: 'Norevia Digital <br/> Marketing That Fixes, Builds, and Grows',
+                fallback: 'Norevia Digital OU<br/> Marketing That Fixes, Builds, and Grows',
               }),
             }}
           />
@@ -38,13 +38,16 @@ export const Footer = () => {
               </Link>
             </div>
           </div>
+          {/* TODO: add phone
           <div className={styles.item}>
             <h5>{t('phone', { fallback: 'Phone:' })}</h5>
             <Link href="tel:+1 000 00 00">+1 000 00 00</Link>
-          </div>
+          </div> */}
           <div className={styles.item}>
             <h5>{t('email', { fallback: 'Email:' })}</h5>
-            <Link href="mailto:info@noreviadigital.com">info@noreviadigital.com</Link>
+            <Link href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`}>
+              {process.env.NEXT_PUBLIC_EMAIL}
+            </Link>
           </div>
           <div className={styles.item}>
             <h5>{t('registeredAddress', { fallback: 'Registered Address:' })}</h5>
