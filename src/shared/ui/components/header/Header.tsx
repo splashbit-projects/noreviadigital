@@ -7,6 +7,7 @@ import { usePathname } from 'next/navigation';
 
 import { useTranslations } from 'next-intl';
 
+import { WEBSITE_EMAIL } from '@/shared/lib/constants/constants';
 import { MenuButton } from '@/shared/ui/icons';
 
 import styles from './Header.module.scss';
@@ -66,9 +67,9 @@ export const Header = () => {
               <span>phone</span>
               <span>phone</span>
             </Link> */}
-            <Link href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`}>
-              <span>{process.env.NEXT_PUBLIC_EMAIL}</span>
-              <span>{process.env.NEXT_PUBLIC_EMAIL}</span>
+            <Link href={`mailto:${WEBSITE_EMAIL}`}>
+              <span>{WEBSITE_EMAIL}</span>
+              <span>{WEBSITE_EMAIL}</span>
             </Link>
           </div>
         </div>
@@ -100,8 +101,8 @@ export const Header = () => {
           <Link href="tel:">
             <span>phone</span>
           </Link> */}
-          <Link href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`}>
-            <span>{process.env.NEXT_PUBLIC_EMAIL}</span>
+          <Link href={`mailto:${WEBSITE_EMAIL}`}>
+            <span>{WEBSITE_EMAIL}</span>
           </Link>
           <div className={styles.header__mobile_menu_contact_social}>
             <Link href="#">

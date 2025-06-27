@@ -5,6 +5,12 @@ import Link from 'next/link';
 
 import { useTranslations } from 'next-intl';
 
+import {
+  WEBSITE_EMAIL,
+  WEBSITE_OFFICE_ADDRESS,
+  WEBSITE_REGISTERED_ADDRESS,
+} from '@/shared/lib/constants/constants';
+
 import { Facebook, Instagram, X } from '../../icons';
 import styles from './Footer.module.scss';
 
@@ -45,17 +51,15 @@ export const Footer = () => {
           </div> */}
           <div className={styles.item}>
             <h5>{t('email', { fallback: 'Email:' })}</h5>
-            <Link href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`}>
-              {process.env.NEXT_PUBLIC_EMAIL}
-            </Link>
+            <Link href={`mailto:${WEBSITE_EMAIL}`}>{WEBSITE_EMAIL}</Link>
           </div>
           <div className={styles.item}>
             <h5>{t('registeredAddress', { fallback: 'Registered Address:' })}</h5>
-            <span>Harju maakond, Tallinn, Kesklinna linnaosa, Liivamäe tn 8-7, 10113</span>
+            <span>{WEBSITE_REGISTERED_ADDRESS}</span>
           </div>
           <div className={styles.item}>
             <h5>{t('officeAddress', { fallback: 'Office Address:' })}</h5>
-            <span>Harju maakond, Tallinn, Kesklinna linnaosa, Liivamäe tn 8-7, 10113</span>
+            <span>{WEBSITE_OFFICE_ADDRESS}</span>
           </div>
         </div>
         <div className={styles.footer__col3}>
