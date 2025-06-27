@@ -5,11 +5,7 @@ import Link from 'next/link';
 
 import { useTranslations } from 'next-intl';
 
-import {
-  WEBSITE_EMAIL,
-  WEBSITE_OFFICE_ADDRESS,
-  WEBSITE_REGISTERED_ADDRESS,
-} from '@/shared/lib/constants/constants';
+import { WEBSITE_EMAIL, WEBSITE_REGISTERED_ADDRESS } from '@/shared/lib/constants/constants';
 
 import { Facebook, Instagram, X } from '../../icons';
 import styles from './Footer.module.scss';
@@ -57,10 +53,11 @@ export const Footer = () => {
             <h5>{t('registeredAddress', { fallback: 'Registered Address:' })}</h5>
             <span>{WEBSITE_REGISTERED_ADDRESS}</span>
           </div>
+          {/* TODO: add office address
           <div className={styles.item}>
             <h5>{t('officeAddress', { fallback: 'Office Address:' })}</h5>
             <span>{WEBSITE_OFFICE_ADDRESS}</span>
-          </div>
+          </div> */}
         </div>
         <div className={styles.footer__col3}>
           <div className={styles.menu}>
