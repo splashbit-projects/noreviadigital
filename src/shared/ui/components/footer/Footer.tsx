@@ -5,6 +5,12 @@ import Link from 'next/link';
 
 import { useTranslations } from 'next-intl';
 
+import {
+  WEBSITE_EMAIL,
+  WEBSITE_OFFICE_ADDRESS,
+  WEBSITE_REGISTERED_ADDRESS,
+} from '@/shared/lib/constants/constants';
+
 import { Facebook, Instagram, X } from '../../icons';
 import styles from './Footer.module.scss';
 
@@ -18,7 +24,7 @@ export const Footer = () => {
           <p
             dangerouslySetInnerHTML={{
               __html: t('text', {
-                fallback: 'Norevia Digital <br/> Marketing That Fixes, Builds, and Grows',
+                fallback: 'Norevia Digital OU<br/> Marketing That Fixes, Builds, and Grows',
               }),
             }}
           />
@@ -38,21 +44,22 @@ export const Footer = () => {
               </Link>
             </div>
           </div>
+          {/* TODO: add phone
           <div className={styles.item}>
             <h5>{t('phone', { fallback: 'Phone:' })}</h5>
             <Link href="tel:+1 000 00 00">+1 000 00 00</Link>
-          </div>
+          </div> */}
           <div className={styles.item}>
             <h5>{t('email', { fallback: 'Email:' })}</h5>
-            <Link href="mailto:info@noreviadigital.com">info@noreviadigital.com</Link>
+            <Link href={`mailto:${WEBSITE_EMAIL}`}>{WEBSITE_EMAIL}</Link>
           </div>
           <div className={styles.item}>
             <h5>{t('registeredAddress', { fallback: 'Registered Address:' })}</h5>
-            <span>Harju maakond, Tallinn, Kesklinna linnaosa, Liivamäe tn 8-7, 10113</span>
+            <span>{WEBSITE_REGISTERED_ADDRESS}</span>
           </div>
           <div className={styles.item}>
             <h5>{t('officeAddress', { fallback: 'Office Address:' })}</h5>
-            <span>Harju maakond, Tallinn, Kesklinna linnaosa, Liivamäe tn 8-7, 10113</span>
+            <span>{WEBSITE_OFFICE_ADDRESS}</span>
           </div>
         </div>
         <div className={styles.footer__col3}>
