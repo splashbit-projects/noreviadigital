@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
+import { useLenis } from 'lenis/react';
 import { useTranslations } from 'next-intl';
 
 import { WEBSITE_EMAIL } from '@/shared/lib/constants/constants';
@@ -12,10 +13,12 @@ import { MenuButton } from '@/shared/ui/icons';
 
 import styles from './Header.module.scss';
 
+
 export const Header = () => {
   const [isSubmenuOpen, setIsSubmenuOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
+  const lenis = useLenis();
 
   const t = useTranslations('header');
 
@@ -27,10 +30,12 @@ export const Header = () => {
   useEffect(() => {
     if (isMobileMenuOpen) {
       document.body.style.overflow = 'hidden';
+      lenis?.stop();
     } else {
       document.body.style.overflow = 'auto';
+      lenis?.start();
     }
-  }, [isMobileMenuOpen]);
+  }, [isMobileMenuOpen, lenis]);
 
   return (
     <header className={styles.header}>
@@ -106,13 +111,7 @@ export const Header = () => {
           </Link>
           <div className={styles.header__mobile_menu_contact_social}>
             <Link href="#">
-              <Image src="/socials/x.svg" alt="X" width={32} height={32} />
-            </Link>
-            <Link href="#">
-              <Image src="/socials/facebook.svg" alt="Facebook" width={32} height={32} />
-            </Link>
-            <Link href="#">
-              <Image src="/socials/instagram.svg" alt="Instagram" width={32} height={32} />
+              <Image src="/socials/linkedin.svg" alt="linkedin" width={32} height={32} />
             </Link>
           </div>
         </div>
