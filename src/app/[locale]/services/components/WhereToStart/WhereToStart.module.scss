@@ -1,0 +1,61 @@
+.whereToStart {
+  padding: 80px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  @media (max-width: 768px) {
+    padding: 40px 0;
+  }
+
+  .heading {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    h2 {
+      color: #fff;
+      font-size: 40px;
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 16px;
+      font-weight: 400;
+      color: #dbdcd5;
+    }
+  }
+
+  .cards {
+    width: 100%;
+    display: flex;
+    gap: 80px;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 250px;
+    border-radius: 8px;
+    padding: 24px 16px 16px 16px;
+    background: linear-gradient(
+      123deg,
+      rgba(255, 255, 255, 0) 57.67%,
+      rgba(255, 255, 255, 0.05) 100%
+    );
+
+    p {
+      color: #fff;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 110%; /* 26.4px */
+      text-transform: uppercase;
+    }
+  }
+}

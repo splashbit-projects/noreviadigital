@@ -1,0 +1,21 @@
+@use '@/shared/lib/styles/mixin.scss' as *;
+
+.services {
+  .layout {
+    padding: 40px 0;
+  }
+
+  .content {
+    border-radius: 32px;
+    background: #e6e8e0;
+  }
+
+  h2 {
+    color: #fff;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 110%; /* 44px */
+    text-transform: uppercase;
+  }
+}
