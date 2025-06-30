@@ -1,0 +1,49 @@
+@use '@/shared/lib/styles/mixin.scss' as *;
+
+.insightsHero {
+  //padding: 40px 0;
+  video {
+    width: 100%;
+    height: 216px;
+    object-fit: cover;
+    border-radius: 16px;
+    filter: grayscale(1);
+  }
+
+  &__content {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 16px;
+    margin: 60px 0 36px 0;
+    @include tablet {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    h1 {
+      color: #dbdcd5;
+      font-size: 60px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 110%; /* 66px */
+      @include tablet {
+        font-size: 40px;
+        br {
+          display: none;
+        }
+      }
+    }
+    p {
+      color: #dbdcd5;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      @include tablet {
+        br {
+          display: none;
+        }
+      }
+    }
+  }
+}

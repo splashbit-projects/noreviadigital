@@ -41,7 +41,7 @@ export const Header = () => {
       <div className={styles.header__container}>
         <div className={styles.header__row}>
           <Link href="/" className={styles.header__logo}>
-            <Image src="/images/logo-white.svg" alt="Norevia" width={128} height={20} />
+            <Image src="/images/logo-white.svg" alt="Norevia" width={149} height={28} />
           </Link>
 
           <button
@@ -53,7 +53,7 @@ export const Header = () => {
 
           <nav className={styles.header__menu}>
             <Link href="/services">{t('services', { fallback: 'Services' })}</Link>
-            <Link href="#">{t('solutions', { fallback: 'Solutions' })}</Link>
+            <Link href="/solutions">{t('solutions', { fallback: 'Solutions' })}</Link>
             <Link href="/marketing-constructor">
               {t('constructor', { fallback: 'Constructor' })}
             </Link>
@@ -83,7 +83,7 @@ export const Header = () => {
             {t('marketing-recovery', { fallback: 'Marketing Recovery' })}
           </Link>
           <span>|</span>
-          <Link href="#">{t('insights', { fallback: 'Insights' })}</Link>
+          <Link href="/insights">{t('insights', { fallback: 'Insights' })}</Link>
           <span>|</span>
           <Link href="/about-us">{t('about-us', { fallback: 'About Us' })}</Link>
         </div>
@@ -100,7 +100,7 @@ export const Header = () => {
             {t('marketing-recovery', { fallback: 'Marketing Recovery' })}
           </Link>
           <hr />
-          <Link href="#">{t('insights', { fallback: 'Insights' })}</Link>
+          <Link href="/insights">{t('insights', { fallback: 'Insights' })}</Link>
           <hr />
           <Link href="/about-us">{t('about-us', { fallback: 'About Us' })}</Link>
         </nav>
