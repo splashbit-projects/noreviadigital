@@ -5,10 +5,12 @@ import Link from 'next/link';
 
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useTranslations } from 'next-intl';
-import { useForm } from 'react-hook-form';
+import { Controller, useForm } from 'react-hook-form';
 
 import { Button } from '@/shared/ui/kit';
+import { Dropdown, DropdownItem, DropdownMenu, DropdownTrigger } from '@/shared/ui/kit/dropdown';
 
+import { sendSolutionRequest } from '../../api/send-solution-request';
 import { type SolutionFormSchema, solutionFormSchema } from '../../model/schemas';
 import styles from './SolutionForm.module.scss';
 
@@ -17,6 +19,7 @@ export const SolutionForm = ({ onSuccess }: { onSuccess?: () => void }) => {
   const [isLoading, setIsLoading] = useState(false);
 
   const {
+    control,
     register,
     handleSubmit,
     reset,
@@ -25,10 +28,10 @@ export const SolutionForm = ({ onSuccess }: { onSuccess?: () => void }) => {
     resolver: zodResolver(solutionFormSchema),
   });
 
-  const onSubmit = (data: SolutionFormSchema) => {
-    console.log(data);
+  const onSubmit = async (data: SolutionFormSchema) => {
     try {
       setIsLoading(true);
+      await sendSolutionRequest(data);
       setTimeout(() => {
         onSuccess?.();
         reset();
@@ -38,6 +41,19 @@ export const SolutionForm = ({ onSuccess }: { onSuccess?: () => void }) => {
       console.error(error);
     }
   };
+
+  const industries = [
+    'Technology',
+    'Finance',
+    'eCommerce & Retail',
+    'Real Estate',
+    'Healthcare',
+    'Education',
+    'Professional Services',
+    'Travel & Hospitality',
+    'Manufacturing',
+    'Other',
+  ];
 
   return (
     <>
@@ -80,12 +96,7 @@ export const SolutionForm = ({ onSuccess }: { onSuccess?: () => void }) => {
                   fallback: 'Website:',
                 })}
               </label>
-              <input
-                {...register('industry')}
-                placeholder={t('industry.placeholder', {
-                  fallback: 'Enter your website',
-                })}
-              />
+              <input {...register('industry')} placeholder="Enter your website" />
               {errors.industry && <p className={styles.error}>{errors.industry.message}</p>}
             </div>
             <div className={`${styles.inputWrapper} `}>
@@ -123,17 +134,31 @@ export const SolutionForm = ({ onSuccess }: { onSuccess?: () => void }) => {
             </div>
           </div>
           <div className={styles.col}>
-            <div className={styles.inputWrapper}>
-              <label>
-                {t('website.label', {
-                  fallback: 'Website:',
-                })}
-              </label>
-              <input
-                {...register('industry')}
-                placeholder={t('industry.placeholder', {
-                  fallback: 'Enter your website',
-                })}
+            <div className={styles.inputWrapper} style={{ width: '100%' }}>
+              <label>Industry:</label>
+              <Controller
+                name="industry"
+                control={control}
+                render={({ field }) => (
+                  <Dropdown>
+                    <DropdownTrigger>
+                      {field.value ? field.value : 'Select your industry'}
+                    </DropdownTrigger>
+                    <DropdownMenu>
+                      {industries.map((item) => (
+                        <DropdownItem
+                          key={item}
+                          onSelect={(e) => {
+                            e.preventDefault();
+                            field.onChange(item);
+                          }}
+                        >
+                          {item}
+                        </DropdownItem>
+                      ))}
+                    </DropdownMenu>
+                  </Dropdown>
+                )}
               />
               {errors.industry && <p className={styles.error}>{errors.industry.message}</p>}
             </div>
