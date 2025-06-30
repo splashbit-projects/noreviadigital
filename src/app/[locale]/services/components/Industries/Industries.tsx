@@ -1,5 +1,6 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
 import type { JSX } from 'react';
 
 import { B2bIcon } from '@/shared/ui/icons/domains/b2b';
@@ -15,19 +16,25 @@ import { TravelIcon } from '@/shared/ui/icons/domains/travel';
 import st from './Industries.module.scss';
 
 export const Industries = () => {
+  const t = useTranslations('servicesPage.industries');
+
   return (
     <div className="_container">
       <section className={st.industries}>
         <section className={st.content}>
           <div>
-            <h2>Industries We Serve</h2>
-            <p>We know how to position, promote, and grow businesses in:</p>
+            <h2>{t('title', { fallback: 'Industries We Serve' })}</h2>
+            <p>
+              {t('text', { fallback: 'We know how to position, promote, and grow businesses in:' })}
+            </p>
           </div>
           <p>
-            We speak your industry’s language — and your customer’s.
+            {t('text2.0', { fallback: 'We speak your industry’s language — and your customer’s.' })}
             <br />
-            From strategy to execution, we tailor campaigns that match your niche, drive real
-            demand, and earn lasting trust.
+            {t('text2.1', {
+              fallback:
+                'From strategy to execution, we tailor campaigns that match your niche, drive real demand, and earn lasting trust.',
+            })}
           </p>
         </section>
         <Cards />
@@ -37,16 +44,18 @@ export const Industries = () => {
 };
 
 const Cards = () => {
+  const t = useTranslations('servicesPage.industries.items');
+
   const items = [
-    { icon: TechIcon, name: 'Tech & SaaS' },
-    { icon: FinanceIcon, name: 'Finance & Fintech' },
-    { icon: RetailIcon, name: 'Retail & Ecommerce' },
-    { icon: HealthcareIcon, name: 'Healthcare & Life Sciences' },
-    { icon: PropertyIcon, name: 'Property & Real Estate' },
-    { icon: EducationIcon, name: 'Education & Training' },
-    { icon: TravelIcon, name: 'Travel & Hospitality' },
-    { icon: ProfessionalServicesIcon, name: 'Professional Services' },
-    { icon: B2bIcon, name: 'B2B & Enterprise' },
+    { icon: TechIcon, name: t('0', { fallback: 'Tech & SaaS' }) },
+    { icon: FinanceIcon, name: t('1', { fallback: 'Finance & Fintech' }) },
+    { icon: RetailIcon, name: t('2', { fallback: 'Retail & Ecommerce' }) },
+    { icon: HealthcareIcon, name: t('3', { fallback: 'Healthcare & Life Sciences' }) },
+    { icon: PropertyIcon, name: t('4', { fallback: 'Property & Real Estate' }) },
+    { icon: EducationIcon, name: t('5', { fallback: 'Education & Training' }) },
+    { icon: TravelIcon, name: t('6', { fallback: 'Travel & Hospitality' }) },
+    { icon: ProfessionalServicesIcon, name: t('7', { fallback: 'Professional Services' }) },
+    { icon: B2bIcon, name: t('8', { fallback: 'B2B & Enterprise' }) },
   ];
 
   return (
@@ -57,7 +66,7 @@ const Cards = () => {
         ))}
       </section>
       <div className={st.mobileCard}>
-        <Card icon={B2bIcon} name="B2B & Enterprise" />
+        <Card icon={B2bIcon} name={t('8', { fallback: 'B2B & Enterprise' })} />
       </div>
     </section>
   );

@@ -48,7 +48,7 @@ export const Header = () => {
           </button>
 
           <nav className={styles.header__menu}>
-            <Link href="#">{t('services', { fallback: 'Services' })}</Link>
+            <Link href="/services">{t('services', { fallback: 'Services' })}</Link>
             <Link href="#">{t('solutions', { fallback: 'Solutions' })}</Link>
             <Link href="/marketing-constructor">
               {t('constructor', { fallback: 'Constructor' })}

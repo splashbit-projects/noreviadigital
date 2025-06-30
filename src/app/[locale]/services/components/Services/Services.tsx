@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 
 import { fadeInUp } from '@/shared/lib/helpers/animations';
 
@@ -8,6 +9,8 @@ import { ServicesList } from '../ServicesList/ServicesList';
 import st from './Services.module.scss';
 
 export const Services = () => {
+  const t = useTranslations('servicesPage.services');
+
   return (
     <section className={st.services}>
       <div className="_container">
@@ -18,7 +21,7 @@ export const Services = () => {
           variants={fadeInUp}
           className={st.layout}
         >
-          Tailored Services for Every Marketing Need
+          {t('title', { fallback: 'Tailored Services for Every Marketing Need' })}
         </motion.h2>
       </div>
       <ServicesList />
