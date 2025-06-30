@@ -57,7 +57,7 @@ export const Footer = () => {
           <div className={styles.menu}>
             <div>
               <h5>{t('explore', { fallback: 'Explore' })}</h5>
-              <Link href="#">
+              <Link href="/services">
                 <span>{t('services', { fallback: 'Services' })}</span>
                 <span>{t('services', { fallback: 'Services' })}</span>
               </Link>
@@ -72,7 +72,7 @@ export const Footer = () => {
             </div>
             <div>
               <h5>{t('company', { fallback: 'Company' })}</h5>
-              <Link href="#">
+              <Link href="/about-us">
                 <span>{t('about', { fallback: 'About' })}</span>
                 <span>{t('about', { fallback: 'About' })}</span>
               </Link>

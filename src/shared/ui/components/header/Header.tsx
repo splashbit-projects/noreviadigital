@@ -85,12 +85,12 @@ export const Header = () => {
           <span>|</span>
           <Link href="#">{t('insights', { fallback: 'Insights' })}</Link>
           <span>|</span>
-          <Link href="#">{t('about-us', { fallback: 'About Us' })}</Link>
+          <Link href="/about-us">{t('about-us', { fallback: 'About Us' })}</Link>
         </div>
       </div>
       <div className={`${styles.header__mobile_menu} ${isMobileMenuOpen ? styles.open : ''}`}>
         <nav>
-          <Link href="#">{t('services', { fallback: 'Services' })}</Link>
+          <Link href="/services">{t('services', { fallback: 'Services' })}</Link>
           <hr />
           <Link href="#">{t('solutions', { fallback: 'Solutions' })}</Link>
           <hr />
@@ -102,7 +102,7 @@ export const Header = () => {
           <hr />
           <Link href="#">{t('insights', { fallback: 'Insights' })}</Link>
           <hr />
-          <Link href="#">{t('about-us', { fallback: 'About Us' })}</Link>
+          <Link href="/about-us">{t('about-us', { fallback: 'About Us' })}</Link>
         </nav>
         <div className={styles.header__mobile_menu_contact}>
           {/* TODO: add phone
