@@ -6,7 +6,9 @@
   },
   "marketingBudgets": {
     "text1": "lost yearly to <br/>ad fraud",
-    "text2": "of ad spend often delivers no return",
+    "text2": "of marketers don’t use their data",
+    "text3": "in 5 is satisfied with their conversion rate",
+    "text4": "of ad spend often delivers no return",
     "title": "Most Marketing Budgets Are Wasted",
     "text": "Clear strategy, clean execution, and measurable results — for businesses that expect more."
   },
@@ -65,6 +67,41 @@
     "description": "Not Just Marketing — Business Impact",
     "button": "Learn Us Better",
     "text": "We’re not here to win awards. We’re here to grow your business. Our team combines senior marketing talent with technical precision to create campaigns that drive leads, sales, and visibility."
+  },
+  "aboutCta": {
+    "text": "Clear goals, bold execution, measurable impact — let’s get started.",
+    "title": "Let’s Make Your <br/>Marketing Work!",
+    "button": "Contact Us"
+  },
+  "aboutHero": {
+    "subtitle": "Built for the reality of modern marketing — precise, adaptive, and results-focused.",
+    "title": "Who We Are",
+    "button": "Contact Us"
+  },
+  "howWeAct": {
+    "text1": "Avg. Response Time",
+    "text2": "Issue Resolution Time",
+    "text3": "in 5 is satisfied with their conversion rate",
+    "text4": "Conversion Rate Increase",
+    "text5": "On-Time Project Delivery",
+    "title": "How We Act",
+    "text": "Clear strategy, clean execution, and measurable results — for businesses that expect more<br/>Here’s how we operate across every project:."
+  },
+  "whyChoose": {
+    "title1": "Problem-Focused",
+    "text1": "We address real marketing issues with tailored solutions — not generic service bundles.",
+    "title2": "Transparent Process",
+    "text2": "You see the full picture: pricing, timelines, execution, and results. No hidden steps.",
+    "title3": "Strategic Execution",
+    "text3": "We bring expert strategy and in-house delivery together — no handoffs, no disconnect.",
+    "title": "Why Choose Norevia Digital"
+  },
+  "whyWeStarted": {
+    "text1": "Most marketing agencies are stuck in the past. Strategies don’t evolve. Services don’t scale. Outcomes don’t meet expectations.",
+    "text2": "Norevia Digital was founded to change that.",
+    "text3": "We deliver marketing that matches the complexity of today’s business needs — combining advanced strategy, compliant execution, and measurable impact. No shortcuts. No manipulation. No black-hat tactics. Ever.",
+    "title": "Why We Started Norevia Digital",
+    "text": "Everything we do is real, safe, and <br/>built for sustainable growth."
   },
   "buildYourOwn": {
     "title": "Can’t Find the Right Fit?",
