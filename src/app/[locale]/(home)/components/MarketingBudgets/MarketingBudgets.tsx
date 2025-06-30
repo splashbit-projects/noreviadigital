@@ -24,13 +24,13 @@ export const MarketingBudgets = () => {
     },
     {
       value: '1',
-      text: t('text2', {
+      text: t('text3', {
         fallback: 'in 5 is satisfied with their conversion rate',
       }),
     },
     {
       value: '50%+',
-      text: t('text2', {
+      text: t('text4', {
         fallback: 'of ad spend often delivers no return',
       }),
     },
