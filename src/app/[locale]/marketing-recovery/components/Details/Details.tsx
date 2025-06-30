@@ -17,7 +17,7 @@ export const Details = () => {
         fallback: 'No calls or <br/>purchases',
       }),
       description: t('description1', {
-        fallback: "You’re running ads but not getting any real customers.",
+        fallback: 'You’re running ads but not getting any real customers.',
       }),
     },
     {
@@ -25,7 +25,7 @@ export const Details = () => {
         fallback: 'No ads seen <br/>at all',
       }),
       description: t('description2', {
-        fallback: "You don’t see your own ads anywhere — and neither do your clients.",
+        fallback: 'You don’t see your own ads anywhere — and neither do your clients.',
       }),
     },
     {
@@ -41,7 +41,7 @@ export const Details = () => {
         fallback: 'Irrelevant <br/>customer <br/>requests',
       }),
       description: t('description4', {
-        fallback: "People are misunderstanding your offer or asking about things you don’t sell.",
+        fallback: 'People are misunderstanding your offer or asking about things you don’t sell.',
       }),
     },
   ];

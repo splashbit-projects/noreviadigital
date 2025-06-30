@@ -1,6 +1,5 @@
 'use client';
 
-
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 
@@ -26,8 +25,7 @@ export const AboutCta = () => {
           <p
             dangerouslySetInnerHTML={{
               __html: t('text', {
-                fallback:
-                  'Clear goals, bold execution, measurable impact — let’s get started.',
+                fallback: 'Clear goals, bold execution, measurable impact — let’s get started.',
               }),
             }}
           />

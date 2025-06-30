@@ -1,0 +1,13 @@
+.cardLayout {
+  padding: 80px 0;
+  border-top: 1px solid #e1e3e7;
+
+  * > &:last-child {
+    border-bottom: 1px solid #e1e3e7;
+  }
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+}
