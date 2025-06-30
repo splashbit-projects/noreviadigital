@@ -73,9 +73,59 @@
     "notice": "Click the tabs and choose the services that match your goals."
   },
   "marketingHero": {
-    "title": "Build Your Own <br/>Marketing Solution.",
-    "description": "Modular services, strategic clarity, full control — <br/>customise your package now.",
-    "button": "Contact Us"
+    "title": "Urgent Marketing Support, <br/>When You Need It Most.",
+    "description": "Comprehensive packages built to solve challenges <br/>and drive business growth.",
+    "button": "Get Assistance"
+  },
+  "details": {
+    "title1": "No calls or <br/>purchases",
+    "description1": "You’re running ads but not getting any real customers.",
+    "title2": "No ads seen <br/>at all",
+    "description2": "You don’t see your own ads anywhere — and neither do your clients.",
+    "title3": "No orders <br/>from your <br/>website",
+    "description3": "Visitors arrive but don’t place orders, sign up, or contact you.",
+    "title4": "Irrelevant <br/>customer <br/>requests",
+    "description4": "People are misunderstanding your offer or asking about things you don’t sell."
+  },
+  "doYouKnow": {
+    "title1": "Revenue Collapse",
+    "description1": "Ad campaigns stall, SEO rankings drop, and sales pipelines dry up — with no contingency plan.",
+    "title2": "Brand Reputation Damage",
+    "description2": "A wrong message, poor PR handling, or bad UX can erode years of brand trust in weeks.",
+    "title3": "Customer Churn & Loss of Loyalty",
+    "description3": "When you stop showing up or misfire on communication, your audience moves on — fast.",
+    "title4": "Missed Opportunities",
+    "description4": "Seasonal traffic, market trends, or competitor weaknesses — all lost due to delayed execution.",
+    "title5": "Escalating Ad Waste",
+    "description5": "Running inefficient campaigns without tracking, targeting, or strategic control burns the budget with no return.",
+    "title6": "Team Burnout & Operational Chaos",
+    "description6": "Disorganised efforts create stress, misalignment, and decision paralysis across internal teams.",
+    "title": "Do You Know the Real Risk of Waiting?",
+    "description": "When marketing breaks down, doing nothing costs more than just time. Delays, poor decisions, or wrong turns can cascade into lasting damage."
+  },
+  "howResponds": {
+    "title1": "Situational Audit (within 12h)",
+    "description1": "We diagnose what’s broken — performance, tracking, messaging, or internal execution. Fast.",
+    "title2": "Tactical Triage",
+    "description2": "We prioritise high-impact fixes: ad stop-losses, messaging corrections, tracking recovery, or funnel patching.",
+    "title3": "Recovery Campaign",
+    "description3": "Deploy optimised ads, reset user journeys, rebuild broken automation or outreach to regain momentum.",
+    "title4": "Stabilisation & Support",
+    "description4": "Rebuild performance dashboards, brief internal teams, and ensure your operations can scale forward again.",
+    "howResponds": {
+      "title": "How Norevia Digital Responds"
+    },
+    "step": "Step"
+  },
+  "notisingSigns": {
+    "title": "Noticing These Warning Signs?",
+    "description": "Rescue your reputation. Stop budget leaks. Get campaigns back on target now.",
+    "button": "Explore Full Services"
+  },
+  "timeToAct": {
+    "text": "If your marketing efforts are failing or your campaigns are going off-track, waiting only <br/>makes it worse. We’re ready to step in, assess fast, and get you back on course.",
+    "title": "It’s Time to Act",
+    "button": "Urgent Assistance"
   },
   "proposalForm": {
     "messageSentTitle": "Thank you!",
@@ -109,6 +159,38 @@
       "title": "Your package"
     }
   },
+  "urgentRequest": {
+    "messageSentTitle": "Thank you!",
+    "messageSentDescription": "Our team will review your message and get back to you within 48 business hours.",
+    "messageSentButton": "Home page",
+    "firstName": {
+      "label": "First Name:",
+      "placeholder": "Enter your first name"
+    },
+    "lastName": {
+      "label": "Last Name:",
+      "placeholder": "Enter your last name"
+    },
+    "website": {
+      "label": "Website:",
+      "placeholder": "Enter your website"
+    },
+    "companyName": {
+      "label": "Company:",
+      "placeholder": "Enter your company name"
+    },
+    "email": {
+      "label": "Email:"
+    },
+    "phone": {
+      "label": "Phone:"
+    },
+    "description": {
+      "label": "What is going wrong right now?",
+      "placeholder": "Describe your case"
+    },
+    "title": "Urgent Assistance Request"
+  },
   "footer": {
     "text": "Norevia Digital OU<br/> Marketing That Fixes, Builds, and Grows",
     "socialMedia": "Social Media:",
@@ -141,72 +223,5 @@
     "marketing-recovery": "Marketing Recovery",
     "insights": "Insights",
     "about-us": "About Us"
-  },
-  "servicesPage": {
-    "hero": {
-      "title": "Explore What We Do.",
-      "text": "Strategic, creative, and performance-driven services built to grow your business.",
-      "btn": "Check Our Solutions"
-    },
-    "services": {
-      "title": "Tailored Services for Every Marketing Need",
-      "0": {
-        "title": "Advertising Services",
-        "text": "From high-impact digital ads to traditional placements, our advertising services are built to meet your audience wherever they are. Whether through search, social, TV, or billboards, we design campaigns that generate visibility, drive traffic, and convert attention into results."
-      },
-      "1": {
-        "title": "Marketing Services",
-        "text": "Marketing is more than exposure — it's alignment, consistency, and momentum. From SEO to branding, content to automation, we deliver complete marketing frameworks connecting strategy with execution and scale."
-      },
-      "2": {
-        "title": "Strategic & Diagnostic Services",
-        "text": "If you’re not sure what’s broken — start here. These services audit your funnel, sharpen your offer, and define where your marketing should go next. Perfect for companies preparing to scale or pivot."
-      },
-      "3": {
-        "title": "Technical Services & Performance Support",
-        "text": "Behind every successful campaign is clean data, smooth tracking, and high-functioning infrastructure. We implement the technical layer that makes your marketing measurable, optimised, and ready to perform."
-      },
-      "4": {
-        "title": "Content & Creative Support",
-        "text": "Strong campaigns need the right story, the right visuals, and the right angle. From scripts to sales materials, we create assets that speak, persuade effectively, and perform under pressure."
-      },
-      "5": {
-        "title": "Client Education & Retention Services",
-        "text": "Our support doesn’t end with delivery. We provide ongoing education, communication integration, and high-level briefings to help your internal teams stay aligned and your leadership informed."
-      },
-      "button": "Explore Full Services"
-    },
-    "industries": {
-      "title": "Industries We Serve",
-      "text": "We know how to position, promote, and grow businesses in:",
-      "text2": {
-        "0": "We speak your industry’s language — and your customer’s.",
-        "1": "From strategy to execution, we tailor campaigns that match your niche, drive real demand, and earn lasting trust."
-      },
-      "items": {
-        "0": "Tech & SaaS",
-        "1": "Finance & Fintech",
-        "2": "Retail & Ecommerce",
-        "3": "Healthcare & Life Sciences",
-        "4": "Property & Real Estate",
-        "5": "Education & Training",
-        "6": "Travel & Hospitality",
-        "7": "Professional Services",
-        "8": "B2B & Enterprise"
-      }
-    },
-    "marketingGoing": {
-      "title": {
-        "0": "Marketing going off track?",
-        "1": "We’ll fix it — fast."
-      },
-      "button": "Get Immediate Help"
-    },
-    "whereToStart": {
-      "title": "Don’t Know Where to Start?",
-      "text": "We get it — choosing the right service isn’t always obvious. That’s why we offer two simple paths forward:",
-      "0": "Discover pre-built packages designed to solve real business challenges.",
-      "1": "Get personal guidance from our team to map out the right approach for your goals."
-    }
   }
 }

@@ -1,0 +1,64 @@
+@use '@/shared/lib/styles/mixin.scss' as *;
+
+.details {
+  padding: 0 0 40px 0;
+  &__content {
+    display: flex;
+    gap: 80px;
+    @include tablet {
+      flex-direction: column;
+    }
+    .item {
+      width: 25%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 40px;
+      justify-content: space-between;
+      padding: 24px 16px 16px 16px;
+      border-radius: 8px;
+      background: linear-gradient(
+        123deg,
+        rgba(255, 255, 255, 0) 57.67%,
+        rgba(255, 255, 255, 0.05) 100%
+      );
+      &:nth-child(even) {
+        flex-direction: column-reverse;
+        border-radius: 8px;
+        background: linear-gradient(
+          19deg,
+          rgba(255, 255, 255, 0) 63.67%,
+          rgba(255, 255, 255, 0.05) 100%
+        );
+        svg {
+          transform: rotate(-90deg);
+        }
+      }
+      @include tablet {
+        width: 100%;
+      }
+      > div {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 16px;
+        h3 {
+          color: #fff;
+          font-family: var(--font-work-sans), sans-serif;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 110%; /* 26.4px */
+          text-transform: uppercase;
+        }
+        p {
+          color: #dbdcd5;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+      }
+    }
+  }
+}

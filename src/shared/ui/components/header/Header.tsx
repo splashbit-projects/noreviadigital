@@ -13,7 +13,6 @@ import { MenuButton } from '@/shared/ui/icons';
 
 import styles from './Header.module.scss';
 
-
 export const Header = () => {
   const [isSubmenuOpen, setIsSubmenuOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -80,7 +79,9 @@ export const Header = () => {
         </div>
 
         <div className={`${styles.header__submenu} ${isSubmenuOpen ? styles.open : ''}`}>
-          <Link href="#">{t('marketing-recovery', { fallback: 'Marketing Recovery' })}</Link>
+          <Link href="/marketing-recovery">
+            {t('marketing-recovery', { fallback: 'Marketing Recovery' })}
+          </Link>
           <span>|</span>
           <Link href="#">{t('insights', { fallback: 'Insights' })}</Link>
           <span>|</span>
@@ -95,7 +96,9 @@ export const Header = () => {
           <hr />
           <Link href="/marketing-constructor">{t('constructor', { fallback: 'Constructor' })}</Link>
           <hr />
-          <Link href="#">{t('marketing-recovery', { fallback: 'Marketing Recovery' })}</Link>
+          <Link href="/marketing-recovery">
+            {t('marketing-recovery', { fallback: 'Marketing Recovery' })}
+          </Link>
           <hr />
           <Link href="#">{t('insights', { fallback: 'Insights' })}</Link>
           <hr />
