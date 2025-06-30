@@ -1,0 +1,106 @@
+@use '@/shared/lib/styles/mixin.scss' as *;
+
+.insightsLoop {
+  border-radius: 32px;
+  background: #e6e8e0;
+  display: flex;
+  padding: 60px;
+  flex-direction: column;
+  gap: 0;
+  overflow: hidden;
+  @include tablet {
+    padding: 60px 16px;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    h2 {
+      color: #0d0d0d;
+      font-size: 60px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 110%; /* 66px */
+      @include tablet {
+        font-size: 40px;
+      }
+    }
+    p {
+      color: #0d0d0d;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+  }
+
+  &__item {
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+    padding: 40px 0;
+    border-top: 1px solid #0d0d0d;
+    @include tablet {
+      flex-direction: column;
+    }
+    &:nth-child(odd) {
+      .content {
+        flex-direction: row-reverse;
+      }
+    }
+    > img {
+      width: 100%;
+      object-fit: cover;
+      filter: grayscale(100%) brightness(0.5);
+      border-radius: 8px;
+    }
+    .content {
+      display: flex;
+      > div {
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        @include tablet {
+          width: 100%;
+        }
+        h3 {
+          color: #0d0d0d;
+          font-family: var(--font-work-sans), sans-serif;
+          font-size: 40px;
+          font-style: normal;
+          font-weight: 800;
+          line-height: normal;
+          text-transform: uppercase;
+          margin-bottom: 8px;
+          @include tablet {
+            font-size: 32px;
+          }
+        }
+        h5 {
+          color: #0d0d0d;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 140%; /* 22.4px */
+          display: flex;
+          align-items: center;
+          gap: 4px;
+        }
+        p {
+          color: #0d0d0d;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 140%; /* 22.4px */
+          margin: 8px 0 24px 0;
+        }
+        a {
+          width: fit-content;
+        }
+      }
+    }
+  }
+}

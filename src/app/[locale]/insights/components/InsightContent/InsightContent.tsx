@@ -1,0 +1,59 @@
+'use client';
+
+import { useLayoutEffect, useRef, useState } from 'react';
+import Link from 'next/link';
+
+import st from './InsightContent.module.scss';
+
+export const InsightContent = ({ content }: { content: string }) => {
+  const [titles, setTitles] = useState<{ [key: string]: string }>({});
+  const [activeTitle, setActiveTitle] = useState<string | null>(null);
+  const contentRef = useRef<HTMLDivElement>(null);
+
+  useLayoutEffect(() => {
+    if (!contentRef.current) return;
+
+    const sections = contentRef.current.querySelectorAll('h2');
+    const newTitles: { [key: string]: string } = {};
+
+    sections.forEach((section) => {
+      const id = section.getAttribute('id') || '';
+      const title = section.textContent || '';
+      newTitles[title] = id;
+    });
+
+    setTitles(newTitles);
+  }, [content]);
+
+  const handleTitleClick = (id: string) => {
+    setActiveTitle(id);
+  };
+
+  return (
+    <section className={st.post}>
+      <div className="_container">
+        <div className={st.post__body}>
+          <article className={st.post__article}>
+            <div
+              className={st.content}
+              ref={contentRef}
+              dangerouslySetInnerHTML={{ __html: content }}
+            />
+            <div className={st.navigation}>
+              {Object.entries(titles).map(([title, id]) => (
+                <Link
+                  href={`#${id}`}
+                  key={id}
+                  onClick={() => handleTitleClick(title)}
+                  className={activeTitle === title ? st.active : ''}
+                >
+                  {id}
+                </Link>
+              ))}
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  );
+};

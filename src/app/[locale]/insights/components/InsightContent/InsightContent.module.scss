@@ -1,0 +1,182 @@
+@use '@/shared/lib/styles/mixin.scss' as *;
+
+.post {
+  border-radius: 32px;
+  background: #e6e8e0;
+  display: flex;
+  padding: 60px 0;
+  flex-direction: column;
+  gap: 12px;
+  //overflow: hidden;
+  @include tablet {
+    padding: 60px 0;
+  }
+
+  &__body {
+    article {
+      display: flex;
+      align-items: flex-start;
+      gap: 80px;
+      @include tablet {
+        
+      }
+
+      .navigation {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        width: 350px;
+        position: sticky;
+        top: 0;
+        @include tablet {
+          display: none;
+        }
+        a {
+          padding: 24px 0;
+          color: #0d0d0d;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 110%; /* 22px */
+          text-transform: uppercase;
+          border-bottom: 1px solid rgba(13, 13, 13, 0.5);
+          opacity: 0.5;
+          &.active {
+            opacity: 1;
+          }
+        }
+      }
+
+      .content {
+        width: calc(100% - 430px);
+        @include tablet {
+          width: 100%;
+        }
+        h2 {
+          font-family: var(--font-work-sans), sans-serif;
+          color: #0d0d0d;
+          font-size: 32px;
+          font-style: normal;
+          font-weight: 800;
+          line-height: normal;
+          text-transform: uppercase;
+          margin: 40px 0 16px 0;
+        }
+
+        p {
+          color: #0d0d0d;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          margin-bottom: 16px;
+          opacity: 0.8;
+        }
+
+        a {
+          color: #fff;
+          text-decoration: none;
+          &:hover {
+            text-decoration: none;
+          }
+        }
+
+        ul {
+          list-style-type: disc;
+          margin-left: 24px;
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 24px;
+          gap: 6px;
+          li {
+            color: #0d0d0d;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            opacity: 0.8;
+          }
+        }
+
+        ol {
+          margin-bottom: 24px;
+          display: flex;
+          flex-direction: column;
+          gap: 24px;
+          counter-reset: item;
+          &:last-child {
+            margin-bottom: 0;
+          }
+          & + ul {
+            margin-top: -30px;
+          }
+
+          > li {
+            color: #fff;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 140%; /* 22.4px */
+            padding-left: 24px;
+            position: relative;
+            list-style-type: none;
+            &:has(ul) {
+              &:before {
+                transform: unset;
+                top: -8px;
+              }
+            }
+            span {
+              color: #fff;
+            }
+            /*&::before {
+                box-sizing: border-box;
+                content: counter(item, upper-alpha);
+                counter-increment: item;
+                color: #fff;
+                border-radius: 100px;
+                background: #000;
+                display: flex;
+                width: 36px;
+                height: 36px;
+                padding: 6px 8px;
+                justify-content: center;
+                align-items: center;
+                gap: 8px;
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                @media (max-width: 992px) {
+                  transform: unset;
+                  top: 0px;
+                }
+              }*/
+            &::before {
+              box-sizing: border-box;
+              content: counter(item, upper-alpha) '.';
+              counter-increment: item;
+              color: #fff;
+              left: 0;
+              position: absolute;
+              top: 0;
+              color: #fff;
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 140%;
+              @media (max-width: 992px) {
+                transform: unset;
+                top: 0px;
+              }
+            }
+            ul {
+              margin-left: -36px;
+              margin-top: 24px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -103,6 +103,44 @@
     "title": "Why We Started Norevia Digital",
     "text": "Everything we do is real, safe, and <br/>built for sustainable growth."
   },
+  "faq": {
+    "title": "Your questions - our answers"
+  },
+  "insightsPage": {
+    "title": "We Share What We Know.",
+    "description": "Proven strategies, expert breakdowns, and real <br/>marketing lessons — no fluff, just insight.",
+    "button": "Check Services"
+  },
+  "insightsLoop": {
+    "article1": {
+      "title": "Google Ads vs Social Media: What Really Brings the Best ROI?",
+      "subtitle": "Compare real use cases for B2B and B2C",
+      "text": "Two powerful channels. One marketing budget. Which delivers better returns? This breakdown explores how intent, targeting, cost, and funnel stage define which channel wins—Google Ads or paid social."
+    },
+    "article2": {
+      "title": "Programmatic Advertising in 2025: Smarter, Faster, More Profitable",
+      "subtitle": "Discover how to make every impression count",
+      "text": "Automation meets precision. Learn how programmatic ads use AI, real-time bidding, and cross-channel delivery to maximize ROI—at scale."
+    },
+    "article3": {
+      "title": "Why Your Marketing Isn’t Working (And How Strategy Fixes It)",
+      "subtitle": "Fix the strategy. Watch everything improve.",
+      "text": "Campaigns failing quietly? It’s not your channels—it’s your lack of strategy. Learn how to build data-driven marketing that aligns audience, message, and results"
+    },
+    "article4": {
+      "title": "Tracking Made Simple: UTMs, Pixels & Analytics That Work",
+      "subtitle": "Clear data. Smarter decisions. Better ROI.",
+      "text": "Not a tech expert? No problem. This guide breaks down how to track what matters—so you know exactly where your marketing money is going and what it brings back."
+    },
+    "title": "Latest From the Field",
+    "text": "Real takeaways, practical strategies, and expert commentary — straight from our team.",
+    "button": "Read Article"
+  },
+  "isightsTimeToAct": {
+    "text": "If your marketing efforts are failing or your campaigns are going off-track, waiting only <br/>makes it worse. We’re ready to step in, assess fast, and get you back on course.",
+    "title": "It’s Time to Act",
+    "button": "Urgent Assistance"
+  },
   "buildYourOwn": {
     "title": "Can’t Find the Right Fit?",
     "subtitle": "Build Your Own.",
