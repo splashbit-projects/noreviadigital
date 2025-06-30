@@ -26,8 +26,21 @@ const kola = LocalFont({
 });
 
 export const metadata: Metadata = {
-  title: 'Norevia',
-  description: 'Norevia',
+  title: {
+    template: '%s | Norevia Digital',
+    default: 'Advertising and Marketing Services | Norevia Digital',
+  },
+  description:
+    'Discover performance-driven advertising and marketing services for businesses ready to scale, convert, and lead in competitive markets.',
+  openGraph: {
+    title: {
+      template: '%s | Norevia Digital',
+      default: 'Advertising and Marketing Services | Norevia Digital',
+    },
+    description:
+      'Discover performance-driven advertising and marketing services for businesses ready to scale, convert, and lead in competitive markets.',
+    images: 'https://noreviadigital.com/images/meta.png',
+  },
 };
 
 export default async function RootLayout({
