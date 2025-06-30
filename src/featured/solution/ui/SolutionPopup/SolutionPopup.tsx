@@ -1,5 +1,7 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
+
 import { Close } from '@/shared/ui/icons/close/Close';
 
 import { useSolutionPopup } from '../../model/store';
@@ -8,6 +10,7 @@ import { SolutionForm } from '../SolutionForm/SolutionForm';
 import styles from './SolutionPopup.module.scss';
 
 export const SolutionPopup = () => {
+  const t = useTranslations('solution.popup');
   const { isSuccess, popupOpened, setIsSuccess, setPopupOpened, solution } = useSolutionPopup();
 
   const handleClose = () => {
@@ -27,7 +30,9 @@ export const SolutionPopup = () => {
             <MessageSent />
           ) : (
             <>
-              <h2>{solution?.title} Request</h2>
+              <h2>
+                {solution?.title} {t('request')}
+              </h2>
               <SolutionForm onSuccess={() => setIsSuccess(true)} />
             </>
           )}

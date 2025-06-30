@@ -15,7 +15,8 @@ import { type SolutionFormSchema, solutionFormSchema } from '../../model/schemas
 import styles from './SolutionForm.module.scss';
 
 export const SolutionForm = ({ onSuccess }: { onSuccess?: () => void }) => {
-  const t = useTranslations('urgentRequest');
+  const t = useTranslations('solution.form');
+  const ti = useTranslations('industries');
   const [isLoading, setIsLoading] = useState(false);
 
   const {
@@ -43,16 +44,16 @@ export const SolutionForm = ({ onSuccess }: { onSuccess?: () => void }) => {
   };
 
   const industries = [
-    'Technology',
-    'Finance',
-    'eCommerce & Retail',
-    'Real Estate',
-    'Healthcare',
-    'Education',
-    'Professional Services',
-    'Travel & Hospitality',
-    'Manufacturing',
-    'Other',
+    ti('0'),
+    ti('1'),
+    ti('2'),
+    ti('3'),
+    ti('4'),
+    ti('5'),
+    ti('6'),
+    ti('7'),
+    ti('8'),
+    ti('9'),
   ];
 
   return (
@@ -63,7 +64,7 @@ export const SolutionForm = ({ onSuccess }: { onSuccess?: () => void }) => {
             <div className={`${styles.inputWrapper} `}>
               <label>
                 {t('firstName.label', {
-                  fallback: 'First Name:',
+                  fallback: 'First Name',
                 })}
               </label>
 
@@ -96,8 +97,8 @@ export const SolutionForm = ({ onSuccess }: { onSuccess?: () => void }) => {
                   fallback: 'Website:',
                 })}
               </label>
-              <input {...register('industry')} placeholder="Enter your website" />
-              {errors.industry && <p className={styles.error}>{errors.industry.message}</p>}
+              <input {...register('website')} placeholder="Enter your website" />
+              {errors.website && <p className={styles.error}>{errors.website.message}</p>}
             </div>
             <div className={`${styles.inputWrapper} `}>
               <label>
@@ -107,12 +108,12 @@ export const SolutionForm = ({ onSuccess }: { onSuccess?: () => void }) => {
               </label>
 
               <input
-                {...register('website')}
+                {...register('company')}
                 placeholder={t('companyName.placeholder', {
                   fallback: 'Enter your company name',
                 })}
               />
-              {errors.website && <p className={styles.error}>{errors.website.message}</p>}
+              {errors.company && <p className={styles.error}>{errors.company.message}</p>}
             </div>
             <div className={styles.inputWrapper}>
               <label>
@@ -120,8 +121,8 @@ export const SolutionForm = ({ onSuccess }: { onSuccess?: () => void }) => {
                   fallback: 'Email:',
                 })}
               </label>
-              <input {...register('company')} placeholder="Enter your email" />
-              {errors.company && <p className={styles.error}>{errors.company.message}</p>}
+              <input {...register('email')} placeholder="Enter your email" />
+              {errors.email && <p className={styles.error}>{errors.email.message}</p>}
             </div>
             <div className={styles.inputWrapper}>
               <label>
@@ -129,8 +130,8 @@ export const SolutionForm = ({ onSuccess }: { onSuccess?: () => void }) => {
                   fallback: 'Phone:',
                 })}
               </label>
-              <input {...register('email')} placeholder="Enter your phone" />
-              {errors.email && <p className={styles.error}>{errors.email.message}</p>}
+              <input {...register('phone')} placeholder="Enter your phone" />
+              {errors.phone && <p className={styles.error}>{errors.phone.message}</p>}
             </div>
           </div>
           <div className={styles.col}>
@@ -164,35 +165,43 @@ export const SolutionForm = ({ onSuccess }: { onSuccess?: () => void }) => {
             </div>
             <div className={`${styles.inputWrapper} ${styles.fullWidth}`}>
               <label>
-                {t('description.label', {
+                {t('marketingChallenge.label', {
                   fallback: 'What is going wrong right now?',
                 })}
               </label>
               <textarea
-                {...register('phone')}
-                placeholder={t('description.placeholder', {
-                  fallback: 'Describe your case',
+                {...register('marketingChallenge')}
+                placeholder={t('marketingChallenge.placeholder', {
+                  fallback: 'Describe your challenge',
                 })}
               />
-              {errors.phone && <p className={styles.error}>{errors.phone.message}</p>}
+              {errors.marketingChallenge && (
+                <p className={styles.error}>{errors.marketingChallenge.message}</p>
+              )}
             </div>
           </div>
         </div>
-
         <div className={styles.buttonWrapper}>
           <div className={`${styles.checkbox}`}>
             <label>
               <input type="checkbox" {...register('consent')} />
               <span>
-                I agree to the processing of my personal data for the purpose of handling my
-                request, in accordance with the{' '}
-                <Link href="/legal/privacy-policy">Privacy Policy</Link>.
+                {t('consent.0', {
+                  fallback:
+                    'I agree to the processing of my personal data for the purpose of handling my request, in accordance with the',
+                })}{' '}
+                <Link href="/legal/privacy-policy">
+                  {t('consent.1', {
+                    fallback: 'Privacy Policy',
+                  })}
+                </Link>
+                .
               </span>
             </label>
             {errors.consent && <p className={styles.error}>{errors.consent.message}</p>}
           </div>
           <Button buttonType="submit" color="grey" plus size="large">
-            {isLoading ? 'Submitting...' : 'Submit'}
+            {isLoading ? t('submitting') : t('submit')}
           </Button>
         </div>
       </form>
