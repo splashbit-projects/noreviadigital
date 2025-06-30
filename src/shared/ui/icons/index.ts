@@ -1,3 +1,4 @@
+export * from './arrow-down-right/ArrowDownRight';
 export * from './menu-button/MenuButton';
 export * from './plus/Plus';
 export * from './service-arrow/ServiceArrow';
