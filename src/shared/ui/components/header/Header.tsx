@@ -13,7 +13,6 @@ import { MenuButton } from '@/shared/ui/icons';
 
 import styles from './Header.module.scss';
 
-
 export const Header = () => {
   const [isSubmenuOpen, setIsSubmenuOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -80,26 +79,30 @@ export const Header = () => {
         </div>
 
         <div className={`${styles.header__submenu} ${isSubmenuOpen ? styles.open : ''}`}>
-          <Link href="#">{t('marketing-recovery', { fallback: 'Marketing Recovery' })}</Link>
+          <Link href="/marketing-recovery">
+            {t('marketing-recovery', { fallback: 'Marketing Recovery' })}
+          </Link>
           <span>|</span>
           <Link href="#">{t('insights', { fallback: 'Insights' })}</Link>
           <span>|</span>
-          <Link href="#">{t('about-us', { fallback: 'About Us' })}</Link>
+          <Link href="/about-us">{t('about-us', { fallback: 'About Us' })}</Link>
         </div>
       </div>
       <div className={`${styles.header__mobile_menu} ${isMobileMenuOpen ? styles.open : ''}`}>
         <nav>
-          <Link href="#">{t('services', { fallback: 'Services' })}</Link>
+          <Link href="/services">{t('services', { fallback: 'Services' })}</Link>
           <hr />
           <Link href="#">{t('solutions', { fallback: 'Solutions' })}</Link>
           <hr />
           <Link href="/marketing-constructor">{t('constructor', { fallback: 'Constructor' })}</Link>
           <hr />
-          <Link href="#">{t('marketing-recovery', { fallback: 'Marketing Recovery' })}</Link>
+          <Link href="/marketing-recovery">
+            {t('marketing-recovery', { fallback: 'Marketing Recovery' })}
+          </Link>
           <hr />
           <Link href="#">{t('insights', { fallback: 'Insights' })}</Link>
           <hr />
-          <Link href="#">{t('about-us', { fallback: 'About Us' })}</Link>
+          <Link href="/about-us">{t('about-us', { fallback: 'About Us' })}</Link>
         </nav>
         <div className={styles.header__mobile_menu_contact}>
           {/* TODO: add phone

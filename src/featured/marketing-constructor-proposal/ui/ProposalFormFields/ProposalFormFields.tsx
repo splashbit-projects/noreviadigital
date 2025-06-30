@@ -8,6 +8,7 @@ import { useForm } from 'react-hook-form';
 
 import { Button } from '@/shared/ui/kit';
 
+import { submitConstructorRequest } from '../../api/submitConstructorRequest';
 import styles from './ProposalFormFields.module.scss';
 
 import {
@@ -39,7 +40,7 @@ export const ProposalFormFields = () => {
     console.log(data);
     try {
       setIsLoading(true);
-      console.log(data);
+      submitConstructorRequest(data);
       setTimeout(() => {
         setIsSuccess(true);
         reset();
