@@ -1,11 +1,20 @@
 'use client';
 
+import dynamic from 'next/dynamic';
+
 import { Transform3D } from '@/shared/ui/kit';
 
 import st from './SolutionList.module.scss';
 
 import type { Solution } from '@/featured/solution/model/types';
 import { SolutionCard } from '@/featured/solution/ui/SolutionCard';
+
+const SolutionPopup = dynamic(
+  () => import('@/featured/solution/ui/SolutionPopup').then((mod) => mod.SolutionPopup),
+  {
+    ssr: false,
+  }
+);
 
 export const SolutionList = () => {
   const solutions: Solution[] = [
@@ -171,6 +180,7 @@ export const SolutionList = () => {
           </Transform3D>
         ))}
       </section>
+      <SolutionPopup />
     </div>
   );
 };

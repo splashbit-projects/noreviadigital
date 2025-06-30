@@ -365,5 +365,66 @@
       "0": "Discover pre-built packages designed to solve real business challenges.",
       "1": "Get personal guidance from our team to map out the right approach for your goals."
     }
+  },
+  "industries": {
+    "0": "Technology",
+    "1": "Finance",
+    "2": "eCommerce & Retail",
+    "3": "Real Estate",
+    "4": "Healthcare",
+    "5": "Education",
+    "6": "Professional Services",
+    "7": "Travel & Hospitality",
+    "8": "Manufacturing",
+    "9": "Other"
+  },
+  "solution": {
+    "popup": {
+      "request": "Request"
+    },
+    "form": {
+      "firstName": {
+        "label": "First Name:",
+        "placeholder": "Enter your first name"
+      },
+      "lastName": {
+        "label": "Last Name:",
+        "placeholder": "Enter your last name"
+      },
+      "industry": {
+        "label": "Industry:",
+        "placeholder": "Select your industry"
+      },
+      "website": {
+        "label": "Website:",
+        "placeholder": "Enter your website"
+      },
+      "company": {
+        "label": "Company:",
+        "placeholder": "Enter your company name"
+      },
+      "email": {
+        "label": "Email:",
+        "placeholder": "Enter your email"
+      },
+      "phone": {
+        "label": "Phone:",
+        "placeholder": "Enter your phone number"
+      },
+      "marketingChallenge": {
+        "label": "Marketing Challenge:",
+        "placeholder": "Describe your marketing challenge"
+      },
+      "companyName": {
+        "label": "Company Name:",
+        "placeholder": "Enter your company name"
+      },
+      "consent": {
+        "0": "I agree to the processing of my personal data for the purpose of handling my request, in accordance with the",
+        "1": "Privacy Policy."
+      },
+      "submit": "Submit",
+      "submitting": "Submitting..."
+    }
   }
 }

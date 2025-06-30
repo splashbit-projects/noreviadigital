@@ -8,7 +8,6 @@ import st from './page.module.scss';
 
 import { getFaqData, getPost, getPostSlugs } from '@/featured/insights/insights';
 
-
 type PageParams = { locale: string; slug: string };
 
 export async function generateStaticParams(): Promise<PageParams[]> {
