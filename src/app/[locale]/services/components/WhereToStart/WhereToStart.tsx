@@ -18,7 +18,8 @@ export const WhereToStart = () => {
     },
     {
       title: t('1', {
-        fallback: 'Discover pre-built packages designed to solve real business challenges.',
+        fallback:
+          'Get personal guidance from our team to map out the right approach for your goals.',
       }),
       url: '/',
     },
