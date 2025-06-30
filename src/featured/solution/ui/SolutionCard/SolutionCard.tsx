@@ -3,6 +3,7 @@
 import { cn } from '@/shared/lib/helpers/styles';
 import { Button } from '@/shared/ui/kit';
 
+import { useSolutionPopup } from '../../model/store';
 import type { Solution } from '../../model/types';
 import st from './SolutionCard.module.scss';
 
@@ -14,6 +15,13 @@ export const SolutionCard = ({
   subtitle,
   title,
 }: Solution) => {
+  const { setSolution, setPopupOpened } = useSolutionPopup();
+
+  const onRequestHandle = () => {
+    setSolution({ description, includes, price, purpose, subtitle, title });
+    setPopupOpened(true);
+  };
+
   return (
     <section className={st.layout}>
       <section className={st.contentLayout}>
@@ -36,7 +44,7 @@ export const SolutionCard = ({
               <p className={st.text}>Starting from:</p>
               <h3>{price}</h3>
             </div>
-            <Button color="white" plus>
+            <Button color="white" onClick={onRequestHandle} plus>
               Request Solution
             </Button>
           </section>
