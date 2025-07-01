@@ -43,7 +43,7 @@ export const HomeHero = () => {
               }),
             }}
           />
-          <Button url="/" color="white" plus>
+          <Button url="/solutions" color="white" plus buttonType="link">
             {t('button', {
               fallback: 'Get Your Solution',
             })}

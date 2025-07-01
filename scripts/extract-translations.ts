@@ -31,26 +31,30 @@ function walk(dirPath: string): void {
 function extractFromFile(filePath: string): void {
   const content = fs.readFileSync(filePath, 'utf-8');
 
-  // Match the namespace: useTranslations('header')
   const namespaceMatch = content.match(
-    /(?:useTranslations|getTranslations)\(\s*["'`]([\w-]+)["'`]\s*\)/
+    /(?:useTranslations|getTranslations)\(\s*["'`]([\w.-]+)["'`]\s*\)/
   );
   if (!namespaceMatch) return;
 
   const namespace = namespaceMatch[1];
-  if (!translations[namespace]) translations[namespace] = {};
+  const namespaceParts = namespace.split('.');
 
-  // Match t('key', { fallback: 'Fallback' })
   const regex =
     /t\(\s*['"`]([\w.-]+)['"`]\s*,\s*{[^}]*fallback:\s*['"`]([\s\S]*?)['"`][^}]*}\s*\)/g;
 
   let match;
   while ((match = regex.exec(content))) {
-    const fullKey = match[1];
+    const key = match[1];
     const fallback = match[2];
-    if (fullKey && fallback) {
-      setNestedKey(translations[namespace], fullKey, fallback);
-    }
+    if (!key || !fallback) continue;
+
+    const keyParts = key.split('.');
+
+    // Combine namespace and key path
+    const fullPathParts = [...namespaceParts, ...keyParts];
+
+    const fullPath = fullPathParts.join('.');
+    setNestedKey(translations, fullPath, fallback);
   }
 }
 
