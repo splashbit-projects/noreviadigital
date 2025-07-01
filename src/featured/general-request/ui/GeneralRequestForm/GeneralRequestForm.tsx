@@ -28,9 +28,6 @@ export const GeneralRequestForm = ({ onSuccess }: { onSuccess?: () => void }) =>
   });
 
   const t = useTranslations('solution.form');
-  const ti = useTranslations('industries');
-  const tg = useTranslations('marketingGoals');
-  const tu = useTranslations('urgency');
 
   const onSubmit = async (data: GeneralRequestSchema) => {
     try {
@@ -47,19 +44,30 @@ export const GeneralRequestForm = ({ onSuccess }: { onSuccess?: () => void }) =>
   };
 
   const industries = [
-    ti('0'),
-    ti('1'),
-    ti('2'),
-    ti('3'),
-    ti('4'),
-    ti('5'),
-    ti('6'),
-    ti('7'),
-    ti('8'),
-    ti('9'),
+    t('industries.0', { fallback: 'Technology' }),
+    t('industries.1', { fallback: 'Finance' }),
+    t('industries.2', { fallback: 'eCommerce & Retail' }),
+    t('industries.3', { fallback: 'Real Estate' }),
+    t('industries.4', { fallback: 'Healthcare' }),
+    t('industries.5', { fallback: 'Education' }),
+    t('industries.6', { fallback: 'Professional Services' }),
+    t('industries.7', { fallback: 'Travel & Hospitality' }),
+    t('industries.8', { fallback: 'Manufacturing' }),
+    t('industries.9', { fallback: 'Other' }),
   ];
-  const mainMarketingGoals = [tg('0'), tg('1'), tg('2'), tg('3'), tg('4'), tg('5')];
-  const urgency = [tu('0'), tu('1'), tu('2')];
+  const mainMarketingGoals = [
+    t('marketingGoals.0', { fallback: 'Launch a new product' }),
+    t('marketingGoals.1', { fallback: 'Get more leads' }),
+    t('marketingGoals.2', { fallback: 'Scale existing campaigns' }),
+    t('marketingGoals.3', { fallback: 'Fix underperforming marketing' }),
+    t('marketingGoals.4', { fallback: 'Competition' }),
+    t('marketingGoals.5', { fallback: 'Other' }),
+  ];
+  const urgency = [
+    t('urgency.0', { fallback: 'Just exploring' }),
+    t('urgency.1', { fallback: 'Planning in 2–4 weeks' }),
+    t('urgency.2', { fallback: 'Ready to start this week' }),
+  ];
 
   return (
     <>

@@ -8,7 +8,7 @@ import { fadeInUp } from '@/shared/lib/helpers/animations';
 import styles from './Hero.module.scss';
 
 export const Hero = () => {
-  const t = useTranslations('solution.hero');
+  const t = useTranslations('solutionsPage.hero');
 
   return (
     <section className={styles.marketingHero}>
@@ -28,7 +28,7 @@ export const Hero = () => {
             viewport={{ once: true }}
             variants={fadeInUp}
           >
-            {t('title')}
+            {t('title', { fallback: 'Marketing Solutions That Deliver.' })}
           </motion.h1>
           <motion.p
             initial="hidden"
@@ -36,7 +36,10 @@ export const Hero = () => {
             viewport={{ once: true }}
             variants={fadeInUp}
           >
-            {t('text')}
+            {t('text', {
+              fallback:
+                'Comprehensive packages built to solve challenges and drive business growth.',
+            })}
           </motion.p>
         </div>
       </div>
