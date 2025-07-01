@@ -6,7 +6,7 @@ import { MarketingGoing } from '../services/components';
 import { Hero, ReadyMadePackages, SolutionList } from './components';
 
 export default async function SolutionsPage() {
-  const t = await getTranslations('solution.twoLinks');
+  const t = await getTranslations('solutionsPage.twoLinks');
 
   return (
     <main>
@@ -15,15 +15,22 @@ export default async function SolutionsPage() {
       <SolutionList />
       <MarketingGoing />
       <TwoLinks
-        title={t('title')}
-        description={t('description')}
+        title={t('title', { fallback: 'Not Sure What Services You Need?' })}
+        description={t('description', {
+          fallback:
+            'We understand — sometimes it’s hard to match your needs to specific services. That’s why we offer two easy ways to move forward:',
+        })}
         items={[
           {
-            title: t('0'),
+            title: t('0', {
+              fallback: 'Explore our full range of individual marketing and advertising services.',
+            }),
             url: '/services',
           },
           {
-            title: t('1'),
+            title: t('1', {
+              fallback: 'Tell us your goals — we’ll help you shape the right marketing approach.',
+            }),
             url: '/',
             generalRequest: true,
           },

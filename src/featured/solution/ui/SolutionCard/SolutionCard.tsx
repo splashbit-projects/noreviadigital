@@ -53,8 +53,8 @@ export const SolutionCard = ({
       <div className={st.includesLayout}>
         <p>What’s Included:</p>
         <ul className={st.list}>
-          {includes.map((item) => (
-            <li key={item}>{item}</li>
+          {includes.map((item, index) => (
+            <li key={index}>{item}</li>
           ))}
         </ul>
       </div>

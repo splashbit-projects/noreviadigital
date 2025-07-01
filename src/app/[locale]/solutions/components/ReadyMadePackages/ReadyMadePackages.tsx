@@ -8,7 +8,7 @@ import { fadeInUp } from '@/shared/lib/helpers/animations';
 import styles from './ReadyMadePackages.module.scss';
 
 export const ReadyMadePackages = () => {
-  const t = useTranslations('solution.readyMadePackages');
+  const t = useTranslations('solutionsPage.readyMadePackages');
 
   return (
     <section className={styles.marketingHero}>
@@ -28,7 +28,7 @@ export const ReadyMadePackages = () => {
             viewport={{ once: true }}
             variants={fadeInUp}
           >
-            {t('title')}
+            {t('title', { fallback: 'Ready-Made Packages for Real Marketing Challenges' })}
           </motion.h1>
           <motion.p
             initial="hidden"
@@ -36,7 +36,10 @@ export const ReadyMadePackages = () => {
             viewport={{ once: true }}
             variants={fadeInUp}
           >
-            {t('text')}
+            {t('text', {
+              fallback:
+                'Structured solutions designed to align with your goals, budget, and urgency.',
+            })}
           </motion.p>
         </div>
       </div>
