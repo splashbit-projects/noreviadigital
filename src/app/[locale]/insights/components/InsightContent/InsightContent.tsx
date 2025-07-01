@@ -1,6 +1,6 @@
 'use client';
 
-import { useLayoutEffect, useRef, useState } from 'react';
+import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 
 import st from './InsightContent.module.scss';
@@ -27,11 +27,19 @@ export const InsightContent = ({ content }: { content: string }) => {
 
   const handleTitleClick = (id: string) => {
     setActiveTitle(id);
-    window.scrollTo({
-      top: document.getElementById(id)?.offsetTop,
-      behavior: 'smooth',
-    });
   };
+
+  useEffect(() => {
+    if (activeTitle) {
+      const el = document.getElementById(activeTitle);
+      if (el) {
+        window.scrollTo({
+          top: el.offsetTop,
+          behavior: 'smooth',
+        });
+      }
+    }
+  }, [activeTitle]);
 
   return (
     <section className={st.post}>
@@ -51,7 +59,7 @@ export const InsightContent = ({ content }: { content: string }) => {
                   onClick={() => handleTitleClick(title)}
                   className={activeTitle === title ? st.active : ''}
                 >
-                  {id}
+                  {title}
                 </Link>
               ))}
             </div>

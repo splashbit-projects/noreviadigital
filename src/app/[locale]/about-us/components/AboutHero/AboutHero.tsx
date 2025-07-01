@@ -43,7 +43,7 @@ export const AboutHero = () => {
               }),
             }}
           />
-          <Button url="/contact-us" color="white" plus>
+          <Button url="/contact-us" color="white" plus buttonType="link">
             {t('button', {
               fallback: 'Contact Us',
             })}

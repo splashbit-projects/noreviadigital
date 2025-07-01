@@ -5,7 +5,7 @@ import type { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
 
 import { cn } from '@/shared/lib/helpers/styles';
-import { CursorFollower, Footer, Header } from '@/shared/ui/components';
+import { CursorFollower, Footer, Header, Preloader } from '@/shared/ui/components';
 import { LenisScrollProvider } from '@/shared/ui/kit';
 
 import '@/shared/lib/styles/null.scss';
@@ -60,6 +60,7 @@ export default async function RootLayout({
       <body className={cn(workSans.variable, kola.variable)}>
         <NextIntlClientProvider>
           <LenisScrollProvider>
+            <Preloader />
             <Header />
             {children}
             <Footer />

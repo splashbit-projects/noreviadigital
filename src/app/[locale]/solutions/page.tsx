@@ -1,9 +1,22 @@
+import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 
 import { TwoLinks } from '@/shared/ui/components/two-links/TwoLinks';
 
 import { MarketingGoing } from '../services/components';
 import { Hero, ReadyMadePackages, SolutionList } from './components';
+
+export const metadata: Metadata = {
+  title: 'Complex Marketing Solutions',
+  description:
+    'Discover marketing and advertising solutions tailored to the exact trigger your business is facing — from low lead flow to weak brand recall.',
+  openGraph: {
+    title: 'Complex Marketing Solutions',
+    description:
+      'Discover marketing and advertising solutions tailored to the exact trigger your business is facing — from low lead flow to weak brand recall.',
+    images: 'https://noreviadigital.com/images/meta.png',
+  },
+};
 
 export default async function SolutionsPage() {
   const t = await getTranslations('solutionsPage.twoLinks');

@@ -8,8 +8,16 @@ import { Button } from '@/shared/ui/kit';
 
 import styles from './MarketingHero.module.scss';
 
+import { useUrgentRequestStore } from '@/featured/urgent-request';
+
 export const MarketingHero = () => {
   const t = useTranslations('marketingHero');
+  const { setPopupOpened } = useUrgentRequestStore();
+
+  const handleUrgentRequest = () => {
+    setPopupOpened(true);
+    document.body.style.overflow = 'hidden';
+  };
 
   return (
     <section className={styles.marketingHero}>
@@ -53,7 +61,7 @@ export const MarketingHero = () => {
           viewport={{ once: true }}
           variants={fadeInUp}
         >
-          <Button url="#" color="white" plus>
+          <Button url="#" color="white" plus onClick={handleUrgentRequest}>
             {t('button', {
               fallback: 'Get Assistance',
             })}

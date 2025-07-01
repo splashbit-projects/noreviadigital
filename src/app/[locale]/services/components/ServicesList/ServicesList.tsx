@@ -1,11 +1,9 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 
-import { fadeInUp } from '@/shared/lib/helpers/animations';
 import { ServiceArrow } from '@/shared/ui/icons';
-import { Button, Transform3D, TransformScale } from '@/shared/ui/kit';
+import { Transform3D, TransformScale } from '@/shared/ui/kit';
 
 import styles from './ServicesList.module.scss';
 
@@ -90,17 +88,6 @@ export const ServicesList = () => {
             </a>
           </Transform3D>
         ))}
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={fadeInUp}
-          className={styles.services__button}
-        >
-          <Button url="/solutions" color="grey" plus size="large" buttonType="link">
-            {t('button', { fallback: 'Explore Full Services' })}
-          </Button>
-        </motion.div>
       </section>
       <SolutionPopup />
     </TransformScale>
