@@ -87,7 +87,7 @@ export const Footer = () => {
                 <span>{t('about', { fallback: 'About' })}</span>
                 <span>{t('about', { fallback: 'About' })}</span>
               </Link>
-              <Link href="#">
+              <Link href="/contacts">
                 <span>{t('contact', { fallback: 'Contact' })}</span>
                 <span>{t('contact', { fallback: 'Contact' })}</span>
               </Link>
