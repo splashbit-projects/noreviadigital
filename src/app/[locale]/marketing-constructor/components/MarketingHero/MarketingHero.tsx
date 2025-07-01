@@ -53,7 +53,7 @@ export const MarketingHero = () => {
           viewport={{ once: true }}
           variants={fadeInUp}
         >
-          <Button url="/contact-us" color="white" plus buttonType="link">
+          <Button url="/contacts" color="white" plus buttonType="link">
             {t('button', {
               fallback: 'Contact Us',
             })}

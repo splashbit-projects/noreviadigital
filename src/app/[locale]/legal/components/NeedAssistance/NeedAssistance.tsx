@@ -28,7 +28,7 @@ export const NeedAssistance = () => {
               }),
             }}
           />
-          <Button url="/contact-us" color="grey" plus size="small" buttonType="link">
+          <Button url="/contacts" color="grey" plus size="small" buttonType="link">
             {t('button', {
               fallback: 'Contact Us',
             })}
