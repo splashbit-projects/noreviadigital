@@ -72,9 +72,13 @@ export const Footer = () => {
                 <span>{t('solutions', { fallback: 'Solutions' })}</span>
                 <span>{t('solutions', { fallback: 'Solutions' })}</span>
               </Link>
-              <Link href="/insights">
-                <span>{t('insights', { fallback: 'Insights' })}</span>
-                <span>{t('insights', { fallback: 'Insights' })}</span>
+              <Link href="/marketing-recovery">
+                <span>{t('recovery', { fallback: 'Recovery' })}</span>
+                <span>{t('recovery', { fallback: 'Recovery' })}</span>
+              </Link>
+              <Link href="/marketing-constructor">
+                <span>{t('constructor', { fallback: 'Constructor' })}</span>
+                <span>{t('constructor', { fallback: 'Constructor' })}</span>
               </Link>
             </div>
             <div>
@@ -87,20 +91,9 @@ export const Footer = () => {
                 <span>{t('contact', { fallback: 'Contact' })}</span>
                 <span>{t('contact', { fallback: 'Contact' })}</span>
               </Link>
-              <Link href="#">
-                <span>{t('legal', { fallback: 'Legal' })}</span>
-                <span>{t('legal', { fallback: 'Legal' })}</span>
-              </Link>
-            </div>
-            <div>
-              <h5>{t('tools', { fallback: 'Tools' })}</h5>
-              <Link href="/marketing-constructor">
-                <span>{t('constructor', { fallback: 'Constructor' })}</span>
-                <span>{t('constructor', { fallback: 'Constructor' })}</span>
-              </Link>
-              <Link href="/marketing-recovery">
-                <span>{t('recovery', { fallback: 'Recovery' })}</span>
-                <span>{t('recovery', { fallback: 'Recovery' })}</span>
+              <Link href="/insights">
+                <span>{t('insights', { fallback: 'Insights' })}</span>
+                <span>{t('insights', { fallback: 'Insights' })}</span>
               </Link>
               <Link href="#" onClick={onOpenGeneralRequestHandle}>
                 <span>{t('requestBrief', { fallback: 'Request Brief' })}</span>
