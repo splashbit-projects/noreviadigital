@@ -10,8 +10,15 @@ import { WEBSITE_EMAIL, WEBSITE_REGISTERED_ADDRESS } from '@/shared/lib/constant
 import { Linkedin } from '../../icons';
 import styles from './Footer.module.scss';
 
+import { useGeneralRequestPopup } from '@/featured/general-request/model/store';
+
 export const Footer = () => {
   const t = useTranslations('footer');
+
+  const { setOpen } = useGeneralRequestPopup();
+
+  const onOpenGeneralRequestHandle = () => setOpen(true);
+
   return (
     <footer className={styles.footer}>
       <div className={styles.footer__container}>
@@ -95,7 +102,7 @@ export const Footer = () => {
                 <span>{t('recovery', { fallback: 'Recovery' })}</span>
                 <span>{t('recovery', { fallback: 'Recovery' })}</span>
               </Link>
-              <Link href="#">
+              <Link href="#" onClick={onOpenGeneralRequestHandle}>
                 <span>{t('requestBrief', { fallback: 'Request Brief' })}</span>
                 <span>{t('requestBrief', { fallback: 'Request Brief' })}</span>
               </Link>
