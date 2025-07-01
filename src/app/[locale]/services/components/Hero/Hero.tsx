@@ -50,7 +50,7 @@ export const Hero = () => {
           viewport={{ once: true }}
           variants={fadeInUp}
         >
-          <Button url="#" color="white" plus>
+          <Button url="/solutions" color="white" plus buttonType="link">
             {t('btn', { fallback: 'Check Our Solutions' })}
           </Button>
         </motion.div>
