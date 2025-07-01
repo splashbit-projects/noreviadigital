@@ -1,12 +1,15 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 
 import { fadeInUp } from '@/shared/lib/helpers/animations';
 
 import styles from './ReadyMadePackages.module.scss';
 
 export const ReadyMadePackages = () => {
+  const t = useTranslations('solution.readyMadePackages');
+
   return (
     <section className={styles.marketingHero}>
       <div className={'_container'}>
@@ -25,7 +28,7 @@ export const ReadyMadePackages = () => {
             viewport={{ once: true }}
             variants={fadeInUp}
           >
-            Ready-Made Packages for Real Marketing Challenges
+            {t('title')}
           </motion.h1>
           <motion.p
             initial="hidden"
@@ -33,7 +36,7 @@ export const ReadyMadePackages = () => {
             viewport={{ once: true }}
             variants={fadeInUp}
           >
-            Structured solutions designed to align with your goals, budget, and urgency.
+            {t('text')}
           </motion.p>
         </div>
       </div>

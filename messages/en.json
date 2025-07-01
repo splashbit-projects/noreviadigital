@@ -333,5 +333,301 @@
     "marketing-recovery": "Marketing Recovery",
     "insights": "Insights",
     "about-us": "About Us"
+  },
+  "servicesPage": {
+    "hero": {
+      "title": "Explore What We Do.",
+      "text": "Strategic, creative, and performance-driven services built to grow your business.",
+      "btn": "Check Our Solutions"
+    },
+    "services": {
+      "title": "Tailored Services for Every Marketing Need",
+      "0": {
+        "title": "Advertising Services",
+        "text": "From high-impact digital ads to traditional placements, our advertising services are built to meet your audience wherever they are. Whether through search, social, TV, or billboards, we design campaigns that generate visibility, drive traffic, and convert attention into results."
+      },
+      "1": {
+        "title": "Marketing Services",
+        "text": "Marketing is more than exposure — it's alignment, consistency, and momentum. From SEO to branding, content to automation, we deliver complete marketing frameworks connecting strategy with execution and scale."
+      },
+      "2": {
+        "title": "Strategic & Diagnostic Services",
+        "text": "If you’re not sure what’s broken — start here. These services audit your funnel, sharpen your offer, and define where your marketing should go next. Perfect for companies preparing to scale or pivot."
+      },
+      "3": {
+        "title": "Technical Services & Performance Support",
+        "text": "Behind every successful campaign is clean data, smooth tracking, and high-functioning infrastructure. We implement the technical layer that makes your marketing measurable, optimised, and ready to perform."
+      },
+      "4": {
+        "title": "Content & Creative Support",
+        "text": "Strong campaigns need the right story, the right visuals, and the right angle. From scripts to sales materials, we create assets that speak, persuade effectively, and perform under pressure."
+      },
+      "5": {
+        "title": "Client Education & Retention Services",
+        "text": "Our support doesn’t end with delivery. We provide ongoing education, communication integration, and high-level briefings to help your internal teams stay aligned and your leadership informed."
+      },
+      "button": "Explore Full Services"
+    },
+    "industries": {
+      "title": "Industries We Serve",
+      "text": "We know how to position, promote, and grow businesses in:",
+      "text2": {
+        "0": "We speak your industry’s language — and your customer’s.",
+        "1": "From strategy to execution, we tailor campaigns that match your niche, drive real demand, and earn lasting trust."
+      },
+      "items": {
+        "0": "Tech & SaaS",
+        "1": "Finance & Fintech",
+        "2": "Retail & Ecommerce",
+        "3": "Healthcare & Life Sciences",
+        "4": "Property & Real Estate",
+        "5": "Education & Training",
+        "6": "Travel & Hospitality",
+        "7": "Professional Services",
+        "8": "B2B & Enterprise"
+      }
+    },
+    "marketingGoing": {
+      "title": {
+        "0": "Marketing going off track?",
+        "1": "We’ll fix it — fast."
+      },
+      "button": "Get Immediate Help"
+    },
+    "whereToStart": {
+      "title": "Don’t Know Where to Start?",
+      "text": "We get it — choosing the right service isn’t always obvious. That’s why we offer two simple paths forward:",
+      "0": "Discover pre-built packages designed to solve real business challenges.",
+      "1": "Get personal guidance from our team to map out the right approach for your goals."
+    }
+  },
+  "industries": {
+    "0": "Technology",
+    "1": "Finance",
+    "2": "eCommerce & Retail",
+    "3": "Real Estate",
+    "4": "Healthcare",
+    "5": "Education",
+    "6": "Professional Services",
+    "7": "Travel & Hospitality",
+    "8": "Manufacturing",
+    "9": "Other"
+  },
+  "marketingGoals": {
+    "0": "Launch a new product",
+    "1": "Get more leads",
+    "2": "Scale existing campaigns",
+    "3": "Fix underperforming marketing",
+    "4": "Competition",
+    "5": "Other"
+  },
+  "urgency": {
+    "0": "Just exploring",
+    "1": "Planning in 2–4 weeks",
+    "2": "Ready to start this week"
+  },
+  "solution": {
+    "hero": {
+      "title": "Marketing Solutions That Deliver.",
+      "text": "Comprehensive packages built to solve challenges and drive business growth."
+    },
+    "readyMadePackages": {
+      "title": "Ready-Made Packages for Real Marketing Challenges",
+      "text": "Structured solutions designed to align with your goals, budget, and urgency."
+    },
+    "twoLinks": {
+      "title": "Not Sure What Services You Need?",
+      "description": "We understand — sometimes it's hard to match your needs to specific services. That’s why we offer two easy ways to move forward:",
+      "0": "Explore our full range of individual marketing and advertising services.",
+      "1": "Tell us your goals — we’ll help you shape the right marketing approach."
+    },
+    "solutionList": {
+      "0": {
+        "title": "Market Launch & Positioning",
+        "subtitle": "For brands entering the market or launching a new product or service.",
+        "description": "Lay the foundation for strong market entry with sharp positioning, cohesive branding, full-funnel execution, and high-performance campaigns tailored for visibility and growth.",
+        "purpose": {
+          "0": "Startups",
+          "1": "Product launches",
+          "2": "New market entries",
+          "3": "Businesses pivoting their positioning"
+        },
+        "includes": {
+          "0": "Positioning and Messaging Workshop",
+          "1": "Branding and Identity Development",
+          "2": "Website Analysis and Optimization",
+          "3": "Google Ads",
+          "4": "Social Media Advertising",
+          "5": "Search Engine Optimization",
+          "6": "Customer Relationship Management as a Service or Email Marketing and Automation"
+        }
+      },
+      "1": {
+        "title": "Performance Acceleration",
+        "subtitle": "For businesses with traffic but poor conversion or underperforming campaigns.",
+        "description": "Boost your performance with data-backed funnel diagnostics, precise conversion optimization, improved creative direction, and fully integrated retargeting workflows.",
+        "purpose": {
+          "0": "Mid-sized businesses",
+          "1": "Stalled funnels",
+          "2": "Campaigns with poor ROI",
+          "3": "Low lead flow"
+        },
+        "includes": {
+          "0": "Full Funnel Audit",
+          "1": "Pay-Per-Click Advertising",
+          "2": "Display Advertising",
+          "3": "Social Media Advertising",
+          "4": "Conversion Rate Optimization",
+          "5": "Landing Page A/B Testing Setup",
+          "6": "Ad Creative Strategy Pack",
+          "7": "Video Ad Scriptwriting & Direction",
+          "8": "UTM Strategy & Implementation",
+          "9": "Analytics Dashboard Setup (GA4 + Looker)",
+          "10": "Email Marketing and Automation or Programmatic Retargeting",
+          "11": "Marketing Analytics and Reporting"
+        }
+      },
+      "2": {
+        "title": "Rebranding & Relaunch",
+        "subtitle": "For established companies shifting brand identity or reaching a new audience.",
+        "description": "Modernize your brand, align your strategy, and re-enter the market with high-impact campaigns and upgraded digital presence.",
+        "purpose": {
+          "0": "Established businesses refreshing their image",
+          "1": "Repositioning their offer",
+          "2": "Expanding into new segments"
+        },
+        "includes": {
+          "0": "Brand Marketing Strategy Development",
+          "1": "Branding and Identity Development",
+          "2": "Social Media Management and Strategy",
+          "3": "Content Marketing and Strategy",
+          "4": "Search Engine Optimization",
+          "5": "Website Analysis and Optimization",
+          "6": "Influencer Marketing Strategy or Public Relations and Media Outreachs",
+          "7": "Paid Campaigns (Google Ads + Social Media Advertising)",
+          "8": "Marketing Analytics and Reporting",
+          "9": "Positioning and Messaging Workshop"
+        }
+      },
+      "3": {
+        "title": "Digital Transformation in Marketing",
+        "subtitle": "For traditional or offline-first businesses adopting digital marketing.",
+        "description": "Build a modern marketing engine with the right systems, automation, analytics, and foundational campaigns to scale sustainably.",
+        "purpose": {
+          "0": "Offline-first companies",
+          "1": "Local businesses",
+          "2": "Traditional agencies transitioning into digital channels"
+        },
+        "includes": {
+          "0": "Marketing Automation and Workflow Optimization",
+          "1": "CRM Setup and Customization",
+          "2": "Paid Acquisition Plan (Google Ads + Social Media Advertising + Display)",
+          "3": "Content Marketing Foundation",
+          "4": "Search Engine Optimization",
+          "5": "Pixel, UTM, and Conversion Tracking Setup",
+          "6": "Analytics Dashboard (GA4 + Looker)",
+          "7": "Website Analysis and UX Optimization",
+          "8": "Custom Team Training",
+          "9": "Branding and Identity Update",
+          "10": "Email Deliverability Fix",
+          "11": "MarTech Stack Optimization"
+        }
+      },
+      "4": {
+        "title": "Audience Expansion & Demand Generation",
+        "subtitle": "For scaling brands ready to reach new audiences and increase demand.",
+        "description": "Scale acquisition through strategic full-funnel targeting, optimized messaging, and performance marketing designed to convert and retain high-value customers.",
+        "purpose": {
+          "0": "Growth-stage businesses",
+          "1": "Expanding startups",
+          "2": "Companies launching into new verticals or regions"
+        },
+        "includes": {
+          "0": "Full Funnel Audit",
+          "1": "Google Ads",
+          "2": "Programmatic Advertising",
+          "3": "Social Media Advertising",
+          "4": "Influencer Marketing",
+          "5": "Event Marketing",
+          "6": "Content Marketing and Strategy",
+          "7": "Brand Marketing Strategy Development",
+          "8": "Conversion Rate Optimization",
+          "9": "Ad Creative Strategy Pack",
+          "10": "Email Marketing and Automation",
+          "11": "UTM Strategy & Implementation",
+          "12": "Analytics Dashboard Setup",
+          "13": "Pixel & Conversion Tracking Setups",
+          "14": "Market Research and Analysis",
+          "15": "Landing Page A/B Testing Setup"
+        }
+      },
+      "5": {
+        "title": "Crisis Recovery & Marketing Reset",
+        "subtitle": "For businesses that need to recover from failed campaigns or drops in revenue.",
+        "description": "Audit, fix, and rebuild your marketing from the ground up. We focus on what went wrong, what to improve, and how to recover sustainably — with clear ROI metrics and stable execution.",
+        "purpose": {
+          "0": "Brands burned by previous agencies",
+          "1": "mismanaged campaigns",
+          "2": "disrupted by shifting markets"
+        },
+        "includes": {
+          "0": "Marketing Readiness Audit",
+          "1": "Offer Optimization Consultation",
+          "2": "Google Ads (Revamp)",
+          "3": "Social Media Advertising (Revamp)",
+          "4": "Website Analysis and Optimization",
+          "5": "Email Deliverability Fix",
+          "6": "Pixel & Conversion Tracking Setup",
+          "7": "Executive Marketing Briefing (Monthly – 2 months)"
+        }
+      }
+    },
+    "popup": {
+      "request": "Request"
+    },
+    "form": {
+      "firstName": {
+        "label": "First Name:",
+        "placeholder": "Enter your first name"
+      },
+      "lastName": {
+        "label": "Last Name:",
+        "placeholder": "Enter your last name"
+      },
+      "industry": {
+        "label": "Industry:",
+        "placeholder": "Select your industry"
+      },
+      "website": {
+        "label": "Website:",
+        "placeholder": "Enter your website"
+      },
+      "company": {
+        "label": "Company:",
+        "placeholder": "Enter your company name"
+      },
+      "email": {
+        "label": "Email:",
+        "placeholder": "Enter your email"
+      },
+      "phone": {
+        "label": "Phone:",
+        "placeholder": "Enter your phone number"
+      },
+      "marketingChallenge": {
+        "label": "Marketing Challenge:",
+        "placeholder": "Describe your marketing challenge"
+      },
+      "companyName": {
+        "label": "Company Name:",
+        "placeholder": "Enter your company name"
+      },
+      "consent": {
+        "0": "I agree to the processing of my personal data for the purpose of handling my request, in accordance with the",
+        "1": "Privacy Policy."
+      },
+      "submit": "Submit",
+      "submitting": "Submitting..."
+    }
   }
 }
