@@ -1,9 +1,15 @@
 'use client';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 import { motion, useMotionValue, useTransform } from 'framer-motion';
 
 export const CursorFollower = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    setIsMobile(window.innerWidth < 992);
+  }, []);
+
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
 
@@ -48,6 +54,7 @@ export const CursorFollower = () => {
         pointerEvents: 'none',
         mixBlendMode: 'difference',
         zIndex: 1000,
+        display: isMobile ? 'none' : 'block',
       }}
     />
   );
