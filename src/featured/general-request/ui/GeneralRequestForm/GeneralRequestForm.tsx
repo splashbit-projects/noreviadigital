@@ -10,20 +10,11 @@ import { Controller, useForm } from 'react-hook-form';
 import { Button } from '@/shared/ui/kit';
 import { Dropdown, DropdownItem, DropdownMenu, DropdownTrigger } from '@/shared/ui/kit/dropdown';
 
-import { sendSolutionRequest } from '../../api/send-solution-request';
-import { type SolutionFormSchema, solutionFormSchema } from '../../model/schemas';
-import styles from './SolutionForm.module.scss';
+import { sendGeneralRequest } from '../../api/send-general-request';
+import { type GeneralRequestSchema, generalRequestSchema } from '../../model/schemas';
+import styles from './GeneralRequestForm.module.scss';
 
-export const SolutionForm = ({
-  name,
-  onSuccess,
-  type = 'solution',
-}: {
-  name: string;
-  onSuccess?: () => void;
-  type?: 'solution' | 'service';
-}) => {
-  const t = useTranslations('solution.form');
+export const GeneralRequestForm = ({ onSuccess }: { onSuccess?: () => void }) => {
   const [isLoading, setIsLoading] = useState(false);
 
   const {
@@ -32,14 +23,19 @@ export const SolutionForm = ({
     handleSubmit,
     reset,
     formState: { errors },
-  } = useForm<SolutionFormSchema>({
-    resolver: zodResolver(solutionFormSchema),
+  } = useForm<GeneralRequestSchema>({
+    resolver: zodResolver(generalRequestSchema),
   });
 
-  const onSubmit = async (data: SolutionFormSchema) => {
+  const t = useTranslations('solution.form');
+  const ti = useTranslations('industries');
+  const tg = useTranslations('marketingGoals');
+  const tu = useTranslations('urgency');
+
+  const onSubmit = async (data: GeneralRequestSchema) => {
     try {
       setIsLoading(true);
-      await sendSolutionRequest(data, type, name);
+      await sendGeneralRequest(data);
       setTimeout(() => {
         onSuccess?.();
         reset();
@@ -51,17 +47,19 @@ export const SolutionForm = ({
   };
 
   const industries = [
-    t('industry.0', { fallback: 'Technology' }),
-    t('industry.1', { fallback: 'Finance' }),
-    t('industry.2', { fallback: 'eCommerce & Retail' }),
-    t('industry.3', { fallback: 'Real Estate' }),
-    t('industry.4', { fallback: 'Healthcare' }),
-    t('industry.5', { fallback: 'Education' }),
-    t('industry.6', { fallback: 'Professional Services' }),
-    t('industry.7', { fallback: 'Travel & Hospitality' }),
-    t('industry.8', { fallback: 'Manufacturing' }),
-    t('industry.9', { fallback: 'Other' }),
+    ti('0'),
+    ti('1'),
+    ti('2'),
+    ti('3'),
+    ti('4'),
+    ti('5'),
+    ti('6'),
+    ti('7'),
+    ti('8'),
+    ti('9'),
   ];
+  const mainMarketingGoals = [tg('0'), tg('1'), tg('2'), tg('3'), tg('4'), tg('5')];
+  const urgency = [tu('0'), tu('1'), tu('2')];
 
   return (
     <>
@@ -141,8 +139,8 @@ export const SolutionForm = ({
               {errors.phone && <p className={styles.error}>{errors.phone.message}</p>}
             </div>
           </div>
-          <div className={styles.col}>
-            <div className={styles.inputWrapper} style={{ width: '100%' }}>
+          <div className={styles.column}>
+            <div className={styles.inputWrapper}>
               <label>Industry:</label>
               <Controller
                 name="industry"
@@ -170,6 +168,64 @@ export const SolutionForm = ({
               />
               {errors.industry && <p className={styles.error}>{errors.industry.message}</p>}
             </div>
+            <div className={styles.inputWrapper}>
+              <label>Urgency of Request:</label>
+              <Controller
+                name="urgency"
+                control={control}
+                render={({ field }) => (
+                  <Dropdown>
+                    <DropdownTrigger>
+                      {field.value ? field.value : 'Select your request'}
+                    </DropdownTrigger>
+                    <DropdownMenu>
+                      {urgency.map((item) => (
+                        <DropdownItem
+                          key={item}
+                          onSelect={(e) => {
+                            e.preventDefault();
+                            field.onChange(item);
+                          }}
+                        >
+                          {item}
+                        </DropdownItem>
+                      ))}
+                    </DropdownMenu>
+                  </Dropdown>
+                )}
+              />
+              {errors.urgency && <p className={styles.error}>{errors.urgency.message}</p>}
+            </div>
+            <div className={styles.inputWrapper}>
+              <label>Main Marketing Goal:</label>
+              <Controller
+                name="goal"
+                control={control}
+                render={({ field }) => (
+                  <Dropdown>
+                    <DropdownTrigger>
+                      {field.value ? field.value : 'Select your goal'}
+                    </DropdownTrigger>
+                    <DropdownMenu>
+                      {mainMarketingGoals.map((item) => (
+                        <DropdownItem
+                          key={item}
+                          onSelect={(e) => {
+                            e.preventDefault();
+                            field.onChange(item);
+                          }}
+                        >
+                          {item}
+                        </DropdownItem>
+                      ))}
+                    </DropdownMenu>
+                  </Dropdown>
+                )}
+              />
+              {errors.goal && <p className={styles.error}>{errors.goal.message}</p>}
+            </div>
+          </div>
+          <div className={styles.col}>
             <div className={`${styles.inputWrapper} ${styles.fullWidth}`}>
               <label>
                 {t('marketingChallenge.label', {
@@ -208,9 +264,7 @@ export const SolutionForm = ({
             {errors.consent && <p className={styles.error}>{errors.consent.message}</p>}
           </div>
           <Button buttonType="submit" color="grey" plus size="large">
-            {isLoading
-              ? t('submitting', { fallback: 'Submitting' })
-              : t('submit', { fallback: 'Submit' })}
+            {isLoading ? t('submitting') : t('submit')}
           </Button>
         </div>
       </form>

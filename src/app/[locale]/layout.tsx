@@ -4,11 +4,14 @@ import LocalFont from 'next/font/local';
 import type { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
 
+import { cn } from '@/shared/lib/helpers/styles';
 import { CursorFollower, Footer, Header } from '@/shared/ui/components';
 import { LenisScrollProvider } from '@/shared/ui/kit';
 
 import '@/shared/lib/styles/null.scss';
 import '@/shared/lib/styles/base.scss';
+
+import { GeneralRequestPopup } from '@/featured/general-request/ui/GeneralRequestPopup';
 
 const workSans = Work_Sans({
   variable: '--font-work-sans',
@@ -54,13 +57,14 @@ export default async function RootLayout({
 
   return (
     <html lang={locale}>
-      <body className={`${workSans.variable} ${kola.variable}`}>
+      <body className={cn(workSans.variable, kola.variable)}>
         <NextIntlClientProvider>
           <LenisScrollProvider>
             <Header />
             {children}
             <Footer />
             <CursorFollower />
+            <GeneralRequestPopup />
           </LenisScrollProvider>
         </NextIntlClientProvider>
       </body>

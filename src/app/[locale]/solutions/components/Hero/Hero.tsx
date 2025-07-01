@@ -1,12 +1,15 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 
 import { fadeInUp } from '@/shared/lib/helpers/animations';
 
 import styles from './Hero.module.scss';
 
 export const Hero = () => {
+  const t = useTranslations('solution.hero');
+
   return (
     <section className={styles.marketingHero}>
       <div className={'_container'}>
@@ -25,7 +28,7 @@ export const Hero = () => {
             viewport={{ once: true }}
             variants={fadeInUp}
           >
-            Marketing Solutions That Deliver.
+            {t('title')}
           </motion.h1>
           <motion.p
             initial="hidden"
@@ -33,7 +36,7 @@ export const Hero = () => {
             viewport={{ once: true }}
             variants={fadeInUp}
           >
-            Comprehensive packages built to solve challenges and drive business growth.
+            {t('text')}
           </motion.p>
         </div>
       </div>

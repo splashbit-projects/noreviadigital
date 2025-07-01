@@ -11,11 +11,24 @@ import styles from './SolutionPopup.module.scss';
 
 export const SolutionPopup = () => {
   const t = useTranslations('solution.popup');
-  const { isSuccess, popupOpened, setIsSuccess, setPopupOpened, solution } = useSolutionPopup();
+  const {
+    isSuccess,
+    popupOpened,
+    setIsSuccess,
+    setPopupOpened,
+    solution,
+    service,
+    setSolution,
+    setService,
+  } = useSolutionPopup();
+
+  console.log('service', service);
 
   const handleClose = () => {
     setPopupOpened(false);
     setIsSuccess(false);
+    setSolution(undefined);
+    setService(undefined);
     document.body.style.overflow = 'auto';
   };
 
@@ -33,7 +46,11 @@ export const SolutionPopup = () => {
               <h2>
                 {solution?.title} {t('request', { fallback: 'Request' })}
               </h2>
-              <SolutionForm onSuccess={() => setIsSuccess(true)} />
+              <SolutionForm
+                onSuccess={() => setIsSuccess(true)}
+                type={solution ? 'solution' : 'service'}
+                name={solution?.title || service?.title || ''}
+              />
             </>
           )}
         </div>

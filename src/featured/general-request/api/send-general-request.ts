@@ -2,25 +2,31 @@
 
 import sgMail from '@sendgrid/mail';
 
-import type { SolutionFormSchema } from '../model/schemas';
+import type { GeneralRequestSchema } from '../model/schemas';
 
-export async function sendSolutionRequest(
-  data: SolutionFormSchema,
-  type: 'solution' | 'service',
-  name: string
-) {
+export async function sendGeneralRequest(data: GeneralRequestSchema) {
   try {
-    const { firstName, lastName, email, website, phone, company, industry, marketingChallenge } =
-      data;
+    const {
+      firstName,
+      lastName,
+      email,
+      website,
+      phone,
+      company,
+      industry,
+      marketingChallenge,
+      goal,
+      urgency,
+    } = data;
 
     sgMail.setApiKey(process.env.SENDGRID_API_KEY!);
 
     const msg = {
       to: process.env.ADMIN_EMAIL!,
       from: process.env.FROM_EMAIL!,
-      subject: `New ${type === 'solution' ? 'Solution' : 'Service'} Request`,
+      subject: `New General Request`,
       html: `
-        <h2>${name} ${type === 'solution' ? 'Solution' : 'Service'}</h2>
+        <h2>New General Request</h2>
         <p><strong>Name:</strong> ${firstName} ${lastName}</p>
         <p><strong>Email:</strong> ${email}</p>
         <p><strong>Website:</strong> ${website}</p>
@@ -28,6 +34,8 @@ export async function sendSolutionRequest(
         <p><strong>Phone:</strong> ${phone}</p>
         <p><strong>Industry:</strong> ${industry}</p>
         <p><strong>Marketing Challenge:</strong> ${marketingChallenge}</p>
+        <p><strong>Main Marketing Goal:</strong> ${goal}</p>
+        <p><strong>Urgency of Request:</strong> ${urgency}</p>
       `,
     };
 
