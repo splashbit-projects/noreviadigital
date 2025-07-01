@@ -4,7 +4,11 @@ import sgMail from '@sendgrid/mail';
 
 import type { SolutionFormSchema } from '../model/schemas';
 
-export async function sendSolutionRequest(data: SolutionFormSchema) {
+export async function sendSolutionRequest(
+  data: SolutionFormSchema,
+  type: 'solution' | 'service',
+  name: string
+) {
   try {
     const { firstName, lastName, email, website, phone, company, industry, marketingChallenge } =
       data;
@@ -14,9 +18,9 @@ export async function sendSolutionRequest(data: SolutionFormSchema) {
     const msg = {
       to: process.env.ADMIN_EMAIL!,
       from: process.env.FROM_EMAIL!,
-      subject: 'New Solution Request',
+      subject: `New ${type === 'solution' ? 'Solution' : 'Service'} Request`,
       html: `
-        <h2>New Solution Request</h2>
+        <h2>${name} ${type === 'solution' ? 'Solution' : 'Service'}</h2>
         <p><strong>Name:</strong> ${firstName} ${lastName}</p>
         <p><strong>Email:</strong> ${email}</p>
         <p><strong>Website:</strong> ${website}</p>
