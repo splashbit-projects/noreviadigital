@@ -103,10 +103,14 @@ export const Footer = () => {
           </div>
           <div className={styles.legal}>
             <nav>
-              <Link href="#">{t('terms', { fallback: 'Terms & Conditions' })}</Link>
-              <Link href="#">{t('privacy', { fallback: 'Privacy Policy' })}</Link>
-              <Link href="#">{t('cookie', { fallback: 'Cookie Policy' })}</Link>
-              <Link href="#">{t('refund', { fallback: 'Refund Policy' })}</Link>
+              <Link href="/legal/terms-and-conditions">
+                {t('terms', { fallback: 'Terms & Conditions' })}
+              </Link>
+              <Link href="/legal/privacy-policy">
+                {t('privacy', { fallback: 'Privacy Policy' })}
+              </Link>
+              <Link href="/legal/cookie-policy">{t('cookie', { fallback: 'Cookie Policy' })}</Link>
+              <Link href="/legal/refund-policy">{t('refund', { fallback: 'Refund Policy' })}</Link>
             </nav>
             <p>
               © {new Date().getFullYear()}{' '}

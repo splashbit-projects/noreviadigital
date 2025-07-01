@@ -1,12 +1,11 @@
 import React from 'react';
-import Image from 'next/image';
 
 import type { Metadata } from 'next';
 
-import { Faq, InsightContent, TimeToAct } from '../components';
+import { LegalContent, NeedAssistance } from '../components';
 import st from './page.module.scss';
 
-import { getFaqData, getPost, getPostSlugs } from '@/featured/insights/insights';
+import { getPost, getPostSlugs } from '@/featured/policy/policy';
 
 type PageParams = { locale: string; slug: string };
 
@@ -32,14 +31,11 @@ export async function generateMetadata({
   const awaitedParams = await params;
   const { locale, slug } = awaitedParams;
   const post = await getPost(slug, locale);
-  const pageTitle = `${post.seo_title}`;
-  const pageDescription = post.seo_description;
+  const pageTitle = `${post.title}`;
   return {
     title: pageTitle,
-    description: pageDescription,
     openGraph: {
       title: pageTitle,
-      description: pageDescription,
       images: '',
     },
   };
@@ -54,21 +50,17 @@ export default async function PostPage({
   const { locale, slug } = awaitedParams;
   const post = await getPost(slug, locale);
 
-  const faq = await getFaqData(slug, locale);
-
   return (
     <>
       <section className={st.postTitle}>
         <div className="_container">
           <div className={st.postTitle__content}>
-            <Image src={post.image} alt={post.title} width={1320} height={400} />
             <h1>{post.title}</h1>
           </div>
         </div>
       </section>
-      <InsightContent content={post.body as string} />
-      <Faq data={faq} />
-      <TimeToAct />
+      <LegalContent content={post.body as string} />
+      <NeedAssistance />
     </>
   );
 }
