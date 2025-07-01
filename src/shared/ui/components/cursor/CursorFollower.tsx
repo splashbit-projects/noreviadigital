@@ -7,8 +7,8 @@ export const CursorFollower = () => {
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
 
-  const circleX = useTransform(mouseX, (value) => value);
-  const circleY = useTransform(mouseY, (value) => value);
+  const circleX = useTransform(mouseX, (value) => value - 8);
+  const circleY = useTransform(mouseY, (value) => value - 8);
 
   //const springX = useSpring(circleX, { stiffness: 100, damping: 20, mass: 0.5 });
   //const springY = useSpring(circleY, { stiffness: 100, damping: 20, mass: 0.5 });
