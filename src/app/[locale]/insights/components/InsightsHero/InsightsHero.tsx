@@ -45,7 +45,7 @@ export const InsightsHero = () => {
           viewport={{ once: true }}
           variants={fadeInUp}
         >
-          <Button url="/services" color="white" plus>
+          <Button url="/services" color="white" plus buttonType="link">
             {t('button', {
               fallback: 'Check Services',
             })}

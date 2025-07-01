@@ -60,6 +60,9 @@
           line-height: normal;
           text-transform: uppercase;
           margin: 40px 0 16px 0;
+          &:first-child {
+            margin-top: 0;
+          }
         }
 
         p {

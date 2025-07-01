@@ -141,6 +141,10 @@
     "title": "It’s Time to Act",
     "button": "Urgent Assistance"
   },
+  "needAssistance": {
+    "title": "Need Assistance?",
+    "button": "Contact Us"
+  },
   "buildYourOwn": {
     "title": "Can’t Find the Right Fit?",
     "subtitle": "Build Your Own.",
@@ -265,6 +269,37 @@
       "placeholder": "Describe your case"
     },
     "title": "Urgent Assistance Request"
+  },
+  "industries": {
+    "firstName": {
+      "label": "First Name",
+      "placeholder": "Enter your first name"
+    },
+    "lastName": {
+      "label": "Last Name:",
+      "placeholder": "Enter your last name"
+    },
+    "website": {
+      "label": "Website:"
+    },
+    "companyName": {
+      "label": "Company:",
+      "placeholder": "Enter your company name"
+    },
+    "email": {
+      "label": "Email:"
+    },
+    "phone": {
+      "label": "Phone:"
+    },
+    "marketingChallenge": {
+      "label": "What is going wrong right now?",
+      "placeholder": "Describe your challenge"
+    },
+    "consent": {
+      "0": "I agree to the processing of my personal data for the purpose of handling my request, in accordance with the",
+      "1": "Privacy Policy"
+    }
   },
   "footer": {
     "text": "Norevia Digital OU<br/> Marketing That Fixes, Builds, and Grows",
