@@ -14,7 +14,15 @@ import { sendSolutionRequest } from '../../api/send-solution-request';
 import { type SolutionFormSchema, solutionFormSchema } from '../../model/schemas';
 import styles from './SolutionForm.module.scss';
 
-export const SolutionForm = ({ onSuccess }: { onSuccess?: () => void }) => {
+export const SolutionForm = ({
+  name,
+  onSuccess,
+  type = 'solution',
+}: {
+  name: string;
+  onSuccess?: () => void;
+  type?: 'solution' | 'service';
+}) => {
   const t = useTranslations('solution.form');
   const ti = useTranslations('industries');
   const [isLoading, setIsLoading] = useState(false);
@@ -32,7 +40,7 @@ export const SolutionForm = ({ onSuccess }: { onSuccess?: () => void }) => {
   const onSubmit = async (data: SolutionFormSchema) => {
     try {
       setIsLoading(true);
-      await sendSolutionRequest(data);
+      await sendSolutionRequest(data, type, name);
       setTimeout(() => {
         onSuccess?.();
         reset();

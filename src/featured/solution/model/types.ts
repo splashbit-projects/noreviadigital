@@ -6,3 +6,8 @@ export type Solution = {
   includes: string[];
   price: string;
 };
+
+export type Service = {
+  title: string;
+  text: string;
+};
