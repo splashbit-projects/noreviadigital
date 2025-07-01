@@ -16,7 +16,6 @@ import styles from './SolutionForm.module.scss';
 
 export const SolutionForm = ({ onSuccess }: { onSuccess?: () => void }) => {
   const t = useTranslations('solution.form');
-  const ti = useTranslations('industries');
   const [isLoading, setIsLoading] = useState(false);
 
   const {
@@ -44,16 +43,16 @@ export const SolutionForm = ({ onSuccess }: { onSuccess?: () => void }) => {
   };
 
   const industries = [
-    ti('0'),
-    ti('1'),
-    ti('2'),
-    ti('3'),
-    ti('4'),
-    ti('5'),
-    ti('6'),
-    ti('7'),
-    ti('8'),
-    ti('9'),
+    t('industry.0', { fallback: 'Technology' }),
+    t('industry.1', { fallback: 'Finance' }),
+    t('industry.2', { fallback: 'eCommerce & Retail' }),
+    t('industry.3', { fallback: 'Real Estate' }),
+    t('industry.4', { fallback: 'Healthcare' }),
+    t('industry.5', { fallback: 'Education' }),
+    t('industry.6', { fallback: 'Professional Services' }),
+    t('industry.7', { fallback: 'Travel & Hospitality' }),
+    t('industry.8', { fallback: 'Manufacturing' }),
+    t('industry.9', { fallback: 'Other' }),
   ];
 
   return (
@@ -201,7 +200,9 @@ export const SolutionForm = ({ onSuccess }: { onSuccess?: () => void }) => {
             {errors.consent && <p className={styles.error}>{errors.consent.message}</p>}
           </div>
           <Button buttonType="submit" color="grey" plus size="large">
-            {isLoading ? t('submitting') : t('submit')}
+            {isLoading
+              ? t('submitting', { fallback: 'Submitting' })
+              : t('submit', { fallback: 'Submit' })}
           </Button>
         </div>
       </form>

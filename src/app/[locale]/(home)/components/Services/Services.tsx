@@ -117,7 +117,7 @@ export const Services = () => {
           variants={fadeInUp}
           className={styles.services__button}
         >
-          <Button url="#" color="grey" plus size="large" buttonType="link">
+          <Button url="/services" color="grey" plus size="large" buttonType="link">
             {t('button', {
               fallback: 'Explore Full Services',
             })}

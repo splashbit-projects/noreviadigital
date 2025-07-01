@@ -9,7 +9,7 @@ import { Button } from '@/shared/ui/kit';
 import styles from './MarketingHero.module.scss';
 
 export const MarketingHero = () => {
-  const t = useTranslations('marketingHero');
+  const t = useTranslations('marketingConstructorHero');
 
   return (
     <section className={styles.marketingHero}>
@@ -53,7 +53,7 @@ export const MarketingHero = () => {
           viewport={{ once: true }}
           variants={fadeInUp}
         >
-          <Button url="#" color="white" plus>
+          <Button url="/contact-us" color="white" plus buttonType="link">
             {t('button', {
               fallback: 'Contact Us',
             })}

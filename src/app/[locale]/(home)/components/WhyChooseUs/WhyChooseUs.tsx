@@ -54,7 +54,7 @@ export const WhyChooseUs = () => {
                   fallback: 'Not Just Marketing — Business Impact',
                 })}
               </p>
-              <Button url="#" color="grey" plus size="small" buttonType="link">
+              <Button url="/about-us" color="grey" plus size="small" buttonType="link">
                 {t('button', {
                   fallback: 'Learn Us Better',
                 })}

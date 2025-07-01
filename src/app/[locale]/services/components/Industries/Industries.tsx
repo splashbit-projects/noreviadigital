@@ -44,18 +44,18 @@ export const Industries = () => {
 };
 
 const Cards = () => {
-  const t = useTranslations('servicesPage.industries.items');
+  const t = useTranslations('servicesPage.industries');
 
   const items = [
-    { icon: TechIcon, name: t('0', { fallback: 'Tech & SaaS' }) },
-    { icon: FinanceIcon, name: t('1', { fallback: 'Finance & Fintech' }) },
-    { icon: RetailIcon, name: t('2', { fallback: 'Retail & Ecommerce' }) },
-    { icon: HealthcareIcon, name: t('3', { fallback: 'Healthcare & Life Sciences' }) },
-    { icon: PropertyIcon, name: t('4', { fallback: 'Property & Real Estate' }) },
-    { icon: EducationIcon, name: t('5', { fallback: 'Education & Training' }) },
-    { icon: TravelIcon, name: t('6', { fallback: 'Travel & Hospitality' }) },
-    { icon: ProfessionalServicesIcon, name: t('7', { fallback: 'Professional Services' }) },
-    { icon: B2bIcon, name: t('8', { fallback: 'B2B & Enterprise' }) },
+    { icon: TechIcon, name: t('items.0', { fallback: 'Tech & SaaS' }) },
+    { icon: FinanceIcon, name: t('items.1', { fallback: 'Finance & Fintech' }) },
+    { icon: RetailIcon, name: t('items.2', { fallback: 'Retail & Ecommerce' }) },
+    { icon: HealthcareIcon, name: t('items.3', { fallback: 'Healthcare & Life Sciences' }) },
+    { icon: PropertyIcon, name: t('items.4', { fallback: 'Property & Real Estate' }) },
+    { icon: EducationIcon, name: t('items.5', { fallback: 'Education & Training' }) },
+    { icon: TravelIcon, name: t('items.6', { fallback: 'Travel & Hospitality' }) },
+    { icon: ProfessionalServicesIcon, name: t('items.7', { fallback: 'Professional Services' }) },
+    { icon: B2bIcon, name: t('items.8', { fallback: 'B2B & Enterprise' }) },
   ];
 
   return (
