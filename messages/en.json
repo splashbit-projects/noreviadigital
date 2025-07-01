@@ -580,5 +580,15 @@
     "marketing-recovery": "Marketing Recovery",
     "insights": "Insights",
     "about-us": "About Us"
+  },
+  "contacts": {
+    "hero": {
+      "title": {
+        "0": "Contact Us",
+        "1": "Let’s Build Smarter",
+        "2": "Marketing Together"
+      },
+      "text": "Whether you need clarity, support, or a fresh direction — we’re here."
+    }
   }
 }
