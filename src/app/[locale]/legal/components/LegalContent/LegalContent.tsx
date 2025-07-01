@@ -3,9 +3,9 @@
 import { useLayoutEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 
-import st from './InsightContent.module.scss';
+import st from './LegalContent.module.scss';
 
-export const InsightContent = ({ content }: { content: string }) => {
+export const LegalContent = ({ content }: { content: string }) => {
   const [titles, setTitles] = useState<{ [key: string]: string }>({});
   const [activeTitle, setActiveTitle] = useState<string | null>(null);
   const contentRef = useRef<HTMLDivElement>(null);
