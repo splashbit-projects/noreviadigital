@@ -21,6 +21,7 @@ export default function SolutionsPage() {
           {
             title: 'Tell us your goals — we’ll help you shape the right marketing approach.',
             url: '/',
+            generalRequest: true,
           },
         ]}
       />

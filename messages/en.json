@@ -378,6 +378,19 @@
     "8": "Manufacturing",
     "9": "Other"
   },
+  "marketingGoals": {
+    "0": "Launch a new product",
+    "1": "Get more leads",
+    "2": "Scale existing campaigns",
+    "3": "Fix underperforming marketing",
+    "4": "Competition",
+    "5": "Other"
+  },
+  "urgency": {
+    "0": "Just exploring",
+    "1": "Planning in 2–4 weeks",
+    "2": "Ready to start this week"
+  },
   "solution": {
     "popup": {
       "request": "Request"
