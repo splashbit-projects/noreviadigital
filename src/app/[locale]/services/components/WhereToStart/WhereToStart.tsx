@@ -6,6 +6,8 @@ import { useTranslations } from 'next-intl';
 
 import st from './WhereToStart.module.scss';
 
+import { useGeneralRequestPopup } from '@/featured/general-request/model/store';
+
 export const WhereToStart = () => {
   const t = useTranslations('servicesPage.whereToStart');
 
@@ -39,7 +41,7 @@ export const WhereToStart = () => {
         </section>
         <section className={st.cards}>
           {items.map((item, i) => (
-            <Card key={item.title + i} {...item} />
+            <Card key={item.title + i} {...item} generalRequest={i === 1} />
           ))}
         </section>
       </section>
@@ -47,24 +49,42 @@ export const WhereToStart = () => {
   );
 };
 
-const Card = ({ title, url }: { title: string; url: string }) => (
-  <Link href={url} className={st.card}>
-    <p>{title}</p>
-    <svg
-      style={{ marginLeft: 'auto' }}
-      xmlns="http://www.w3.org/2000/svg"
-      width="80"
-      height="80"
-      viewBox="0 0 80 80"
-      fill="none"
+const Card = ({
+  title,
+  url,
+  generalRequest,
+}: {
+  title: string;
+  url: string;
+  generalRequest?: boolean;
+}) => {
+  const { setOpen } = useGeneralRequestPopup();
+
+  const onOpenGeneralRequestHandle = () => setOpen(true);
+
+  return (
+    <Link
+      href={generalRequest ? '#' : url}
+      className={st.card}
+      onClick={generalRequest ? onOpenGeneralRequestHandle : undefined}
     >
-      <path
-        d="M23.3335 23.3335L56.6668 56.6668M56.6668 56.6668V30.0002M56.6668 56.6668H30.0002"
-        stroke="white"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  </Link>
-);
+      <p>{title}</p>
+      <svg
+        style={{ marginLeft: 'auto' }}
+        xmlns="http://www.w3.org/2000/svg"
+        width="80"
+        height="80"
+        viewBox="0 0 80 80"
+        fill="none"
+      >
+        <path
+          d="M23.3335 23.3335L56.6668 56.6668M56.6668 56.6668V30.0002M56.6668 56.6668H30.0002"
+          stroke="white"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    </Link>
+  );
+};

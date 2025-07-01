@@ -1,6 +1,5 @@
 'use client';
 
-
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 
@@ -9,8 +8,14 @@ import { Button } from '@/shared/ui/kit';
 
 import styles from './ReadyToMarket.module.scss';
 
+import { useGeneralRequestPopup } from '@/featured/general-request/model/store';
+
 export const ReadyToMarket = () => {
   const t = useTranslations('readyToMarket');
+
+  const { setOpen } = useGeneralRequestPopup();
+
+  const onOpenGeneralRequestHandle = () => setOpen(true);
 
   return (
     <section className={styles.readyToMarket}>
@@ -38,7 +43,7 @@ export const ReadyToMarket = () => {
               }),
             }}
           />
-          <Button url="#" color="grey" plus size="small" buttonType="link">
+          <Button url="#" color="grey" plus size="small" onClick={onOpenGeneralRequestHandle}>
             {t('button', {
               fallback: 'Request a Proposal',
             })}
