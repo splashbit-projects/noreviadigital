@@ -4,6 +4,8 @@ import sgMail from '@sendgrid/mail';
 
 import type { ContactSchema } from '../model/schemas';
 
+import { contactFormBody } from '@/featured/email-letters/components/contact-form-body';
+
 export async function sendContactForm(data: ContactSchema) {
   try {
     const { firstName, lastName, email, phone, projectDetails, file } = data;
@@ -22,6 +24,15 @@ export async function sendContactForm(data: ContactSchema) {
         <p><strong>Project Details:</strong> ${projectDetails}</p>
       `,
     };
+
+    const userMsg = {
+      to: email,
+      from: process.env.FROM_EMAIL!,
+      subject: `We’ve Received Your Request - Norevia Digital`,
+      html: contactFormBody({ name: firstName }),
+    };
+
+    await sgMail.send(userMsg);
 
     await sgMail.send({
       ...msg,

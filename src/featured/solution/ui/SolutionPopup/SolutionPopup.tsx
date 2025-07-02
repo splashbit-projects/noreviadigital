@@ -44,7 +44,7 @@ export const SolutionPopup = () => {
           ) : (
             <>
               <h2>
-                {solution?.title} {t('request', { fallback: 'Request' })}
+                {solution?.title || service?.title} {t('request', { fallback: 'Request' })}
               </h2>
               <SolutionForm
                 onSuccess={() => setIsSuccess(true)}

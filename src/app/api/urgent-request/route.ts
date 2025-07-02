@@ -2,6 +2,8 @@ import { NextResponse } from 'next/server';
 
 import sgMail from '@sendgrid/mail';
 
+import { urgentRequestBody } from '@/featured/email-letters/components/urgent-request-body';
+
 type ContactFormData = {
   firstName: string;
   lastName: string;
@@ -37,8 +39,16 @@ export async function POST(request: Request): Promise<NextResponse> {
       `,
     };
 
+    const userMsg = {
+      to: email,
+      from: process.env.FROM_EMAIL!,
+      subject: 'We’ve Received Your Urgent Assistance Request - Norevia Digital',
+      html: urgentRequestBody({ name: firstName }),
+    };
+
     // Send email
     await sgMail.send(msg);
+    await sgMail.send(userMsg);
 
     return NextResponse.json({ message: 'Fund access request sent successfully.' });
   } catch (error: unknown) {
