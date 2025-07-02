@@ -30,7 +30,8 @@
         @include tablet {
           display: none;
         }
-        a {
+        a,
+        button {
           padding: 24px 0;
           color: #0d0d0d;
           font-size: 20px;
@@ -40,8 +41,13 @@
           text-transform: uppercase;
           border-bottom: 1px solid rgba(13, 13, 13, 0.5);
           opacity: 0.5;
+          text-align: left;
           &.active {
             opacity: 1;
+          }
+          &:hover {
+            opacity: 1;
+            border-bottom: 1px solid rgba(13, 13, 13, 1);
           }
         }
       }
