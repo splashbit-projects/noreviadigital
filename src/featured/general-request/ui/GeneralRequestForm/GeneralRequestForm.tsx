@@ -7,8 +7,10 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { useTranslations } from 'next-intl';
 import { Controller, useForm } from 'react-hook-form';
 
+import { useCountryCode } from '@/shared/lib/hooks/use-country';
 import { Button } from '@/shared/ui/kit';
 import { Dropdown, DropdownItem, DropdownMenu, DropdownTrigger } from '@/shared/ui/kit/dropdown';
+import { PhoneField } from '@/shared/ui/kit/phone-field';
 
 import { sendGeneralRequest } from '../../api/send-general-request';
 import { type GeneralRequestSchema, generalRequestSchema } from '../../model/schemas';
@@ -16,6 +18,7 @@ import styles from './GeneralRequestForm.module.scss';
 
 export const GeneralRequestForm = ({ onSuccess }: { onSuccess?: () => void }) => {
   const [isLoading, setIsLoading] = useState(false);
+  const countryCode = useCountryCode();
 
   const {
     control,
@@ -137,13 +140,17 @@ export const GeneralRequestForm = ({ onSuccess }: { onSuccess?: () => void }) =>
               <input {...register('email')} placeholder="Enter your email" />
               {errors.email && <p className={styles.error}>{errors.email.message}</p>}
             </div>
-            <div className={styles.inputWrapper}>
+            <div className={styles.phoneWrapper}>
               <label>
                 {t('phone.label', {
                   fallback: 'Phone:',
                 })}
               </label>
-              <input {...register('phone')} placeholder="Enter your phone" />
+              <Controller
+                name="phone"
+                control={control}
+                render={({ field }) => <PhoneField {...field} country={countryCode} />}
+              />
               {errors.phone && <p className={styles.error}>{errors.phone.message}</p>}
             </div>
           </div>

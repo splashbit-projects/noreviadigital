@@ -1,0 +1,65 @@
+.phoneField {
+  width: 100% !important;
+  height: 100% !important;
+  font-size: 12px !important;
+  line-height: 140%;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.5) !important;
+  color: rgba(13, 13, 13, 0.5) !important;
+  font-weight: 500 !important;
+  backdrop-filter: blur(15px) !important;
+  transition: all 300ms ease-in-out;
+  border: 0 !important;
+  height: 40px !important;
+  flex: 1;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.dropdown {
+  height: 100%;
+  border: 0 !important;
+  background: rgba(255, 255, 255, 0.5) !important;
+  backdrop-filter: blur(15px) !important;
+  padding-right: 16px;
+  padding-left: 12px;
+}
+
+.container {
+  height: 40px !important;
+
+  button {
+    height: 40px !important;
+  }
+}
+
+.dropdownList {
+  outline: none !important;
+}
+
+.arrow {
+  border: 0 !important;
+  margin: 0 !important;
+  background: url('./chevron-down.svg') no-repeat !important;
+  width: 20px;
+  height: 20px;
+  transition: all 0.3s ease-out;
+}
+
+.layout {
+  position: relative;
+  width: 100%;
+}
+
+.label {
+  margin-bottom: 8px;
+}
+
+.hint {
+  position: absolute;
+  bottom: -18px;
+  left: 2px;
+  line-height: 20px;
+}
