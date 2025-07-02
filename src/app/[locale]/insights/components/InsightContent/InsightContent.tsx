@@ -1,14 +1,15 @@
 'use client';
 
-import { useEffect, useLayoutEffect, useRef, useState } from 'react';
-import Link from 'next/link';
+import { useLayoutEffect, useRef, useState } from 'react';
+
+import { useLenis } from 'lenis/react';
 
 import st from './InsightContent.module.scss';
 
 export const InsightContent = ({ content }: { content: string }) => {
   const [titles, setTitles] = useState<{ [key: string]: string }>({});
-  const [activeTitle, setActiveTitle] = useState<string | null>(null);
   const contentRef = useRef<HTMLDivElement>(null);
+  const lenis = useLenis();
 
   useLayoutEffect(() => {
     if (!contentRef.current) return;
@@ -26,20 +27,14 @@ export const InsightContent = ({ content }: { content: string }) => {
   }, [content]);
 
   const handleTitleClick = (id: string) => {
-    setActiveTitle(id);
-  };
-
-  useEffect(() => {
-    if (activeTitle) {
-      const el = document.getElementById(activeTitle);
-      if (el) {
-        window.scrollTo({
-          top: el.offsetTop,
-          behavior: 'smooth',
-        });
-      }
+    const element = document.getElementById(id);
+    if (element && lenis) {
+      lenis.scrollTo(element, {
+        offset: 0,
+        duration: 1.5,
+      });
     }
-  }, [activeTitle]);
+  };
 
   return (
     <section className={st.post}>
@@ -53,14 +48,9 @@ export const InsightContent = ({ content }: { content: string }) => {
             />
             <div className={st.navigation}>
               {Object.entries(titles).map(([title, id]) => (
-                <Link
-                  href={`#${id}`}
-                  key={id}
-                  onClick={() => handleTitleClick(title)}
-                  className={activeTitle === title ? st.active : ''}
-                >
+                <button key={id} onClick={() => handleTitleClick(id)}>
                   {title}
-                </Link>
+                </button>
               ))}
             </div>
           </article>
