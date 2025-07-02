@@ -21,8 +21,8 @@
     justify-content: flex-start;
     @include tablet {
       img {
-        width: 102px;
-        height: 16px;
+        width: auto;
+        height: 20px;
       }
     }
   }
