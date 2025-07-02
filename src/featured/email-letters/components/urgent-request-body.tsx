@@ -1,6 +1,6 @@
 import { htmlTemplate } from './html-template';
 
-export const contactFormBody = ({ name }: { name: string }) => {
+export const urgentRequestBody = ({ name }: { name: string }) => {
   return htmlTemplate({
     body: `
       <div class="wrapper">
@@ -9,9 +9,10 @@ export const contactFormBody = ({ name }: { name: string }) => {
         </header>
         <div class="main">
           <p style="font-size: 24px; font-weight: 700; color: #0D0D0D;"> Hi ${name},</p>
-          <p class="text">Thanks for reaching out to Norevia Digital. We’ve received your request and our team is already reviewing the details you shared. Based on your business goals and challenges, we’ll match you with the most relevant marketing solution.</p>
-          <p class="text">You can expect to hear from us within <strong class="strong">48 business hours</strong>. If your request is urgent, we’ll prioritize it accordingly.</p>
-          <p class="text">We appreciate your interest and look forward to helping you move forward.</p>
+          <p class="text">Your urgent request has been received. We understand the importance and urgency of your situation.</p>
+          <p class="text">Our team is already reviewing the issue you described and will respond <strong class="strong">as quickly as possible — typically within a few business hours.</strong></p>
+          <p class="text">If you need to add anything or reach us directly, feel free to reply to this email.</p>
+          <p class="text">We’re here to help you stabilise and take control — fast.</p>
           <p style="font-size: 24px; color: #0D0D0D;">Best regards,<br/><strong class="strong">The Norevia Digital Team</strong></p>
         </div>
         <footer class="footer">

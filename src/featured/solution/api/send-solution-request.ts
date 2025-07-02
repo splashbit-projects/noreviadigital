@@ -4,6 +4,9 @@ import sgMail from '@sendgrid/mail';
 
 import type { SolutionFormSchema } from '../model/schemas';
 
+import { serviceRequestBody } from '@/featured/email-letters/components/service-request-body';
+import { solutionRequestBody } from '@/featured/email-letters/components/solution-request-body';
+
 export async function sendSolutionRequest(
   data: SolutionFormSchema,
   type: 'solution' | 'service',
@@ -31,7 +34,24 @@ export async function sendSolutionRequest(
       `,
     };
 
+    const userMsg = {
+      to: email,
+      from: process.env.FROM_EMAIL!,
+      subject: `Your ${name} Request Has Been Received - Norevia Digital`,
+      html:
+        type === 'solution'
+          ? solutionRequestBody({
+              name: data.firstName,
+              solutionName: name,
+            })
+          : serviceRequestBody({
+              name: data.firstName,
+              serviceName: name,
+            }),
+    };
+
     await sgMail.send(msg);
+    await sgMail.send(userMsg);
 
     return { message: 'Fund access request sent successfully.' };
   } catch (error: unknown) {
