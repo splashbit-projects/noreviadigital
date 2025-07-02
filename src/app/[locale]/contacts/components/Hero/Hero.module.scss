@@ -40,6 +40,11 @@
       font-weight: 500;
       line-height: normal;
       width: 400px;
+
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+
       @include tablet {
         br {
           display: none;

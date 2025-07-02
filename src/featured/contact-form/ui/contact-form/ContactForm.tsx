@@ -7,10 +7,12 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { Controller, useForm } from 'react-hook-form';
 
 import { cn } from '@/shared/lib/helpers/styles';
+import { useCountryCode } from '@/shared/lib/hooks/use-country';
 import { MessageSent } from '@/shared/ui/components/message-sent/MessageSent';
 import { Popup } from '@/shared/ui/components/popup';
 import { Button } from '@/shared/ui/kit';
 import { Dropdzone } from '@/shared/ui/kit/dropzone';
+import { PhoneField } from '@/shared/ui/kit/phone-field';
 
 import { sendContactForm } from '../../api/send-contact-form';
 import { type ContactSchema, contactSchema } from '../../model/schemas';
@@ -19,6 +21,8 @@ import styles from './ContactForm.module.scss';
 export const ContactForm = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+
+  const countryCode = useCountryCode();
 
   const {
     register,
@@ -71,9 +75,13 @@ export const ContactForm = () => {
               <input {...register('lastName')} placeholder="Enter your last name" />
               {errors.lastName && <p className={styles.error}>{errors.lastName.message}</p>}
             </div>
-            <div className={`${styles.inputWrapper} `}>
+            <div className={`${styles.phoneWrapper}`}>
               <label>Phone:</label>
-              <input {...register('phone')} placeholder="Enter your phone" />
+              <Controller
+                name="phone"
+                control={control}
+                render={({ field }) => <PhoneField {...field} country={countryCode} />}
+              />
               {errors.phone && <p className={styles.error}>{errors.phone.message}</p>}
             </div>
           </div>
