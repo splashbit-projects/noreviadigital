@@ -26,6 +26,8 @@ export const ServicesTabs = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const [isMobile, setIsMobile] = useState(false);
   const divRefs = useRef<HTMLDivElement[]>([]);
+  const contentRefs = useRef<HTMLDivElement[]>([]);
+  const [contentHeights, setContentHeights] = useState<{ [key: string]: number }>({});
 
   useEffect(() => {
     const handleResize = () => {
@@ -35,6 +37,17 @@ export const ServicesTabs = () => {
     handleResize();
     return () => window.removeEventListener('resize', handleResize);
   }, []);
+
+  // Measure content heights after render
+  useEffect(() => {
+    const heights: { [key: string]: number } = {};
+    contentRefs.current.forEach((ref, index) => {
+      if (ref) {
+        heights[services[index].title] = ref.scrollHeight;
+      }
+    });
+    setContentHeights(heights);
+  }, [services]);
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>, index: number) => {
     if (!isMobile) {
@@ -116,7 +129,19 @@ export const ServicesTabs = () => {
             <div className={styles.servicesTabs__tabHead}>
               <span>{service.title}</span>
             </div>
-            <div className={styles.servicesTabs__tabContent}>
+            <div
+              className={styles.servicesTabs__tabContent}
+              style={{
+                height: activeTab === service.title ? `${contentHeights[service.title] || 0}px` : 0,
+                overflow: 'hidden',
+                transition: 'height 0.3s ease-in-out',
+              }}
+              ref={(el) => {
+                if (el) {
+                  contentRefs.current[index] = el;
+                }
+              }}
+            >
               {service.data.map((item) => (
                 <label key={item.id}>
                   <input
@@ -134,7 +159,7 @@ export const ServicesTabs = () => {
           <motion.div
             initial={{ width: '0%' }}
             whileInView={{ width: '100%' }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             className={styles.divider}
             transition={{
               duration: 1.5,

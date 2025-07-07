@@ -47,9 +47,12 @@
     }
   }
   &__tabContent {
-    display: none;
+    display: flex;
+    height: 0;
+    overflow: hidden;
     flex-wrap: wrap;
     row-gap: 10px;
+    transition: all 0.3s ease-in-out;
     @include tablet {
       row-gap: 12px;
     }

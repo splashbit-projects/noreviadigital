@@ -46,8 +46,15 @@
     background: linear-gradient(
       123deg,
       rgba(255, 255, 255, 0) 57.67%,
-      rgba(255, 255, 255, 0.05) 100%
-    );
+        rgba(255, 255, 255, 0.05) 100%
+      );
+      &:hover {
+        background: linear-gradient(
+          123deg,
+          rgba(255, 255, 255, 0) 57.67%,
+          rgba(255, 255, 255, 0.1) 100%
+        );
+      }
 
     p {
       color: #fff;

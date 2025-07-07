@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 
-import { AboutCta, AboutHero, HowWeAct, WhyChoose, WhyWeStarted } from './components';
+import { AboutCta, AboutHero, HowWeAct, WhyChoose } from './components';
 
 export const metadata: Metadata = {
   title: 'Complex Marketing Expertise',
@@ -18,7 +18,7 @@ export default function AboutUs() {
   return (
     <>
       <AboutHero />
-      <WhyWeStarted />
+
       <HowWeAct />
       <WhyChoose />
       <AboutCta />
