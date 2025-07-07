@@ -22,6 +22,13 @@
         rgba(255, 255, 255, 0) 57.67%,
         rgba(255, 255, 255, 0.05) 100%
       );
+      &:hover {
+        background: linear-gradient(
+          123deg,
+          rgba(255, 255, 255, 0) 57.67%,
+          rgba(255, 255, 255, 0.1) 100%
+        );
+      }
       &:nth-child(even) {
         flex-direction: column-reverse;
         border-radius: 8px;
@@ -30,6 +37,13 @@
           rgba(255, 255, 255, 0) 63.67%,
           rgba(255, 255, 255, 0.05) 100%
         );
+        &:hover {
+          background: linear-gradient(
+            19deg,
+            rgba(255, 255, 255, 0) 63.67%,
+            rgba(255, 255, 255, 0.1) 100%
+          );
+        }
         svg {
           transform: rotate(-90deg);
         }
