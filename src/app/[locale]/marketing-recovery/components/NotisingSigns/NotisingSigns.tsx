@@ -6,8 +6,17 @@ import { Button, TransformScale } from '@/shared/ui/kit';
 
 import styles from './NotisingSigns.module.scss';
 
+import { useUrgentRequestStore } from '@/featured/urgent-request';
+
 export const NotisingSigns = () => {
   const t = useTranslations('notisingSigns');
+
+  const { setPopupOpened } = useUrgentRequestStore();
+
+  const handleUrgentRequest = () => {
+    setPopupOpened(true);
+    document.body.style.overflow = 'hidden';
+  };
 
   return (
     <section className={styles.notisingSigns}>
@@ -27,9 +36,9 @@ export const NotisingSigns = () => {
                   'Rescue your reputation. Stop budget leaks. Get campaigns back on target now.',
               })}
             </p>
-            <Button url="/services" color="grey" plus size="large" buttonType="link">
+            <Button url="#" color="white" plus onClick={handleUrgentRequest}>
               {t('button', {
-                fallback: 'Explore Full Services',
+                fallback: 'Urgent Request',
               })}
             </Button>
           </div>
