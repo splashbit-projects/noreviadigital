@@ -103,6 +103,16 @@
     "title": "Why We Started Norevia Digital",
     "text": "Everything we do is real, safe, and <br/>built for sustainable growth."
   },
+  "contacts": {
+    "hero": {
+      "title": {
+        "0": "Contact Us",
+        "1": "Let’s Build Smarter",
+        "2": "Marketing Together"
+      },
+      "text": "Whether you need clarity, support, or a fresh direction — we’re here."
+    }
+  },
   "faq": {
     "title": "Your questions - our answers"
   },
@@ -204,7 +214,7 @@
   "notisingSigns": {
     "title": "Noticing These Warning Signs?",
     "description": "Rescue your reputation. Stop budget leaks. Get campaigns back on target now.",
-    "button": "Explore Full Services"
+    "button": "Urgent Request"
   },
   "timeToAct": {
     "text": "If your marketing efforts are failing or your campaigns are going off-track, waiting only <br/>makes it worse. We’re ready to step in, assess fast, and get you back on course.",
@@ -251,7 +261,7 @@
       },
       "1": {
         "title": "Marketing Services",
-        "text": "Marketing is more than exposure — it"
+        "text": "Marketing is more than exposure — it’s alignment, consistency, and momentum. From SEO to branding, content to automation, we deliver complete marketing frameworks connecting strategy with execution and scale."
       },
       "2": {
         "title": "Strategic & Diagnostic Services",
@@ -269,8 +279,7 @@
         "title": "Client Education & Retention Services",
         "text": "Our support doesn’t end with delivery. We provide ongoing education, communication integration, and high-level briefings to help your internal teams stay aligned and your leadership informed."
       },
-      "title": "Tailored Services for Every Marketing Need",
-      "button": "Explore Full Services"
+      "title": "Tailored Services for Every Marketing Need"
     },
     "whereToStart": {
       "0": "Discover pre-built packages designed to solve real business challenges.",
@@ -282,7 +291,8 @@
   "solutionsPage": {
     "hero": {
       "title": "Marketing Solutions That Deliver.",
-      "text": "Comprehensive packages built to solve challenges and drive business growth."
+      "text": "Comprehensive packages built to solve challenges and drive business growth.",
+      "btn": "Get Assistance"
     },
     "readyMadePackages": {
       "title": "Ready-Made Packages for Real Marketing Challenges",
@@ -458,7 +468,7 @@
         "label": "Phone:"
       },
       "marketingChallenge": {
-        "label": "What is going wrong right now?",
+        "label": "Your Current Marketing Challenge:",
         "placeholder": "Describe your challenge"
       },
       "consent": {
@@ -558,14 +568,12 @@
     "explore": "Explore",
     "services": "Services",
     "solutions": "Solutions",
-    "insights": "Insights",
+    "recovery": "Recovery",
+    "constructor": "Constructor",
     "company": "Company",
     "about": "About",
     "contact": "Contact",
-    "legal": "Legal",
-    "tools": "Tools",
-    "constructor": "Constructor",
-    "recovery": "Recovery",
+    "insights": "Insights",
     "requestBrief": "Request Brief",
     "terms": "Terms & Conditions",
     "privacy": "Privacy Policy",
@@ -580,15 +588,5 @@
     "marketing-recovery": "Marketing Recovery",
     "insights": "Insights",
     "about-us": "About Us"
-  },
-  "contacts": {
-    "hero": {
-      "title": {
-        "0": "Contact Us",
-        "1": "Let’s Build Smarter",
-        "2": "Marketing Together"
-      },
-      "text": "Whether you need clarity, support, or a fresh direction — we’re here."
-    }
   }
 }

@@ -180,7 +180,7 @@ export const SolutionForm = ({
             <div className={`${styles.inputWrapper} ${styles.fullWidth}`}>
               <label>
                 {t('marketingChallenge.label', {
-                  fallback: 'What is going wrong right now?',
+                  fallback: 'Your Current Marketing Challenge:',
                 })}
               </label>
               <textarea

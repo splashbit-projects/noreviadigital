@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 
 import { fadeInUp } from '@/shared/lib/helpers/animations';
+import { Button } from '@/shared/ui/kit';
 
 import styles from './Hero.module.scss';
 
@@ -42,6 +43,16 @@ export const Hero = () => {
             })}
           </motion.p>
         </div>
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeInUp}
+        >
+          <Button url="/contacts" color="white" plus buttonType="link">
+            {t('btn', { fallback: 'Get Assistance' })}
+          </Button>
+        </motion.div>
       </div>
     </section>
   );

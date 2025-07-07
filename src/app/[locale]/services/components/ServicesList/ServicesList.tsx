@@ -33,7 +33,7 @@ export const ServicesList = () => {
       title: t('1.title', { fallback: 'Marketing Services' }),
       text: t('1.text', {
         fallback:
-          "Marketing is more than exposure — it's alignment, consistency, and momentum. From SEO to branding, content to automation, we deliver complete marketing frameworks connecting strategy with execution and scale.",
+          'Marketing is more than exposure — it’s alignment, consistency, and momentum. From SEO to branding, content to automation, we deliver complete marketing frameworks connecting strategy with execution and scale.',
       }),
       video: '/videos/service2.mp4',
     },
