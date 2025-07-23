@@ -15,7 +15,7 @@ export const ReachOut = () => {
             </div>
             <div className={st.info__item}>
               <span>Social Media:</span>
-              <a href="#">
+              <a href="https://www.linkedin.com/company/norevia/" target="_blank">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="28"
