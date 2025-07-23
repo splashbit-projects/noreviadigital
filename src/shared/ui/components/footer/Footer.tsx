@@ -36,7 +36,7 @@ export const Footer = () => {
           <div className={styles.item}>
             <h5>{t('socialMedia', { fallback: 'Social Media:' })}</h5>
             <div>
-              <Link href="#" target="_blank">
+              <Link href="https://www.linkedin.com/company/norevia/" target="_blank">
                 <Linkedin />
               </Link>
             </div>
