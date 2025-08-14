@@ -1,6 +1,7 @@
 import { Work_Sans } from 'next/font/google';
 import LocalFont from 'next/font/local';
 
+import { GoogleAnalytics } from '@next/third-parties/google';
 import type { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
 
@@ -57,6 +58,7 @@ export default async function RootLayout({
 
   return (
     <html lang={locale}>
+      <GoogleAnalytics gaId="G-03VHZK1CNT" />
       <body className={cn(workSans.variable, kola.variable)}>
         <NextIntlClientProvider>
           <LenisScrollProvider>
