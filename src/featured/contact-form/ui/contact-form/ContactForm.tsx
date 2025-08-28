@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 
 import { zodResolver } from '@hookform/resolvers/zod';
+import ReCaptcha from 'react-google-recaptcha';
 import { Controller, useForm } from 'react-hook-form';
 
 import { cn } from '@/shared/lib/helpers/styles';
@@ -21,6 +22,7 @@ import styles from './ContactForm.module.scss';
 export const ContactForm = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [isCaptchaVerified, setIsCaptchaVerified] = useState(false);
 
   const countryCode = useCountryCode();
 
@@ -46,6 +48,10 @@ export const ContactForm = () => {
     } catch (error) {
       console.error(error);
     }
+  };
+
+  const onCaptchaVerify = (token: string | null) => {
+    setIsCaptchaVerified(!!token);
   };
 
   return (
@@ -118,7 +124,17 @@ export const ContactForm = () => {
             </label>
             {errors.consent && <p className={styles.error}>{errors.consent.message}</p>}
           </div>
-          <Button buttonType="submit" color="grey" plus size="large">
+          <ReCaptcha
+            sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY ?? ''}
+            onChange={onCaptchaVerify}
+          />
+          <Button
+            buttonType="submit"
+            color="grey"
+            plus
+            size="large"
+            disabled={!isCaptchaVerified || isLoading}
+          >
             {isLoading ? 'Submitting...' : 'Submit Your Request'}
           </Button>
         </div>
