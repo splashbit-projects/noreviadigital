@@ -12,6 +12,7 @@ export const Button = ({
   plus = false,
   onClick,
   size = 'medium',
+  disabled = false,
 }: {
   url?: string;
   children: React.ReactNode;
@@ -20,6 +21,7 @@ export const Button = ({
   plus?: boolean;
   onClick?: () => void;
   size?: 'medium' | 'large' | 'small';
+  disabled?: boolean;
 }) => {
   if (buttonType === 'link') {
     return (
@@ -37,6 +39,7 @@ export const Button = ({
         type={buttonType}
         className={`${styles.button} ${styles[`button--${color}`]} ${styles[`button--${size}`]}`}
         onClick={onClick}
+        disabled={disabled}
       >
         {children}
         {plus && <Plus />}
