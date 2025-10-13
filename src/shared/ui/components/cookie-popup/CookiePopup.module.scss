@@ -1,0 +1,110 @@
+.cookiePopup {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  display: flex;
+  width: 400px;
+  padding: 32px;
+  z-index: 1000;
+  display: none;
+  max-width: 100%;
+  border-radius: 8px;
+  border: 1px solid #dbdbdb;
+  background: #e6e8e0;
+  box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.05);
+
+  @media (max-width: 992px) {
+    padding: 40px 20px;
+    bottom: 20px;
+    left: 20px;
+    width: calc(100% - 40px);
+  }
+
+  &.visible {
+    display: block;
+  }
+
+  h2 {
+    color: #181818;
+    font-family: Kola;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%; /* 28.8px */
+    margin-bottom: 12px;
+  }
+
+  p {
+    color: #575551;
+    font-family: 'Work Sans';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    a {
+      color: #575551;
+      font-family: 'Work Sans';
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      text-decoration-line: underline;
+      text-decoration-style: solid;
+      text-decoration-skip-ink: auto;
+      text-decoration-thickness: auto;
+      text-underline-offset: auto;
+      text-underline-position: from-font;
+    }
+  }
+
+  .buttons {
+    margin-top: 16px;
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    @media (max-width: 992px) {
+      gap: 16px;
+    }
+
+    button {
+      width: calc(50% - 12px);
+      cursor: pointer;
+      font-size: 14px;
+      padding: 12px 12px;
+      height: 48px;
+      @media (max-width: 992px) {
+        width: calc(50% - 8px);
+      }
+      &.decline {
+        border-radius: 8px;
+        background: #d3d5d8;
+        color: #575551;
+        font-family: 'Work Sans';
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+
+        &:hover {
+          background: #b5b7bb;
+        }
+      }
+
+      &.accept {
+        border-radius: 8px;
+        background: #0a0a0a;
+        color: #fff;
+        font-family: 'Work Sans';
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+
+        &:hover {
+          background: #1e1e1e;
+        }
+      }
+    }
+  }
+}

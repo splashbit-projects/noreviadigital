@@ -7,6 +7,7 @@ import { NextIntlClientProvider } from 'next-intl';
 
 import { cn } from '@/shared/lib/helpers/styles';
 import { CursorFollower, Footer, Header, Preloader } from '@/shared/ui/components';
+import { CookiePopup } from '@/shared/ui/components/cookie-popup';
 import { LenisScrollProvider } from '@/shared/ui/kit';
 
 import '@/shared/lib/styles/null.scss';
@@ -70,6 +71,7 @@ export default async function RootLayout({
             <Footer />
             <CursorFollower />
             <GeneralRequestPopup />
+            <CookiePopup />
           </LenisScrollProvider>
         </NextIntlClientProvider>
       </body>
