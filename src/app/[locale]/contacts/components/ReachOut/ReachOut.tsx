@@ -1,20 +1,24 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
+
 import st from './ReachOut.module.scss';
 
 export const ReachOut = () => {
+  const t = useTranslations('contacts.reachOut');
+
   return (
     <div className="_container">
       <section className={st.layout}>
-        <h2>Reach Out Anytime</h2>
+        <h2>{t('title', { fallback: 'Reach Out Anytime' })}</h2>
         <section className={st.content}>
           <div className={st.info}>
             <div className={st.info__item}>
-              <span>Email:</span>
+              <span>{t('email', { fallback: 'Email:' })}</span>
               <a href="mailto:info@noreviadigital.com">info@noreviadigital.com</a>
             </div>
             <div className={st.info__item}>
-              <span>Social Media:</span>
+              <span>{t('socialMedia', { fallback: 'Social Media:' })}</span>
               <a href="https://www.linkedin.com/company/norevia/" target="_blank">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -34,7 +38,7 @@ export const ReachOut = () => {
           <div className={st.mapsInfo}>
             <div className={st.mapsInfo__item}>
               <div className={st.mapsHeading}>
-                <span>Registered Address:</span>
+                <span>{t('registeredAddress', { fallback: 'Registered Address:' })}</span>
                 <h4>Harju maakond, Tallinn, Kesklinna linnaosa, Liivamäe tn 8-7, 10113</h4>
               </div>
               <iframe

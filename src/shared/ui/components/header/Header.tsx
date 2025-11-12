@@ -11,6 +11,7 @@ import { useTranslations } from 'next-intl';
 import { WEBSITE_EMAIL } from '@/shared/lib/constants/constants';
 import { MenuButton } from '@/shared/ui/icons';
 
+import { LangSwitcher } from '../lang-switcher/LangSwitcher';
 import styles from './Header.module.scss';
 
 export const Header = () => {
@@ -43,21 +44,18 @@ export const Header = () => {
           <Link href="/" className={styles.header__logo}>
             <Image src="/images/logo-white.svg" alt="Norevia" width={149} height={28} />
           </Link>
-
           <button
             className={`${styles.header__mobile_menu_button} ${isMobileMenuOpen ? styles.open : ''}`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             <MenuButton />
           </button>
-
           <nav className={styles.header__menu}>
             <Link href="/services">{t('services', { fallback: 'Services' })}</Link>
             <Link href="/solutions">{t('solutions', { fallback: 'Solutions' })}</Link>
             <Link href="/marketing-constructor">
               {t('constructor', { fallback: 'Constructor' })}
             </Link>
-
             <button
               className={`${styles.header__menu_button} ${isSubmenuOpen ? styles.open : ''}`}
               onClick={() => setIsSubmenuOpen(!isSubmenuOpen)}
@@ -71,8 +69,8 @@ export const Header = () => {
               <span>phone</span>
               <span>phone</span>
             </Link> */}
+            <LangSwitcher />
             <Link href={`mailto:${WEBSITE_EMAIL}`}>
-              <span>{WEBSITE_EMAIL}</span>
               <span>{WEBSITE_EMAIL}</span>
             </Link>
           </div>

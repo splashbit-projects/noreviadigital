@@ -111,7 +111,60 @@
         "2": "Marketing Together"
       },
       "text": "Whether you need clarity, support, or a fresh direction — we’re here."
+    },
+    "reachOut": {
+      "title": "Reach Out Anytime",
+      "email": "Email:",
+      "socialMedia": "Social Media:",
+      "registeredAddress": "Registered Address:"
+    },
+    "contactForm": {
+      "title": "Let’s Start with the Basics",
+      "text": "Just fill out the form below — and we’ll get back to you with clarity, ideas, or a proposal tailored to your goals.",
+      "firstName": {
+        "label": "First Name:",
+        "placeholder": "Enter your first name"
+      },
+      "email": {
+        "label": "Email:",
+        "placeholder": "Enter your email"
+      },
+      "lastName": {
+        "label": "Last Name:",
+        "placeholder": "Enter your last name"
+      },
+      "phone": {
+        "label": "Phone:",
+        "placeholder": "Enter your phone"
+      },
+      "projectDetails": {
+        "label": "Project Details:",
+        "placeholder": "Describe your details"
+      },
+      "file": {
+        "label": "Any Documents?"
+      },
+      "consent": {
+        "0": "I agree to the",
+        "1": "Terms and Conditions",
+        "2": "and",
+        "3": "Privacy Policy"
+      },
+      "button": "Submit Your Request",
+      "submitting": "Submitting...",
+      "errors": {
+        "firstName": "First name is required",
+        "lastName": "Last name is required",
+        "email": "Please enter a valid email address",
+        "phone": "Phone number is required",
+        "projectDetails": "Please provide project details",
+        "file": "Please upload a file",
+        "consent": "You must confirm that you are an accredited or professional investor"
+      }
     }
+  },
+  "dropzone": {
+    "label": "Choose File"
   },
   "faq": {
     "title": "Your questions - our answers"

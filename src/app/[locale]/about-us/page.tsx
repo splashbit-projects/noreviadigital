@@ -18,7 +18,6 @@ export default function AboutUs() {
   return (
     <>
       <AboutHero />
-
       <HowWeAct />
       <WhyChoose />
       <AboutCta />

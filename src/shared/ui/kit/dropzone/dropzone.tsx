@@ -2,6 +2,7 @@
 
 import { useRef } from 'react';
 
+import { useTranslations } from 'next-intl';
 import { useDropzone } from 'react-dropzone';
 
 import st from './dropzone.module.scss';
@@ -18,6 +19,8 @@ export function Dropdzone({
   value?: File | null;
 }) {
   const hiddenInputRef = useRef<HTMLInputElement | null>(null);
+
+  const t = useTranslations('dropzone');
 
   const { getRootProps, getInputProps, open, acceptedFiles } = useDropzone({
     multiple: false,
@@ -50,7 +53,7 @@ export function Dropdzone({
             open();
           }}
         >
-          CHOOSE FILE
+          {t('label', { fallback: 'Choose File' })}
         </button>
         {file && <p>{file.name}</p>}
       </div>
