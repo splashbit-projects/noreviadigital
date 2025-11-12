@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 
 import { zodResolver } from '@hookform/resolvers/zod';
+import { useTranslations } from 'next-intl';
 import ReCaptcha from 'react-google-recaptcha';
 import { Controller, useForm } from 'react-hook-form';
 
@@ -16,7 +17,7 @@ import { Dropdzone } from '@/shared/ui/kit/dropzone';
 import { PhoneField } from '@/shared/ui/kit/phone-field';
 
 import { sendContactForm } from '../../api/send-contact-form';
-import { type ContactSchema, contactSchema } from '../../model/schemas';
+import { type ContactSchema, getContactSchema } from '../../model/schemas';
 import styles from './ContactForm.module.scss';
 
 export const ContactForm = () => {
@@ -24,7 +25,10 @@ export const ContactForm = () => {
   const [isSuccess, setIsSuccess] = useState(false);
   const [isCaptchaVerified, setIsCaptchaVerified] = useState(false);
 
+  const t = useTranslations('contacts.contactForm');
   const countryCode = useCountryCode();
+
+  const contactSchema = getContactSchema(t);
 
   const {
     register,
@@ -57,32 +61,43 @@ export const ContactForm = () => {
   return (
     <div className={styles.container}>
       <section className={styles.heading}>
-        <h2>Let’s Start with the Basics</h2>
+        <h2>{t('title', { fallback: 'Let’s Start with the Basics' })}</h2>
         <p>
-          Just fill out the form below — and we’ll get back to you with clarity, ideas, or a
-          proposal tailored to your goals.
+          {t('text', {
+            fallback:
+              'Just fill out the form below — and we’ll get back to you with clarity, ideas, or a proposal tailored to your goals.',
+          })}
         </p>
       </section>
       <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
         <div className={styles.row}>
           <div className={styles.col}>
             <div className={`${styles.inputWrapper} `}>
-              <label>First Name:</label>
-              <input {...register('firstName')} placeholder="Enter your first name" />
+              <label>{t('firstName.label', { fallback: 'First Name:' })}</label>
+              <input
+                {...register('firstName')}
+                placeholder={t('firstName.placeholder', { fallback: 'Enter your first name' })}
+              />
               {errors.firstName && <p className={styles.error}>{errors.firstName.message}</p>}
             </div>
             <div className={`${styles.inputWrapper} `}>
-              <label>Email</label>
-              <input {...register('email')} placeholder="Enter your email" />
+              <label>{t('email.label', { fallback: 'Email:' })}</label>
+              <input
+                {...register('email')}
+                placeholder={t('email.placeholder', { fallback: 'Enter your email' })}
+              />
               {errors.email && <p className={styles.error}>{errors.email.message}</p>}
             </div>
             <div className={styles.inputWrapper}>
-              <label>Last Name:</label>
-              <input {...register('lastName')} placeholder="Enter your last name" />
+              <label>{t('lastName.label', { fallback: 'Last Name:' })}</label>
+              <input
+                {...register('lastName')}
+                placeholder={t('lastName.placeholder', { fallback: 'Enter your last name' })}
+              />
               {errors.lastName && <p className={styles.error}>{errors.lastName.message}</p>}
             </div>
             <div className={`${styles.phoneWrapper}`}>
-              <label>Phone:</label>
+              <label>{t('phone.label', { fallback: 'Phone:' })}</label>
               <Controller
                 name="phone"
                 control={control}
@@ -93,8 +108,11 @@ export const ContactForm = () => {
           </div>
           <div className={cn(styles.col, styles.columnAdd)}>
             <div className={`${styles.inputWrapper} ${styles.fullWidth}`}>
-              <label>Project Details</label>
-              <textarea {...register('projectDetails')} placeholder="Describe your details" />
+              <label>{t('projectDetails.label', { fallback: 'Project Details:' })}</label>
+              <textarea
+                {...register('projectDetails')}
+                placeholder={t('projectDetails.placeholder', { fallback: 'Describe your details' })}
+              />
               {errors.projectDetails && (
                 <p className={styles.error}>{errors.projectDetails.message}</p>
               )}
@@ -102,7 +120,7 @@ export const ContactForm = () => {
           </div>
           <div className={styles.col}>
             <div className={`${styles.inputWrapper} ${styles.fullWidth}`}>
-              <label>Any Documents?</label>
+              <label>{t('file.label', { fallback: 'Any Documents?' })}</label>
               <Controller
                 name="file"
                 control={control}
@@ -118,8 +136,15 @@ export const ContactForm = () => {
             <label>
               <input type="checkbox" {...register('consent')} />
               <span>
-                I agree to the <Link href="/legal/terms-and-conditions">Terms and Conditions</Link>{' '}
-                and <Link href="/legal/privacy-policy">Privacy Policy</Link>.
+                {t('consent.0', { fallback: 'I agree to the' })}{' '}
+                <Link href="/legal/terms-and-conditions">
+                  {t('consent.1', { fallback: 'Terms and Conditions' })}
+                </Link>{' '}
+                {t('consent.2', { fallback: 'and' })}{' '}
+                <Link href="/legal/privacy-policy">
+                  {t('consent.3', { fallback: 'Privacy Policy' })}
+                </Link>
+                .
               </span>
             </label>
             {errors.consent && <p className={styles.error}>{errors.consent.message}</p>}
@@ -135,7 +160,9 @@ export const ContactForm = () => {
             size="large"
             disabled={!isCaptchaVerified || isLoading}
           >
-            {isLoading ? 'Submitting...' : 'Submit Your Request'}
+            {isLoading
+              ? t('submitting', { fallback: 'Submitting...' })
+              : t('button', { fallback: 'Submit Your Request' })}
           </Button>
         </div>
       </form>

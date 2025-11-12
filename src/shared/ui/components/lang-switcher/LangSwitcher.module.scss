@@ -1,0 +1,67 @@
+.trigger {
+  outline: none;
+  color: #dbdcd5;
+  font-family: 'Work Sans';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.triggerInner {
+  display: flex;
+  height: 32px;
+  align-items: center;
+  border-radius: 2rem;
+  padding: 0 1.5rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.menuContent {
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  background: #090909;
+  width: 231px;
+  padding: 14px 16px 32px 16px;
+  color: #dbdcd5;
+  font-family: 'Work Sans';
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.menuSection {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.dropdownItem {
+  display: flex;
+  align-items: flex-start;
+  cursor: pointer;
+  outline: none;
+  transition: color 0.3s ease-in-out;
+  border-bottom: 1px solid #dbdcd5;
+  padding: 16px 0;
+  width: 100%;
+
+  &:first-child {
+    padding-top: 0;
+  }
+
+  &:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  &:hover {
+    color: #5b5b5b;
+  }
+}
