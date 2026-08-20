@@ -41,5 +41,6 @@ If you have any questions about this Cookie Policy or how we use cookies, please
 
 - Registered Address: Harju maakond, Tallinn, Kesklinna linnaosa, Liivamäe tn 8-7, 10113, Estonia
 - Email: info@noreviadigital.com
-- Phone:
+
+[//]: # (- Phone:)
 - Website: https://noreviadigital.com

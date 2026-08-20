@@ -137,5 +137,6 @@ If you have any questions regarding these Terms, please contact:
 
 - Registered Address: Harju maakond, Tallinn, Kesklinna linnaosa, Liivamäe tn 8-7, 10113, Estonia
 - Email: info@noreviadigital.com
-- Phone:
+
+[//]: # (- Phone:)
 - Website: https://noreviadigital.com
